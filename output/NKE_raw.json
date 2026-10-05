@@ -1,0 +1,332 @@
+{
+  "market_data" : {
+    "ticker" : "NKE",
+    "company" : "NIKE, Inc.",
+    "currency" : "USD",
+    "price" : 33.315,
+    "shares" : 1.202110951E9,
+    "marketCap" : 4.9422757888E10,
+    "totalDebt" : 1.1125000192E10,
+    "totalCash" : 8.368E9,
+    "trailingPe" : 15.864285,
+    "forwardPe" : 18.964212,
+    "evToEbitda" : 10.845,
+    "priceToBook" : 3.3235233,
+    "roe" : 0.21563,
+    "debtToEquity" : 0.73095,
+    "sector" : "Consumer Cyclical",
+    "industry" : "Footwear & Accessories",
+    "history" : {
+      "capex" : {
+        "2023-05-31" : -9.69E8,
+        "2024-05-31" : -8.12E8,
+        "2025-05-31" : -4.3E8,
+        "2026-05-31" : -6.84E8
+      },
+      "operating_income" : {
+        "2023-05-31" : 5.915E9,
+        "2024-05-31" : 6.311E9,
+        "2025-05-31" : 3.702E9,
+        "2026-05-31" : 3.797E9
+      },
+      "free_cash_flow" : {
+        "2023-05-31" : 4.872E9,
+        "2024-05-31" : 6.617E9,
+        "2025-05-31" : 3.268E9,
+        "2026-05-31" : 2.184E9
+      },
+      "operating_cash_flow" : {
+        "2023-05-31" : 5.841E9,
+        "2024-05-31" : 7.429E9,
+        "2025-05-31" : 3.698E9,
+        "2026-05-31" : 2.868E9
+      },
+      "net_income" : {
+        "2023-05-31" : 5.07E9,
+        "2024-05-31" : 5.7E9,
+        "2025-05-31" : 3.219E9,
+        "2026-05-31" : 3.108E9
+      },
+      "revenue" : {
+        "2023-05-31" : 5.1217E10,
+        "2024-05-31" : 5.1362E10,
+        "2025-05-31" : 4.6309E10,
+        "2026-05-31" : 4.6398E10
+      }
+    }
+  },
+  "filings" : {
+    "business_summary" : "NIKE, Inc. designs, develops, markets and sells athletic footwear, apparel, equipment, accessories and services under the NIKE, Jordan and Converse brands. It describes itself as the largest seller of athletic footwear and apparel in the world. It sells through NIKE Direct (owned stores and digital) and wholesale. Nearly all products are made by contract manufacturers, with Vietnam, Indonesia and China making about 52%, 27% and 16% of NIKE Brand footwear. FY2026 (year ended May 31, 2026) revenue was $46.4B, flat reported and down 2% currency-neutral. Net income was $3.1B, down 3%. Management is mid-way through a product, marketplace and brand reset: it is cutting supply of certain footwear, repositioning digital as full-price, reinvesting in wholesale, and liquidating inventory through markdowns. Greater China and Converse are still declining sharply (Q1 FY27 Greater China -26% currency-neutral, Converse -28%). In October 2026 NIKE announced the multi-year 'Pace' cost program (about $1.0B of pre-tax charges, about $2.5B of cumulative savings through FY2031).",
+    "key_figures" : [ {
+      "metric" : "Revenue",
+      "value" : "$46,398M (FY25: $46,309M; FY24: $51,362M)",
+      "period" : "FY2026 (May 31, 2026)",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "metric" : "Gross margin",
+      "value" : "42.9% (FY25 42.7%; FY24 44.6%)",
+      "period" : "FY2026",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "metric" : "Operating income (gross profit less SG&A)",
+      "value" : "$3,797M (FY25 $3,702M; FY24 $6,311M)",
+      "period" : "FY2026",
+      "source" : "Market Data (history.operating_income); ties to SEC 10-K (2026-07-15) income statement"
+    }, {
+      "metric" : "EBIT / EBIT margin (non-GAAP)",
+      "value" : "$3,850M / 8.3% (FY24: 12.7%)",
+      "period" : "FY2026",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "metric" : "Net income / diluted EPS",
+      "value" : "$3,108M / $2.10 (FY25 $3,219M / $2.16; FY24 $5,700M / $3.73)",
+      "period" : "FY2026",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "metric" : "Operating cash flow",
+      "value" : "$2,868M (FY25 $3,698M; FY24 $7,429M)",
+      "period" : "FY2026",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "metric" : "Capex (additions to PP&E)",
+      "value" : "$684M (FY25 $430M; FY24 $812M)",
+      "period" : "FY2026",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "metric" : "Free cash flow (OCF less capex)",
+      "value" : "$2,184M (FY25 $3,268M; FY24 $6,617M; FY23 $4,872M)",
+      "period" : "FY2026",
+      "source" : "Market Data (history.free_cash_flow); ties to SEC 10-K (2026-07-15) cash flow statement"
+    }, {
+      "metric" : "Dividends paid (cash)",
+      "value" : "$2,407M, above FY26 FCF of $2,184M",
+      "period" : "FY2026",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "metric" : "Stock-based compensation",
+      "value" : "$715M",
+      "period" : "FY2026",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "metric" : "ROIC (company-defined, non-GAAP)",
+      "value" : "18.7% (prior year 20.2%)",
+      "period" : "Trailing four quarters to May 31, 2026",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "metric" : "Q1 FY27 revenue",
+      "value" : "$11,213M vs $11,720M, down 4% reported and 5% currency-neutral",
+      "period" : "Quarter ended Aug 31, 2026",
+      "source" : "SEC 10-Q (2026-10-02)"
+    }, {
+      "metric" : "Q1 FY27 gross margin / net income / diluted EPS",
+      "value" : "42.8% (up 60 bps) / $712M / $0.48",
+      "period" : "Quarter ended Aug 31, 2026",
+      "source" : "SEC 10-Q (2026-10-02)"
+    }, {
+      "metric" : "Q1 FY27 operating cash flow and capex",
+      "value" : "OCF $135M; capex $199M; implied FCF about -$64M (computed)",
+      "period" : "Quarter ended Aug 31, 2026",
+      "source" : "SEC 10-Q (2026-10-02)"
+    }, {
+      "metric" : "Cash and short-term investments",
+      "value" : "$8,368M (cash $6,903M + short-term investments $1,465M)",
+      "period" : "Aug 31, 2026",
+      "source" : "SEC 10-Q (2026-10-02); matches Market Data totalCash"
+    }, {
+      "metric" : "Debt",
+      "value" : "Long-term debt $5,893M + current portion $2,000M; operating lease liabilities $473M current + $2,706M long-term; no borrowings under credit facilities",
+      "period" : "Aug 31, 2026",
+      "source" : "SEC 10-Q (2026-10-02)"
+    }, {
+      "metric" : "Credit ratings",
+      "value" : "A+ (S&P) / A2 (Moody's); both were downgraded in 2025",
+      "period" : "FY2026",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "metric" : "Shares outstanding (total A + B)",
+      "value" : "1,485,308,829 (Class A 281,387,752; Class B 1,203,921,077)",
+      "period" : "Sept 28, 2026",
+      "source" : "SEC 10-Q (2026-10-02)"
+    }, {
+      "metric" : "Share price / market cap",
+      "value" : "$33.315 / $49.42B",
+      "period" : "Current",
+      "source" : "Market Data"
+    }, {
+      "metric" : "Trailing P/E, forward P/E, EV/EBITDA, P/B",
+      "value" : "15.86 / 18.96 / 10.85 / 3.32",
+      "period" : "Current",
+      "source" : "Market Data"
+    }, {
+      "metric" : "Share repurchases",
+      "value" : "Program has repurchased 124.4M shares at an average of $97.57 for about $12.1B; about $5.9B remains authorized; repurchases paused since Q1 FY26",
+      "period" : "To Aug 31, 2026",
+      "source" : "SEC 10-K (2026-07-15); SEC 10-Q (2026-10-02)"
+    }, {
+      "metric" : "Pace program",
+      "value" : "About $1.0B pre-tax charges (about $0.3B in FY27, rest through FY31), on top of about $0.3B FY26 severance; about $2.5B cumulative savings through FY31, stated before charges and reinvestment",
+      "period" : "Announced Oct 2026",
+      "source" : "SEC 10-Q (2026-10-02)"
+    }, {
+      "metric" : "Endorsement and purchase commitments",
+      "value" : "Endorsements about $15.5B ($1.7B due within 12 months); product purchase obligations about $4.9B; other purchase obligations about $2.4B",
+      "period" : "May 31, 2026",
+      "source" : "SEC 10-K (2026-07-15)"
+    } ],
+    "recommended_base_growth_rate" : 0.05,
+    "growth_rationale" : "This is an analyst judgment, not management guidance. The documents contain no FCF guidance and no analyst estimates (the Yahoo page's growth estimates are blank). Arguments for positive growth from a depressed base: FY26 FCF of $2.18B is about one third of FY24's $6.62B, and EBIT margin is 8.3% against 12.7% in FY24. Management expects the reset actions to be complete for most segments by December 2026. North America is recovering (FY26 revenue +5%, EBIT +14%; Q1 FY27 wholesale +9%). Pace targets about $2.5B of cumulative savings through FY31, and about $684M of IEEPA tariff refunds were collected after year-end. Arguments for restraint: Q1 FY27 revenue fell 4% and FCF was about -$64M. Greater China fell 26% and Converse 28%. Management says actions on Sportswear and Jordan will extend beyond FY27 and that Greater China pressure will persist beyond FY27. Pace carries about $1.0B of mostly cash charges and the savings are stated before reinvestment. Dividends exceeded FCF in FY26 and cash is falling. FY26 FCF is also a noisy base: it was hit by about $1.2B of working-capital outflow (mostly receivables) and tax payments that included a $268M final transition-tax installment and $260M of expected IRS resolution payments. I settled on 5%, a moderate rate on a trough base. Results will depend more on the starting FCF normalization than on this rate. Treat FY26 FCF of $2.18B as a floor and consider normalizing the base.",
+    "growth_sources" : [ "SEC 10-K (2026-07-15): FCF history (market-data FCF series), the FY26 cash flow statement, margin trend, segment results, and management's statement that the reset actions are expected to complete by the end of December 2026", "SEC 10-Q (2026-10-02): Q1 FY27 results, Pace program ($1.0B charges, $2.5B savings through FY31), and the statement that Sportswear and Jordan actions extend beyond FY27", "Market Data: FCF series (FY23 $4.87B, FY24 $6.62B, FY25 $3.27B, FY26 $2.18B) and operating income series", "No analyst growth estimates available (Yahoo Finance - Analysis page shows empty estimate fields)" ],
+    "stated_risks" : [ "Tariffs and trade policy: the 10-K says protectionist measures have increased product costs. The IEEPA tariffs were ruled unauthorized and NIKE recognized a $986M recovery benefit, but further policy changes are possible (SEC 10-K (2026-07-15)).", "Weak demand and execution in Greater China (store traffic declining, elevated promotions, high marketplace inventory) and at Converse (brand and marketplace reset), with negative impacts expected through FY27 (SEC 10-K (2026-07-15); SEC 10-Q (2026-10-02)).", "NIKE Direct and digital traffic declines: FY26 digital -12% currency-neutral and comparable store sales -4% (SEC 10-K (2026-07-15)).", "Intense competition from adidas, On, Anta, lululemon, New Balance and others, including AI-enabled shopping disruption (SEC 10-K (2026-07-15)).", "Supply chain concentration: four footwear contract manufacturers make about 60% of NIKE Brand footwear, and Vietnam makes 52% (SEC 10-K (2026-07-15)).", "Inventory and discounting risk: higher discounts and marketplace pressure in Sportswear and Jordan, with inventory up 5% since May 31, 2026 (SEC 10-Q (2026-10-02)).", "Restructuring execution risk: the Pace program has about $1.0B of charges, is subject to local-law timing, and the savings may not be realized (SEC 10-Q (2026-10-02)).", "Leadership transition: the CFO departs Aug 17, 2026 and the COO has been in role since Dec 2025 (SEC 10-K (2026-07-15)); the 10-Q is signed by David Denton as CFO (SEC 10-Q (2026-10-02)).", "Legal and tax: the Belgian customs claim has an unestimable loss that could be material; the EU State Aid investigation of Dutch tax rulings is open; IRS audits of FY2017-2023 are ongoing; there are securities class actions and derivative suits over the stock price drop (SEC 10-K (2026-07-15)).", "Credit rating downgrades in 2025 (now A+/A2) could raise borrowing costs (SEC 10-K (2026-07-15)).", "Foreign currency exposure: the FY26 translation benefit to revenue was about $1,023M and to pre-tax income about $184M, and that tailwind may not recur (SEC 10-K (2026-07-15)).", "Controlling-shareholder overhang: Swoosh, LLC owns about 79% of Class A, and a large sale could depress the stock price (SEC 10-K (2026-07-15))." ],
+    "accounting_red_flags" : [ {
+      "flag" : "Free cash flow is deteriorating faster than earnings, and dividends exceed FCF",
+      "evidence" : "FCF fell from $6,617M (FY24) to $3,268M (FY25) to $2,184M (FY26), a 67% fall over two years, while net income fell 45% ($5,700M to $3,108M). FY26 FCF/net income was 70%. FY26 dividends paid of $2,407M exceeded FCF of $2,184M. Q1 FY27 dividends of $610M against OCF of $135M and capex of $199M left cash and short-term investments down from $9.0B to $8.4B.",
+      "source" : "Market Data (history); SEC 10-K (2026-07-15); SEC 10-Q (2026-10-02)"
+    }, {
+      "flag" : "Large non-cash IEEPA tariff-refund benefit recorded in cost of sales",
+      "evidence" : "$986M benefit ($965M North America, $21M Converse) recognized in Q4 FY26 once recovery was 'deemed probable'. Only $302M had been received at May 31; $684M sat in accounts receivable. The 10-K says it 'largely offset' IEEPA tariffs recognized during FY26, so the net effect on margins cannot be isolated from the disclosure. North America gross margin rose 210 bps. Receivables rose 26% ($4,717M to $5,931M) on flat revenue, and cash from operations in FY26 lagged earnings.",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "flag" : "Sales-related reserves fell during a period of liquidation and markdowns",
+      "evidence" : "Sales-related reserves fell from $1,834M to $1,589M (-13%) and the returns reserve from $1,277M to $1,099M, while NIKE Brand wholesale revenue rose 6% and management says it is taking 'higher sales returns and discounts with our wholesale partners'. Reserves are estimate-driven. The 10-K says variances were 'not material', but the direction deserves scrutiny.",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "flag" : "Inventory reserve declined while inventory is flat and rising",
+      "evidence" : "The inventory reserve fell from $233M to $213M although inventory was flat at $7.5B on flat revenue (up in units) and Converse took 'higher inventory obsolescence reserves'. Inventory rose to $7,846M at Aug 31, 2026 (+5% vs May) while Q1 revenue fell 4%. Greater China also booked 'higher inventory obsolescence reserves' in Q1 FY27.",
+      "source" : "SEC 10-K (2026-07-15); SEC 10-Q (2026-10-02)"
+    }, {
+      "flag" : "Recurring restructuring and severance charges that flatter 'underlying' trends",
+      "evidence" : "FY24 restructuring of $443M, FY26 severance of $385M ($154M in cost of sales, $231M in operating overhead), and a new Pace program of about $1.0B through FY31 (about $0.3B in FY27). Charges recurring year after year suggest cost-cutting is a continuous operating cost. FY26 operating overhead was flat only because of the severance included.",
+      "source" : "SEC 10-K (2026-07-15); SEC 10-Q (2026-10-02)"
+    }, {
+      "flag" : "Effective tax rate volatility, rising valuation allowance, large uncertain tax positions",
+      "evidence" : "The effective rate rose from 17.1% to 20.3% as FY25 had a one-time $133M non-cash deferred tax benefit (Section 987). The valuation allowance rose from $51M to $192M. Gross unrecognized tax benefits were $953M plus $438M of accrued interest and penalties. Income taxes was the auditor's sole critical audit matter. Q1 FY27 rate rose to 22.7% on foreign tax audit settlements.",
+      "source" : "SEC 10-K (2026-07-15); SEC 10-Q (2026-10-02)"
+    }, {
+      "flag" : "Unquantified contingent liability: Belgian customs claim",
+      "evidence" : "Claims for alleged underpaid duties since FY2018. The company 'is unable to estimate the range of loss' and says an adverse outcome could be material. Bank guarantees and letters of credit rose to about $1.3B from about $0.9B.",
+      "source" : "SEC 10-K (2026-07-15)"
+    }, {
+      "flag" : "Supplier finance programs inside accounts payable",
+      "evidence" : "About $1.1B of confirmed supplier obligations sit in accounts payable of $3,600M (about 31%), up from $0.8B in FY24. Confirmed invoices were about $11.5B in FY26. This supports payables-based working capital and could reverse if banks pull back.",
+      "source" : "SEC 10-K (2026-07-15); SEC 10-Q (2026-10-02)"
+    }, {
+      "flag" : "FCF is not burdened by stock compensation, and options are deeply underwater",
+      "evidence" : "SBC of $715M equals about 33% of FY26 FCF. Outstanding options (76.8M) have a weighted-average exercise price of $96.44 against a share price of $33.315. Anti-dilutive awards excluded from diluted EPS totaled 81.8M in FY26 and 84.0M in Q1 FY27. New grants at lower prices add dilution. The company repurchased 1.8M shares at an average $67.63 in FY26 and 124.4M shares at an average $97.57 over the program, against today's $33.",
+      "source" : "SEC 10-K (2026-07-15); SEC 10-Q (2026-10-02); Market Data"
+    }, {
+      "flag" : "Management turnover around the period end",
+      "evidence" : "The CFO (Matthew Friend) signed the 10-K on July 15, 2026 but ceases to be CFO on Aug 17, 2026, and a new CFO, David Denton, signs the 10-Q. A new COO started in Dec 2025, and the 10-K lists a December 2025 letter agreement with Craig Williams. Several new executive officers took roles in 2025. Auditor PwC gave clean opinions and ICFR was effective, so this is a governance and continuity flag, not a control failure.",
+      "source" : "SEC 10-K (2026-07-15); SEC 10-Q (2026-10-02)"
+    }, {
+      "flag" : "Cost-saving gross margin gains are partly mix, logistics and FX, and some depend on non-recurring items",
+      "evidence" : "FY26 gross margin rose 20 bps on logistics, FX and 'other costs' (each about +20 bps), offset by higher NIKE Brand product costs and weaker Converse. Q1 FY27 gross margin rose 60 bps mainly on logistics (+90 bps) and FX (+40 bps), while ASP fell (-30 bps). Retained earnings are a deficit of $(155)M at May 31, 2026, the result of buybacks and dividends exceeding earnings.",
+      "source" : "SEC 10-K (2026-07-15); SEC 10-Q (2026-10-02)"
+    } ],
+    "data_gaps" : [ "The Market Data 'shares' field (1,202,110,951) equals Class B shares only. The market cap of $49.42B equals price x total A+B shares (about 1.4835B). Any per-share calculation must use about 1.485B total shares (SEC 10-Q (2026-10-02)), not the 'shares' field.", "Market Data totalDebt of $11.125B does not match any balance sheet sum: Aug 31, 2026 debt plus operating leases is $11,072M and May 31, 2026 is about $11,033M. The definition and date are not stated.", "No management guidance for FY2027 revenue, margin or FCF appears in the documents, and no analyst estimates are provided (the Yahoo Finance - Analysis page shows empty estimate fields), so the growth rate is an analyst judgment.", "The FY2023 Market Data history is not backed by a filing in the provided documents (it only covers FY24-FY26 statements), so FY23 figures are cited from Market Data only.", "The 10-K does not disclose the net effect of IEEPA tariff costs versus the $986M refund on FY26 gross margin, so a clean underlying FY26 margin cannot be computed.", "Q1 FY27 FCF (about -$64M) is computed by me from OCF less capex, not a company-reported figure. The Market Data history has no quarterly series.", "The amount and timing of Pace program cash costs beyond FY27 and the realization of savings are not disclosed in detail (only $0.3B in FY27 and the remainder through FY31).", "Exact IEEPA refund receipts after Aug 31, 2026 are not stated beyond 'substantially all' received after May 31, 2026 (SEC 10-K (2026-07-15)).", "No details on the CFO transition (Form 8-K of June 23, 2026) or the David Denton offer letter are in the provided text.", "No peer or industry valuation comparables are provided." ]
+  },
+  "valuation" : {
+    "reliable" : true,
+    "notes" : [ ],
+    "scenarios" : {
+      "bear" : {
+        "growth" : 0.010000000000000002,
+        "discount_rate" : 0.12,
+        "terminal_growth" : 0.02,
+        "intrinsic_value_per_share" : 30.534882256854868,
+        "upside_vs_price" : -0.08344942948056822
+      },
+      "base" : {
+        "growth" : 0.05,
+        "discount_rate" : 0.1,
+        "terminal_growth" : 0.03,
+        "intrinsic_value_per_share" : 51.158502983241135,
+        "upside_vs_price" : 0.5355996693153575
+      },
+      "bull" : {
+        "growth" : 0.08,
+        "discount_rate" : 0.09,
+        "terminal_growth" : 0.035,
+        "intrinsic_value_per_share" : 73.7706687586241,
+        "upside_vs_price" : 1.2143379486304697
+      }
+    },
+    "base_fcf_used" : 4.023E9,
+    "fcf_history" : {
+      "2023-05-31" : 4.872E9,
+      "2024-05-31" : 6.617E9,
+      "2025-05-31" : 3.268E9,
+      "2026-05-31" : 2.184E9
+    },
+    "price" : 33.315,
+    "currency" : "USD",
+    "multiples" : {
+      "trailing_pe" : 15.864285,
+      "forward_pe" : 18.964212,
+      "ev_to_ebitda" : 10.845,
+      "price_to_book" : 3.3235233
+    }
+  },
+  "qualitative" : {
+    "moat" : {
+      "rating" : "narrow",
+      "sources_of_moat" : [ "Global brand equity (Nike, Jordan, Converse) with scale. Nike is the largest athletic footwear and apparel seller, with an estimated 27–30% share of athletic footwear against roughly 11–13% for Adidas.", "Scale in marketing and athlete and league endorsements. Endorsement commitments are about $15.5B, which smaller rivals cannot match. The NFL uniform and licensing deal runs through 2038.", "Performance-sport innovation. The Performance portfolio was about $16B in FY26 and grew high single digits in Q1 FY27. Running is gaining share, and Nike says its max-cushioning share nearly tripled.", "North America strength and a broad wholesale and direct footprint, plus first-party consumer data through the Nike app and SNKRS.", "Supply-chain scale, though production is outsourced and concentrated in Vietnam, Indonesia and China." ],
+      "evidence" : "The moat is real but has eroded and consumer switching costs are negligible. Revenue fell from $51.4B in FY24 to $46.4B in FY26. Gross margin dropped from 44.6% to 42.9% and EBIT margin from 12.7% to 8.3%. FCF fell from $6.6B to $2.2B. ROIC is still 18.7% on the company's definition, down from 20.2%. Q1 FY27 revenue fell 4%: Sportswear fell low double digits after Dunk supply was cut nearly 50%, Jordan fell mid-teens, and Greater China fell 26%. On, Hoka, Adidas and New Balance are taking share, and Nike's apparel share fell about 30 bps in 2025. Nike is still far larger than any rival. The analysis rests on single-point figures that are unverified, so I am treating it as narrow and not wide. Sources: https://finance.yahoo.com/markets/stocks/articles/nike-q1-earnings-call-highlights-000223968.html ; https://www.companieshistory.com/nike-swot-analysis/ ; https://www.fool.com/earnings/call-transcripts/2026/10/02/nike-nke-q1-2027-earnings-call-transcript/"
+    },
+    "management" : {
+      "rating" : "average",
+      "capital_allocation" : "Dividends paid of $2.4B in FY26 exceeded FCF of $2.18B. Q1 FY27 FCF was about -$64M, so the payout is not covered by free cash flow in the current trough. Buybacks have been paused since Q1 FY26. The program bought 124.4M shares at an average of $97.57 (about $12.1B) against a current price of about $33, which destroyed value. The balance sheet is adequate: $8.4B of cash and short-term investments, net cash, A+/A2 ratings (both downgraded in 2025), and no credit facility borrowings. CEO Elliott Hill returned in October 2024 and has reorganized the company by sport, rebuilt wholesale relationships and cut inventory. The new 'Pace' program targets about $2.5B of cumulative savings through FY31 against about $1.0B of charges, on top of about $0.3B of FY26 severance. FY27 guidance is for revenue down high single digits, with EBIT down by more than that. Adjusted EPS guidance of $1.15–$1.35 comes from a single secondary source and is unverified. Execution is still unproven: the reset has run through FY27 and the Sportswear and Jordan actions extend beyond it. Sources: https://finance.yahoo.com/markets/stocks/articles/nike-q1-earnings-call-highlights-000223968.html ; https://ca.investing.com/news/company-news/nike-inc-nke-q1-2027-earnings-call-highlights-performance-gains-offset-by-china-reset-and--4863264 ; https://finance.biggo.com/news/US_NKE_2026-10-01 ; https://about.nike.com/en/magazine/elliott-hill-ceo-of-sport-interview",
+      "governance_concerns" : [ "Dual-class structure. Class A stock is held mainly by Swoosh, LLC, the entity co-founder Phil Knight formed in 2015 to hold most of his Class A shares. Class A holders elect their own set of directors. Voting power is concentrated with the founder, which limits Class B shareholders' influence. Nike's proxy says some investors have raised specific concerns about the structure. Proxy: https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000089/nikecourtesypdf2026.pdf", "The proxy says three of the eight Class A nominees are not independent. This is the proxy's own disclosure, so the count is not unverified.", "Nike's prior strategy under CEO John Donahoe (direct-to-consumer push, weakened wholesale ties) is blamed for the current reset. The Donahoe-era strategy led to his abrupt departure in 2024. The board's oversight of that period is a governance question.", "Stock decline of nearly 78% (per WWD) took Nike out of the S&P 100 in September 2026. Shareholders still re-elected all 11 director nominees. Source: https://wwd.com/footwear-news/shoe-industry-news/nike-annual-shareholder-meeting-ceo-elliott-hill-progress-1239201228/", "Stock-based compensation was $715M in FY26, about 23% of net income.", "Hill is a Nike insider of more than 32 years. The new CFO, Dave Denton, is also new in the role. Both are positives for culture but add key-person and groupthink risk. No specific accounting or related-party issues were found in the search results." ]
+    },
+    "industry" : {
+      "growth_outlook" : "Industry growth is moderate. One 2025 source puts global sportswear growth at about 7%, which is unverified. Growth is shifting toward performance running, tennis, golf and football, and away from the lifestyle categories where Nike is shrinking. Nike's own near-term growth is negative: FY27 revenue is guided down high single digits, with Greater China expected to worsen over the rest of the year. Management expects most reset actions to be done by about December 2026. Sportswear and Jordan actions will run longer, and Converse fell 28% in Q1. Long-run Nike growth from this depressed base is possible, but its timing is unknown.",
+      "competitive_intensity" : "High. Consumer switching costs are low and fashion cycles are fast. On and Hoka are taking share in premium running, and Lululemon in women's training and athleisure. Adidas is growing strongly (+14% currency-neutral in Q1 2026) on its terrace-shoe styles. New Balance and Skechers are gaining. Anta competes in China. Tariffs and the concentration of production in Asia add cost pressure. Nike's North American wholesale partners such as Dick's and JD Sports are again important. Sources: https://www.companieshistory.com/adidas-competitors ; https://www.growthnavigate.com/nike-competitors ; https://logos-pres.md/en/news/nike-loses-market-share-and-competitors-gain-ground/",
+      "key_competitors" : [ "Adidas", "On Holding", "Deckers (Hoka)", "New Balance", "Lululemon", "Puma", "Skechers", "Anta Sports", "Under Armour", "Asics" ]
+    },
+    "catalysts" : [ "Completion of the marketplace reset (supply cuts, digital repositioned to full price, markdown liquidation), expected for most segments by about December 2026. Sportswear and Jordan actions will extend beyond FY27.", "Continued share gains in running and performance categories (Vomero, Pegasus Plus, Alphafly 4). Basketball is also growing, with the Caitlin Clark signature launch in about 5,000 doors.", "North America wholesale recovery, with North America revenue up 2% in Q1 FY27.", "Pace cost program: about $2.5B of cumulative savings through FY31, against about $1.0B of charges (about $0.3B in FY27). Savings are stated before reinvestment.", "Gross margin: up 60 bps to 42.8% in Q1 FY27, with a possible tailwind from tariff refunds (about $684M of IEEPA refunds collected after year-end, per the filings analysis).", "Greater China stabilization and the first China-made-for-China collection launching in October 2026. Management says China revenue will worsen before it improves.", "Sports events and league partnerships, including the NFL deal through 2038.", "Resumption of share repurchases (about $5.9B authorized) once FCF recovers. This is unlikely near term.", "Fiscal 2028 reorganization into three geographies (Americas, APGC, AMAYA)." ],
+    "citations" : [ "https://finance.yahoo.com/markets/stocks/articles/nike-q1-earnings-call-highlights-000223968.html", "https://ca.investing.com/news/company-news/nike-inc-nke-q1-2027-earnings-call-highlights-performance-gains-offset-by-china-reset-and--4863264", "https://www.fool.com/earnings/call-transcripts/2026/10/02/nike-nke-q1-2027-earnings-call-transcript/", "https://gloom.sh/stocks/nke/transcripts/q1-2027", "https://finance.biggo.com/news/US_NKE_2026-10-01", "https://www.tradingkey.com/news/transcripts/262197031-tradingkey", "https://www.companieshistory.com/nike-swot-analysis/", "https://www.companieshistory.com/adidas-competitors", "https://www.growthnavigate.com/nike-competitors", "https://logos-pres.md/en/news/nike-loses-market-share-and-competitors-gain-ground/", "https://swotpal.com/blog/nike-swot-analysis-2026", "https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000089/nikecourtesypdf2026.pdf", "https://about.nike.com/en/magazine/elliott-hill-ceo-of-sport-interview", "https://wwd.com/footwear-news/shoe-industry-news/nike-annual-shareholder-meeting-ceo-elliott-hill-progress-1239201228/", "https://en.wikipedia.org/wiki/Elliott_Hill" ]
+  },
+  "skeptic" : {
+    "bear_case" : [ "The cash-flow trend is still falling and the stock isn't priced for that. FCF went from $6.6B in FY24 to $3.3B in FY25 to $2.18B in FY26. Q1 FY27 FCF was about -$64M (OCF $135M less capex $199M). FY27 guidance is for revenue down high single digits, with EBIT down by more than that. Q1 revenue fell only 4%, so the rest of the year has to be worse. The company has not yet reached a trough.", "Dividends are not covered. FY26 dividends of $2,407M exceeded FCF of $2,184M. Q1 dividends were $610M against OCF of $135M. The quarterly dividend works out to about $0.41 a share, or about $1.64 a year. That is 120–140% of the unverified adjusted EPS guidance of $1.15–$1.35, and it is about a 4.9% yield. With buybacks already paused, the next lever is a dividend cut or more debt. A $2.0B current debt maturity is also coming due, and ratings were already cut in 2025.", "Reported earnings quality is weaker than it looks. FY26 included a $986M non-cash IEEPA refund benefit in cost of sales, with $684M still in receivables at year-end. It also included $385M of severance. Receivables rose 26% on flat revenue. Sales-related reserves fell 13% and the returns reserve fell from $1,277M to $1,099M while wholesale grew and the company admits to higher returns and discounts. The inventory reserve fell from $233M to $213M while inventory rose 5% to $7.85B in Q1 as revenue fell 4%. Together these point to under-reserving ahead of more markdowns.", "Reported flat revenue hides a decline. FY26 revenue was down 2% currency-neutral, and FX added about $1.0B to revenue and about $184M to pre-tax income. That tailwind is fading. Digital fell 12% and comparable store sales fell 4%. Greater China fell 26% and Converse fell 28% in Q1. Management says China will worsen before it improves, and Sportswear and Jordan actions run beyond FY27.", "The margin recovery is low quality. Q1 gross margin rose 60 bps, but logistics added 90 bps and FX added 40 bps, while ASP fell 30 bps. Underlying pricing and mix are deteriorating. Restructuring has recurred (FY24 $443M, FY26 $385M, and Pace about $1.0B more), so savings may be a recurring cost and a reinvestment treadmill. Pace's $2.5B of savings over about 5 years is stated before reinvestment. That is roughly $0.5B a year against a $46B revenue base, and it is partly offset by about $1.3B of charges.", "The competitive position is eroding. Switching costs are negligible. On, Hoka, Adidas (+14% currency-neutral), New Balance and Anta are taking share, and Nike's apparel share is down. Wholesale recovery (+9% in Q1) means Nike is re-stocking partners that can send product back. Receivables and returns risk are therefore rising, not falling. Nike's moat looks like a brand cycle problem, not a durable franchise.", "Capital allocation has destroyed value. The program bought 124.4M shares at an average of $97.57 (about $12.1B) against a $33 price. Options are deeply underwater (average strike $96.44), so management will probably re-grant at lower prices. SBC of $715M is about 33% of FCF and 23% of net income, so dilution will return when the stock recovers.", "There are tail risks. The Belgian customs claim has an unestimable loss that could be material, and guarantees rose from about $0.9B to about $1.3B. The EU State Aid case is open, IRS audits of FY2017–2023 are ongoing, and there are securities class actions. The tax rate rose to 22.7% in Q1. Gross unrecognized tax benefits are $953M plus $438M of interest and penalties. Swoosh LLC's control through Class A shares and the CFO turnover add governance risk.", "The multiples are not cheap on a trough-earnings basis. Forward P/E is 18.96x on the data feed's implied EPS of about $1.76. On the unverified guidance of $1.15–$1.35, the P/E is about 25–29x. EV/EBITDA of 10.8x uses EBITDA that may include the tariff refund benefit." ],
+    "assumption_challenges" : [ {
+      "assumption" : "Valuation base FCF of $4.023B (the 'normalized' starting point)",
+      "why_questionable" : "This is exactly the 3-year average of FY24–FY26 FCF ((6.617+3.268+2.184)/3). It is 84% above the latest FCF of $2.184B, and it leans on the FY24 peak of $6.6B that came before the margin collapse. Operating income is already 40% below FY24, and FY27 EBIT is guided down. The filings analysis itself says to treat $2.18B as a floor, yet the valuation uses a base that assumes an instant 84% rebound. Scaling the output roughly linearly, base-case value at the actual $2.18B would be about $28 (about -17% versus $33.3). The bear case would be about $17 (about -50%)."
+    }, {
+      "assumption" : "Bear case is a 1% growth rate with 12% discount rate, giving -8% downside",
+      "why_questionable" : "The bear case still starts from the same inflated $4.0B base. It never tests a scenario with FCF at or below $2.18B, FY27 FCF below FY26, a dividend cut, or China and Converse deterioration. The bear case is therefore not a real bear case, and the 'reliable: true' flag with empty notes understates the model risk."
+    }, {
+      "assumption" : "5% growth from a trough base",
+      "why_questionable" : "There is no evidence of a trough. Q1 FCF was negative, revenue is guided down high single digits, and the CFO and COO are new. FY28 brings a reorganization into three geographies. The positives listed (North America, Pace savings) are partly offset by the negatives in the same list. Base FCF growth is also mixing two things: normalization and growth."
+    }, {
+      "assumption" : "About $684M of IEEPA tariff refunds is a positive for FCF",
+      "why_questionable" : "This is a one-time cash inflow, not a recurring base. It also offset tariff costs already recognized during FY26, so it flatters FY26 earnings while the cost is gone from the base. The 10-K says substantially all of it was received after May 31, yet Q1 OCF was only $135M. If the refund landed in Q1, underlying Q1 operating cash flow was deeply negative, around -$550M. Neither the analysis nor the valuation reconciles this."
+    }, {
+      "assumption" : "FY26 FCF is depressed by one-time working capital and tax items, so it understates normal cash generation",
+      "why_questionable" : "Receivables up 26% on flat revenue and supplier finance of $1.1B (about 31% of payables) cut both ways. Receivable growth may reflect weaker collection or more wholesale credit risk, not timing. Supplier finance already props up payables and could reverse. Tax outflows (transition tax, IRS resolution) were disclosed, but more are likely given the uncertain tax positions. Capex also rose from $430M to $684M, and FY25's low capex flatters that year's base."
+    }, {
+      "assumption" : "Balance sheet is net cash and adequate",
+      "why_questionable" : "Market data shows total debt of $11.1B against cash of $8.4B, a net debt of about $2.8B including leases. Net cash holds only if leases are excluded (about $7.9B debt versus $8.4B cash, a net cash of about $0.5B). Cash is falling (from $9.0B to $8.4B in one quarter), $2.0B is current, and both ratings were downgraded. At a Q1-like burn plus the dividend, this runs down quickly."
+    }, {
+      "assumption" : "Moat rated 'narrow' with ROIC of 18.7% as support",
+      "why_questionable" : "ROIC is company-defined and non-GAAP, and it is held up by an asset-light model and by a numerator that includes the one-off tariff benefit. EBIT margin of 8.3% (down from 12.7%) and a 2-year decline in revenue point to pricing power loss. The qualitative analysis itself admits the moat figures rest on unverified single-point sources. A third of the market-share figures come from low-quality SWOT sites."
+    }, {
+      "assumption" : "Per-share valuation uses the correct share count",
+      "why_questionable" : "The 'shares' field (1.202B) is Class B only. The correct total is about 1.485B. The filings analysis flags this, but the valuation output does not state which count was used. A $51.16 value implies about $76B of equity at 1.485B shares versus about $61.5B at 1.202B shares. If the 1.202B figure leaked into the model, the per-share upside is overstated by about 24%."
+    } ],
+    "inconsistencies_found" : [ "The valuation base FCF ($4.023B) is not the latest FCF ($2.184B), and it is not labelled as a 3-year average in the summary. The filings analysis says to treat $2.18B as a floor, while the model treats $4.0B as the starting point.", "The bear, base and bull scenarios all share the same $4.0B base. Scenario spread therefore comes only from growth and discount rate, so even the bear case implies FCF doubling from the current year to $4.0B-plus.", "The qualitative analysis calls the balance sheet 'net cash', but market data shows total debt of $11.1B versus cash of $8.4B. This is net debt of about $2.8B, or net cash only if operating leases are excluded. The filings data gap notes that the debt figure matches no balance sheet sum.", "The growth rationale counts about $684M of tariff refunds collected after year-end as a positive, but Q1 FY27 OCF was only $135M and FCF about -$64M despite that inflow. The two cannot both support a recovery story.", "Management guidance (revenue down high single digits, EBIT down more) conflicts with a 5% FCF growth assumption from FY26, and with a market-data forward P/E of 18.96x (implied EPS about $1.76). That implied EPS is well above the $1.15–$1.35 guidance quoted in the qualitative analysis.", "The qualitative section says Q1 North America revenue rose 2% and the filings say wholesale rose 9%. That implies NIKE Direct fell sharply, which is not discussed. Meanwhile FY26 North America EBIT +14% includes the tariff refund benefit of $965M, so the underlying North America recovery is overstated.", "The qualitative notes say 'the reset has run through FY27', but earlier text says most actions complete by December 2026 (mid-FY27) and Sportswear and Jordan go beyond. The 'catalyst' of reset completion is therefore partial and its timing is inconsistent.", "The filings analysis states 'FY26 FCF/net income was 70%' but net income includes the non-cash $986M refund benefit. Excluding it, FCF conversion is much higher on lower earnings, and the margin picture is worse. The ratio mixes different quality of earnings.", "The qualitative notes say share repurchases 'destroyed value' at $97.57 versus $33, but still list resumption of buybacks ($5.9B authorized) as a catalyst. It is also described as 'unlikely near term', which makes it a weak catalyst.", "Valuation flag 'reliable: true' with empty notes is not consistent with the data gaps listed (share count error in the shares field, unreconciled debt, FY23 data unbacked by a filing)." ],
+    "severity" : "minor",
+    "severity_reason" : "This is not an accounting-fraud or solvency situation. NIKE has a large brand franchise, an A+/A2 balance sheet, no credit facility borrowings and clean audit opinions. The problems are with the bullish thesis, not a reason to avoid the stock at any price. The valuation upside of +54% rests on a $4.0B base FCF that is 84% above the latest year. At the actual $2.18B FCF, the model implies roughly 17% downside. The uncovered dividend, negative Q1 FCF, falling reserves against rising receivables and inventory, and shrinking share make this a 'show me' name until FCF turns. Those are valuation and timing risks, so I rate the severity as minor."
+  },
+  "recommendation" : "INVEST (long term)",
+  "checks" : {
+    "margin_of_safety_ok" : true,
+    "margin_of_safety_actual" : 0.348788606834067,
+    "bear_not_catastrophic" : true,
+    "debt_ok" : true,
+    "roe_ok" : true,
+    "fcf_conversion" : 0.7027027027027027,
+    "cash_conversion_ok" : true,
+    "skeptic_severity" : "minor",
+    "skeptic_ok" : true,
+    "accounting_red_flags" : 11
+  }
+}

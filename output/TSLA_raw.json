@@ -1,0 +1,400 @@
+{
+  "market_data" : {
+    "ticker" : "TSLA",
+    "company" : "Tesla, Inc.",
+    "currency" : "USD",
+    "price" : 377.89,
+    "shares" : 3.949547394E9,
+    "marketCap" : 1.49249458176E12,
+    "totalDebt" : 1.608E10,
+    "totalCash" : 4.3524001792E10,
+    "trailingPe" : 349.89816,
+    "forwardPe" : 176.19385,
+    "evToEbitda" : 133.601,
+    "priceToBook" : 17.180723,
+    "roe" : 0.046669997,
+    "debtToEquity" : 0.18373,
+    "sector" : "Consumer Cyclical",
+    "industry" : "Auto Manufacturers",
+    "history" : {
+      "capex" : {
+        "2022-12-31" : -7.172E9,
+        "2023-12-31" : -8.899E9,
+        "2024-12-31" : -1.1342E10,
+        "2025-12-31" : -8.527E9
+      },
+      "free_cash_flow" : {
+        "2022-12-31" : 7.552E9,
+        "2023-12-31" : 4.357E9,
+        "2024-12-31" : 3.581E9,
+        "2025-12-31" : 6.22E9
+      },
+      "operating_cash_flow" : {
+        "2022-12-31" : 1.4724E10,
+        "2023-12-31" : 1.3256E10,
+        "2024-12-31" : 1.4923E10,
+        "2025-12-31" : 1.4747E10
+      },
+      "operating_income" : {
+        "2022-12-31" : 1.3832E10,
+        "2023-12-31" : 8.891E9,
+        "2024-12-31" : 7.76E9,
+        "2025-12-31" : 4.849E9
+      },
+      "net_income" : {
+        "2022-12-31" : 1.2583E10,
+        "2023-12-31" : 1.4999E10,
+        "2024-12-31" : 7.13E9,
+        "2025-12-31" : 3.794E9
+      },
+      "revenue" : {
+        "2022-12-31" : 8.1462E10,
+        "2023-12-31" : 9.6773E10,
+        "2024-12-31" : 9.769E10,
+        "2025-12-31" : 9.4827E10
+      }
+    }
+  },
+  "filings" : {
+    "business_summary" : "Tesla, Inc. (Nasdaq: TSLA; Texas-incorporated, HQ Austin) is classified in the market data as Consumer Cyclical / Auto Manufacturers. The 10-Q reports revenue in these lines: Automotive (sales, regulatory credits, leasing), Energy generation and storage, and Services and other. Q2 2026 revenue was $28,236M, of which Automotive was $20,516M, Energy $3,139M and Services/other $4,581M (SEC 10-Q 2026-07-23). FY2025 revenue was $94.827B and operating income $4.849B (MARKET DATA history). XBRL tags in both filings suggest FSD subscriptions, robotaxi and bot deliveries, but the excerpts contain no narrative describing them. The Item 1 business description in the 10-K is cut off, so this summary is limited to the financial statements and market data. Market cap is about $1.49T at $377.89 (MARKET DATA).",
+    "key_figures" : [ {
+      "metric" : "Share price",
+      "value" : "$377.89 (Yahoo page shows $377.86-377.87)",
+      "period" : "Current",
+      "source" : "MARKET DATA; Yahoo Finance - Analysis"
+    }, {
+      "metric" : "Market capitalization",
+      "value" : "$1.4925T",
+      "period" : "Current",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "Shares outstanding",
+      "value" : "3,949,547,394 (cover date July 16, 2026)",
+      "period" : "2026-07-16",
+      "source" : "SEC 10-Q (2026-07-23); MARKET DATA"
+    }, {
+      "metric" : "Shares outstanding (prior cover)",
+      "value" : "3,752,431,984",
+      "period" : "2026-01-23",
+      "source" : "SEC 10-K (2026-01-29)"
+    }, {
+      "metric" : "Trailing P/E / Forward P/E / EV/EBITDA / P/B",
+      "value" : "349.9x / 176.2x / 133.6x / 17.18x",
+      "period" : "Current",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "ROE; Debt/Equity",
+      "value" : "4.67%; 0.18373",
+      "period" : "Current",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "FY revenue",
+      "value" : "$81.462B (2022); $96.773B (2023); $97.690B (2024); $94.827B (2025)",
+      "period" : "FY2022-FY2025",
+      "source" : "MARKET DATA history"
+    }, {
+      "metric" : "FY operating income",
+      "value" : "$13.832B (2022); $8.891B (2023); $7.760B (2024); $4.849B (2025)",
+      "period" : "FY2022-FY2025",
+      "source" : "MARKET DATA history"
+    }, {
+      "metric" : "FY net income",
+      "value" : "$12.583B; $14.999B; $7.130B; $3.794B",
+      "period" : "FY2022-FY2025",
+      "source" : "MARKET DATA history"
+    }, {
+      "metric" : "FY operating cash flow",
+      "value" : "$14.724B; $13.256B; $14.923B; $14.747B",
+      "period" : "FY2022-FY2025",
+      "source" : "MARKET DATA history"
+    }, {
+      "metric" : "FY capex",
+      "value" : "$7.172B; $8.899B; $11.342B; $8.527B",
+      "period" : "FY2022-FY2025",
+      "source" : "MARKET DATA history"
+    }, {
+      "metric" : "FY free cash flow",
+      "value" : "$7.552B; $4.357B; $3.581B; $6.220B",
+      "period" : "FY2022-FY2025",
+      "source" : "MARKET DATA history"
+    }, {
+      "metric" : "Derived: FY2025 operating margin vs FY2022",
+      "value" : "5.1% vs 17.0%",
+      "period" : "FY2025 vs FY2022",
+      "source" : "Derived from MARKET DATA history"
+    }, {
+      "metric" : "Derived: FCF CAGR and revenue CAGR",
+      "value" : "FCF about -6.3%/yr; revenue about +5.2%/yr",
+      "period" : "FY2022-FY2025",
+      "source" : "Derived from MARKET DATA history"
+    }, {
+      "metric" : "Total revenues",
+      "value" : "$28,236M vs $22,496M (+25.5%)",
+      "period" : "Q2 2026 vs Q2 2025",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "metric" : "Total revenues",
+      "value" : "$50,623M vs $41,831M (+21.0%)",
+      "period" : "H1 2026 vs H1 2025",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "metric" : "Gross profit",
+      "value" : "$4,751M (16.8%) vs $3,878M (17.2%)",
+      "period" : "Q2 2026 vs Q2 2025",
+      "source" : "SEC 10-Q (2026-07-23); margins derived"
+    }, {
+      "metric" : "Income from operations",
+      "value" : "$398M (1.4% margin) vs $923M (4.1%)",
+      "period" : "Q2 2026 vs Q2 2025",
+      "source" : "SEC 10-Q (2026-07-23); margins derived"
+    }, {
+      "metric" : "Income from operations",
+      "value" : "$1,339M vs $1,322M",
+      "period" : "H1 2026 vs H1 2025",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "metric" : "R&D and SG&A",
+      "value" : "R&D $2,371M vs $1,589M (+49%); SG&A $1,982M vs $1,366M (+45%)",
+      "period" : "Q2 2026 vs Q2 2025",
+      "source" : "SEC 10-Q (2026-07-23); growth derived"
+    }, {
+      "metric" : "Net income; diluted EPS (GAAP)",
+      "value" : "$1,128M; $0.32 (vs $1,190M; $0.33)",
+      "period" : "Q2 2026 vs Q2 2025",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "metric" : "Net income; diluted EPS (GAAP)",
+      "value" : "$1,619M; $0.45 (vs $1,610M; $0.45)",
+      "period" : "H1 2026 vs H1 2025",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "metric" : "Weighted average shares, basic / diluted",
+      "value" : "3,237M / 3,540M",
+      "period" : "Q2 2026",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "metric" : "Stock-based compensation",
+      "value" : "$1,222M (Q2 2026) vs $692M (Q2 2025); $2,315M (H1 2026) vs $1,354M (H1 2025)",
+      "period" : "Q2 and H1 2026",
+      "source" : "SEC 10-Q (2026-07-23), statement of equity"
+    }, {
+      "metric" : "Automotive regulatory credits",
+      "value" : "$146M vs $439M (Q2); $526M vs $1,034M (H1)",
+      "period" : "Q2 and H1 2026 vs 2025",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "metric" : "Energy segment gross margin (derived)",
+      "value" : "20.4% vs 30.3%",
+      "period" : "Q2 2026 vs Q2 2025",
+      "source" : "Derived from SEC 10-Q (2026-07-23)"
+    }, {
+      "metric" : "Cash and equivalents + short-term investments",
+      "value" : "$15,219M + $28,305M = $43,524M (Dec 2025: $44,059M)",
+      "period" : "2026-06-30",
+      "source" : "SEC 10-Q (2026-07-23); MARKET DATA totalCash matches"
+    }, {
+      "metric" : "Debt and finance leases",
+      "value" : "$1,418M current + $7,924M non-current = $9,342M (Dec 2025: $8,376M)",
+      "period" : "2026-06-30",
+      "source" : "SEC 10-Q (2026-07-23); sum derived"
+    }, {
+      "metric" : "Total debt per market data",
+      "value" : "$16.08B (does not reconcile to the 10-Q balance sheet debt line)",
+      "period" : "Current",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "Total stockholders' equity; total assets",
+      "value" : "$86,858M; $148,524M",
+      "period" : "2026-06-30",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "metric" : "PP&E, net; Other non-current assets",
+      "value" : "$47,255M (Dec 2025: $40,643M); $9,453M (Dec 2025: $5,045M)",
+      "period" : "2026-06-30",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "metric" : "Derived EV and FCF multiples",
+      "value" : "EV about $1.465T (mkt cap + $16.08B debt - $43.524B cash); EV/FY2025 FCF about 235x; FCF yield on market cap about 0.42%",
+      "period" : "Current / FY2025",
+      "source" : "Derived from MARKET DATA"
+    }, {
+      "metric" : "Consensus revenue",
+      "value" : "$106.59B (2026, +12.41%); $120.48B (2027, +13.03%); 40 analysts",
+      "period" : "FY2026E-FY2027E",
+      "source" : "Yahoo Finance - Analysis"
+    }, {
+      "metric" : "Consensus EPS (basis not stated)",
+      "value" : "$1.74 (2026); $2.14 (2027). 90 days ago: $2.11 and $2.56",
+      "period" : "FY2026E-FY2027E",
+      "source" : "Yahoo Finance - Analysis"
+    }, {
+      "metric" : "EPS earnings history on Yahoo",
+      "value" : "Q2 FY26 actual $0.33 vs est. $0.54 (-39.15%); Q1 FY26 actual $0.41 vs est. $0.35",
+      "period" : "Q1-Q2 2026",
+      "source" : "Yahoo Finance - Analysis"
+    } ],
+    "recommended_base_growth_rate" : 0.08,
+    "growth_rationale" : "Low-confidence estimate of 8% annual FCF growth, set between two conflicting signals. Historically FCF fell from $7.552B in 2022 to $6.220B in 2025 (about -6.3%/yr), while operating income fell about 65% and operating cash flow stayed flat at about $14.7B (MARKET DATA history). Capex is also rising: PP&E grew $6.6B in H1 2026 and Other non-current assets grew $4.4B (SEC 10-Q 2026-07-23). Against that, revenue is accelerating, up 21% in H1 2026 and with 12-13% consensus growth for 2026-27 (Yahoo Finance - Analysis). Consensus EPS growth for 2027 is 23%, but 2026 and 2027 EPS estimates were cut by about 16-18% over 90 days (Yahoo Finance - Analysis). Operating margin is only 1.4% in Q2 2026, and SBC exceeds operating income (SEC 10-Q 2026-07-23). I therefore assume only partial conversion of revenue growth into FCF. The H1 2026 cash flow statement is truncated in the material, so there is no current FCF run-rate to anchor this.",
+    "growth_sources" : [ "MARKET DATA history (FCF, OCF, capex, operating income, revenue, FY2022-FY2025)", "SEC 10-Q (2026-07-23): Q2/H1 2026 income statement and balance sheet", "Yahoo Finance - Analysis: consensus revenue and EPS estimates and revisions" ],
+    "stated_risks" : [ "The 10-K excerpt is truncated before Item 1A, so the full risk-factor text is not available. Only the forward-looking-statement language is available: supply chain constraints, competition, future operations and production capacity, projected costs and expected cost reductions, capital adequacy, demand and acceptance for the company's technologies, and growth opportunities (SEC 10-K 2026-01-29; SEC 10-Q 2026-07-23).", "The 10-Q states that actual results may differ materially and refers readers to Item 1A of the FY2025 10-K and other SEC filings (SEC 10-Q 2026-07-23).", "Analyst estimate revisions are skewed downward: 3 down vs 1 up over the last 7 days for the current quarter, and 4 down vs 1 up over 30 days for FY2026 (Yahoo Finance - Analysis). This is market sentiment, not a company-stated risk." ],
+    "accounting_red_flags" : [ {
+      "flag" : "Unexplained share-count jump with minimal recorded proceeds",
+      "evidence" : "Shares outstanding rose from 3,752,431,984 (Jan 23, 2026) to 3,949,547,394 (Jul 16, 2026), about +197M or +5.3%. The equity statement shows 198M shares issued in H1 2026 and 194M in Q2 alone, 'for equity incentive awards and acquisitions', recorded at only $684M (H1) and $323M (Q2). That is under $2 per share against a price of about $378. The excerpt does not explain what was issued or why proceeds were so small.",
+      "source" : "SEC 10-K (2026-01-29); SEC 10-Q (2026-07-23)"
+    }, {
+      "flag" : "Large gap between outstanding shares and weighted-average shares",
+      "evidence" : "Q2 2026 basic weighted average shares are 3,237M and diluted 3,540M, versus 3,949M outstanding (3,755M at Mar 31, 2026). Roughly 700M issued shares are not in basic EPS. The excerpt does not say why (for example, unvested restricted stock). XBRL tags reference CEO restricted stock and performance awards, but their terms are not in the excerpt. Market cap and P/B use 3.95B shares, while GAAP EPS uses about 3.2-3.5B, so per-share valuation is sensitive to the denominator.",
+      "source" : "SEC 10-Q (2026-07-23); MARKET DATA"
+    }, {
+      "flag" : "Pre-tax income depends heavily on non-operating items",
+      "evidence" : "Q2 2026 income from operations was $398M, but pre-tax income was $1,329M. Interest income $422M, interest expense $(81)M and Other income, net $590M add $931M, about 70% of pre-tax income. Other income, net was $55M for H1, which implies about -$535M in Q1 (derived). The composition of 'Other income, net' (for example digital-asset or investment marks) is not disclosed in the excerpt. Digital assets fell from $1,008M to $674M over H1.",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "flag" : "Stock-based compensation exceeds operating profit",
+      "evidence" : "SBC was $1,222M in Q2 2026 against operating income of $398M (3.1x). H1 SBC was $2,315M against operating income of $1,339M (1.7x). SBC rose 77% in Q2 year over year (from $692M).",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "flag" : "Operating expenses growing faster than revenue; margin compression",
+      "evidence" : "Q2 revenue was +25.5% year over year, but R&D was +49% and SG&A +45%. Operating margin fell to 1.4% from 4.1%. FY operating margin fell from 17.0% (2022) to 5.1% (2025).",
+      "source" : "SEC 10-Q (2026-07-23); MARKET DATA history"
+    }, {
+      "flag" : "Declining high-margin credit revenue and falling energy margin",
+      "evidence" : "Regulatory credits were $146M in Q2 2026 vs $439M, and $526M in H1 vs $1,034M. Energy gross margin was about 20.4% vs 30.3% (derived). Services and other gross margin is about 14.1% (derived).",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "flag" : "Big unexplained balance-sheet build-up; possible related-party and AI/space exposure",
+      "evidence" : "In six months, PP&E rose $6.6B (+16%) and Other non-current assets rose $4.4B (+87%, $5,045M to $9,453M). Inventory rose $1.4B, Accounts payable $2.0B (+14.6%) and Accrued liabilities $2.0B (+14.9%). XBRL contexts reference a SpaceX equity investment, a SpaceX March 2026 item, an 'AI hardware company', related-party activity, and a subsequent event with X.AI Holdings Corp. (10-K). The text, amounts and terms are not in the excerpts. The cash flow statement is truncated, so the funding and cash impact cannot be verified.",
+      "source" : "SEC 10-Q (2026-07-23); SEC 10-K (2026-01-29)"
+    }, {
+      "flag" : "Cash cushion shrinking while debt rises",
+      "evidence" : "Cash plus short-term investments fell from $44,059M to $43,524M in H1 2026 despite stock issuance. Debt and finance leases rose from $8,376M to $9,342M. XBRL tags suggest a new warehouse line of credit in Q1 2026; terms are not in the excerpt.",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "flag" : "Net income vs operating income anomaly in FY2023 and weak FY2025 earnings quality",
+      "evidence" : "FY2023 net income ($14.999B) exceeded operating income ($8.891B) by $6.1B, and the cause is not in the material. FY2025 FCF ($6.22B) was 164% of net income ($3.794B), while operating income fell 65% from FY2022 and OCF stayed flat. This suggests cash flow is supported by non-cash charges (SBC, D&A) and working capital. The cash flow statement breakdown is not provided.",
+      "source" : "MARKET DATA history"
+    }, {
+      "flag" : "Settlement credited to equity",
+      "evidence" : "'Shareholder settlement, net of tax' added $89M to APIC in H1 2026 ($27M tax) and $110M in H1 2025, bypassing the income statement. The nature of the settlement is not described in the excerpt.",
+      "source" : "SEC 10-Q (2026-07-23)"
+    }, {
+      "flag" : "Vendor/consensus EPS is on a different basis than GAAP",
+      "evidence" : "Yahoo lists Q1 FY26 actual EPS of $0.41, but implied Q1 GAAP diluted EPS is about $0.13 (H1 $0.45 less Q2 $0.32 from the 10-Q). Consensus 2026 EPS of $1.74 compares with H1 GAAP EPS of $0.45. Forward P/E of 176x (implies EPS of about $2.14, equal to the 2027 estimate) is probably on an adjusted basis, so adjustments such as SBC are not confirmed.",
+      "source" : "Yahoo Finance - Analysis; SEC 10-Q (2026-07-23); MARKET DATA"
+    }, {
+      "flag" : "Market-data debt does not reconcile to the filing",
+      "evidence" : "MARKET DATA totalDebt is $16.08B, while the 10-Q balance sheet shows $9,342M of debt and finance leases. The difference may be operating leases, but that is not confirmed. totalCash of $43.524B does reconcile ($15,219M + $28,305M).",
+      "source" : "MARKET DATA; SEC 10-Q (2026-07-23)"
+    }, {
+      "flag" : "Effective tax rate volatility",
+      "evidence" : "Q2 2026 provision was $201M on $1,329M pre-tax income (15.1%) vs $359M on $1,549M (23.2%) in Q2 2025. The H1 2026 rate was 22.1%. The reason for the Q2 decline is not given in the excerpt.",
+      "source" : "SEC 10-Q (2026-07-23)"
+    } ],
+    "data_gaps" : [ "The 10-K text after the cover, forward-looking statements and index is missing (Item 1 business, Item 1A risk factors, MD&A, notes), so the full list of stated risks is unavailable.", "The 10-Q cash flow statement is truncated, so H1 2026 operating cash flow, capex, FCF, D&A and working-capital changes are unavailable. The latest FCF figure is FY2025 from MARKET DATA.", "No 10-Q notes or MD&A are provided: nature of the 'Other income, net', 'acquisitions' share issuance, the SpaceX/AI-hardware/X.AI items, debt terms and the warehouse line, and the settlement are all undisclosed.", "The reason for the roughly 700M gap between outstanding and weighted-average shares, and the exact share count (basic, diluted, or incl. unvested awards) to use for valuation, is not documented.", "Reconciliation of MARKET DATA totalDebt ($16.08B) to the balance sheet ($9.342B) is not provided.", "Management guidance and segment-level profitability (operating income by segment) are not provided.", "Analyst consensus covers revenue and EPS only. There are no FCF, capex or margin forecasts, and the GAAP/non-GAAP basis of the EPS estimates is not clear on the Yahoo page, which loaded with an 'Oops, something went wrong' message.", "Peer or industry benchmarks are not provided.", "Quarterly FCF history and TTM FCF to mid-2026 are not provided." ]
+  },
+  "valuation" : {
+    "reliable" : true,
+    "notes" : [ ],
+    "scenarios" : {
+      "bear" : {
+        "growth" : 0.04,
+        "discount_rate" : 0.12,
+        "terminal_growth" : 0.02,
+        "intrinsic_value_per_share" : 20.122287098294734,
+        "upside_vs_price" : -0.946750940489839
+      },
+      "base" : {
+        "growth" : 0.08,
+        "discount_rate" : 0.1,
+        "terminal_growth" : 0.03,
+        "intrinsic_value_per_share" : 28.50785648834444,
+        "upside_vs_price" : -0.9245604369304706
+      },
+      "bull" : {
+        "growth" : 0.11,
+        "discount_rate" : 0.09,
+        "terminal_growth" : 0.035,
+        "intrinsic_value_per_share" : 37.68989979174379,
+        "upside_vs_price" : -0.9002622461781371
+      }
+    },
+    "base_fcf_used" : 4.719333333333333E9,
+    "fcf_history" : {
+      "2022-12-31" : 7.552E9,
+      "2023-12-31" : 4.357E9,
+      "2024-12-31" : 3.581E9,
+      "2025-12-31" : 6.22E9
+    },
+    "price" : 377.89,
+    "currency" : "USD",
+    "multiples" : {
+      "trailing_pe" : 349.89816,
+      "forward_pe" : 176.19385,
+      "ev_to_ebitda" : 133.601,
+      "price_to_book" : 17.180723
+    }
+  },
+  "qualitative" : {
+    "moat" : {
+      "rating" : "narrow",
+      "sources_of_moat" : [ "Supercharger network and NACS standard: a proprietary network that is now partly monetized through other OEMs' drivers. Its advantage is eroding as rival networks scale.", "Fleet data and software: FSD is a data flywheel with a reported ~12B cumulative supervised miles and ~1.48M paid FSD subscriptions. It could become a strong moat, but unsupervised autonomy at scale is unproven.", "Vertical integration (in-house battery cells, chips, giga-casting, direct sales): a real cost and iteration advantage, but recent margin compression suggests it does not guarantee pricing power.", "Brand: strong with EV-native buyers, but CEO-related reputational headwinds in Western markets.", "Energy storage scale (Megapack): growing quickly, but margins are volatile." ],
+      "evidence" : "Mixed. Automotive gross margin ex-credits fell to 16.3% and energy gross margin dropped sharply in Q2 2026. Filings-based figures show FY2025 operating margin of 5.1% vs 17.0% in FY2022, which is hard to square with a wide moat. Management cited warranty charges, tariff changes, pricing and higher financing costs. Model 3 and Model Y made up 97% of deliveries. Tesla's share of global EV sales is only about 12-13%, and BYD delivered 557,090 BEVs in Q2 2026 against Tesla's 480,126. FSD paid subscriptions are up 56% YoY, and 55% of North American deliveries came with a subscription. Services and Other margin hit a record 14.1%. Third-party moat ratings differ: GuruFocus scores it 7/10, 'entry-level wide', while another analysis calls the tech lead 'defensible but narrowing' and pricing power 'materially diminished'. I rate it narrow because the autonomy and robotics moat is not yet evidenced in returns on capital. ROE is 4.67% per the market data."
+    },
+    "management" : {
+      "rating" : "average",
+      "capital_allocation" : "Tesla is in a heavy investment cycle. CapEx is expected to exceed $25B in 2026 and rise further over the next few years. Q2 free cash flow was about -$1.1B as capex doubled sequentially. Management is lining up up to $30B of borrowing capacity. The CEO's stated approach is to spend as quickly as possible without being wasteful. Spending targets Robotaxi, Optimus, semiconductors, AI compute and a lithium/cathode refinery. These bets are large, long-dated and have no disclosed return hurdles, so ROIC is unknown. Per the filings summary, Q2 R&D rose ~49% and SG&A ~45%, and Q2 stock-based compensation was $1.22B vs $0.69B a year earlier. Share count rose from ~3.75B (Jan 2026 cover) to ~3.95B (Jul 2026 cover); the cause is not confirmed in my sources. There are no buybacks or dividends. The balance sheet is strong at $43.5B of cash and investments against ~$9.3B of debt per the 10-Q. Operating execution is mixed: record deliveries and a record order backlog, but EPS missed and margins fell. <cite index=\"4-4\">Q2 revenue was $28.24B vs a $25.55B estimate, and adjusted EPS of $0.33 missed the $0.49 forecast.</cite> Overall, management is ambitious and operationally capable, but capital discipline is unproven.",
+      "governance_concerns" : [ "Board independence: <cite index=\"19-13\">A Delaware judge found the board too close to Musk to negotiate his pay at arm's length.</cite> <cite index=\"19-14\">Electrek says that board dynamic has not changed.</cite>", "Pay package: <cite index=\"19-1\">On April 21, 2026 the board signed an implementation agreement to deliver the 2018 award and revoked the $29B interim package.</cite> <cite index=\"19-2\">Tesla registered 304M shares for it, now worth over $114B.</cite> <cite index=\"19-10\">$9.97B of unrecognized stock-based compensation expense will hit earnings.</cite>", "<cite index=\"22-5\">In Nov 2025 the board approved a ~$1T equity-based package for Musk.</cite> <cite index=\"22-6\">It would raise his ownership to ~29%.</cite> <cite index=\"24-1\">ISS advised shareholders to reject it.</cite> <cite index=\"24-4\">ISS said it has no explicit requirement to keep Musk's time and attention on Tesla.</cite>", "Key-person and distraction risk: <cite index=\"24-3\">Musk oversees five companies: Tesla, SpaceX, xAI, Neuralink and the Boring Company.</cite>", "Dilution and rising SBC will weigh on per-share returns.", "Brand and political risk linked to the CEO." ]
+    },
+    "industry" : {
+      "growth_outlook" : "Global EV demand is still growing, but at a slower pace. <cite index=\"29-1\">The IEA says 2025 electric car sales grew 20% to exceed 20M.</cite> <cite index=\"32-1\">EV Volumes estimates 2026 global EV sales of 22.7M, up only modestly from 2025.</cite> <cite index=\"30-4\">Counterpoint says BEVs were 19% of Q2 2026 passenger car sales, with BEV sales up 24% YoY.</cite> Tesla's analyst-consensus revenue growth is ~12-13% a year for 2026-27 (Yahoo, per the filings summary). The larger upside is the option value in robotaxi, FSD subscriptions, energy storage and humanoid robots, none of which is proven at scale. The US faces a headwind from expired federal EV tax credits.",
+      "competitive_intensity" : "High and rising. Chinese overcapacity is being exported; <cite index=\"31-2\">China produces well over half of the world's EVs and batteries.</cite> <cite index=\"32-10\">Competition is shifting from rapid expansion to aggressive share capture.</cite> BYD led annual BEV sales in 2025 (<cite index=\"32-8\">2.26M vs Tesla's 1.64M</cite>). Legacy OEMs have adopted the Tesla charging connector, which weakens Tesla's charging edge. In autonomy, Tesla faces Waymo and others.",
+      "key_competitors" : [ "BYD", "Geely/Zeekr", "Volkswagen Group", "GM", "Ford", "Toyota", "Hyundai/Kia", "Xiaomi", "XPeng", "NIO", "Li Auto", "Rivian", "Lucid", "Waymo (robotaxi)", "Baidu Apollo Go (robotaxi; not confirmed in sources)" ]
+    },
+    "catalysts" : [ "Unsupervised Robotaxi expansion: <cite index=\"6-3\">operations in seven metros</cite>, with Phoenix and Las Vegas next.", "Cybercab production ramp: <cite index=\"3-3\">production began in Q2 2026.</cite>", "Optimus production start; <cite index=\"7-7\">management said it will soon start Optimus production.</cite>", "FSD approvals in Europe: <cite index=\"6-3\">approvals so far in the Netherlands, Lithuania, Estonia, Denmark and Belgium</cite>; FSD V14-Lite rollout to AI3 vehicles.", "Energy storage: <cite index=\"9-4\">13.5 GWh deployed in Q2, up 41% YoY</cite>; Megapack 3 production soon.", "Margin recovery or further decline in auto gross margin, warranty and tariff effects; trajectory of free cash flow given capex above $25B.", "Next earnings report (Q3 2026) and delivery data.", "Resolution of CEO pay and governance issues, and dilution from the Musk award." ],
+    "citations" : [ "https://www.marketbeat.com/instant-alerts/tesla-q2-earnings-call-highlights-2026-07-22/", "https://www.gurufocus.com/news/8973433/tesla-inc-tsla-q2-2026-earnings-call-highlights-record-deliveries-and-strategic-investments-amid-margin-pressures", "https://www.notateslaapp.com/news/4481/summary-of-teslas-2026-q2-earnings-call-cybercab-fsd-ai4-and-more", "https://www.theglobeandmail.com/investing/markets/stocks/TSLA/pressreleases/3667292/tesla-tsla-q2-2026-earnings-call-transcript/", "https://www.fool.com/earnings/call-transcripts/2026/08/05/tesla-tsla-q2-2026-earnings-call-transcript/", "https://www.investing.com/news/transcripts/earnings-call-transcript-tesla-q2-2026-revenue-beats-eps-misses-as-stock-falls-93CH-4807216", "https://www.shacknews.com/article/150109/tesla-tsla-q2-2026-earnings-call-transcript", "https://finance.yahoo.com/quote/TSLA/earnings/TSLA-Q2-2026-earnings_call-653184.html", "https://www.gurufocus.com/term/moat-score/TSLA", "https://norrisai.us/analysis/tsla-q2-2026/", "https://electrek.co/2026/04/27/tesla-files-deliver-elon-musk-56-billion-pay-package-shares/", "https://fortune.com/2025/10/17/tesla-shareholders-should-reject-musks-1-trillion-pay-package-iss-advises", "https://poole.ncsu.edu/thought-leadership/article/inside-the-implications-of-musks-massive-deal/", "https://www.iea.org/reports/global-ev-outlook-2026/trends-in-electric-cars", "https://electriccarsreport.com/2026/07/byd-overtakes-tesla-again-in-q2-2026-ev-sales-as-global-gap-widens/", "https://www.technobaboy.com/2026/08/28/tesla-byd-geely-lead-global-ev-market-in-q2-2026/", "https://recharged.com/articles/electric-car-market-trends-2026/", "https://www.sec.gov/Archives/edgar/data/0001318605/000162828026049213/exhibit991.htm" ]
+  },
+  "skeptic" : {
+    "bear_case" : [ "Valuation needs a business that doesn't exist yet. At $377.89 the market cap is about $1.49T. That is about 350x trailing GAAP EPS, 134x EV/EBITDA and 235x FY2025 FCF, for a 0.42% FCF yield. ROE is 4.7%. The computed DCF gives $20–38 per share, which is 90–95% below the price. Even if that DCF is too harsh, the price rests entirely on robotaxi, Optimus and FSD cash flows that have no disclosed return hurdles.", "Negative operating leverage. Q2 2026 revenue rose 26% sequentially (Q1 was about $22.4B), but operating income fell from about $941M in Q1 to $398M, a margin of 1.4% against about 4.2%. Q2 R&D rose 49% and SG&A 45% year over year, against revenue growth of 25.5%. Operating margin has fallen from 17.0% in FY2022 to 5.1% in FY2025. Tesla can't turn growth into profit at the moment.", "Earnings quality is poor. Of Q2 pre-tax income of $1,329M, $931M (about 70%) came from interest income and 'Other income, net'. The composition of Other income, net is undisclosed. It was about -$535M in Q1 and +$590M in Q2, so it swings widely. The Q2 tax rate was 15.1% against 23.2% a year earlier, which also flatters EPS. Stock-based compensation (SBC) of $1,222M is 3.1x operating income. Regulatory credits, which are almost pure margin, fell to $146M from $439M.", "Free cash flow is about to turn sharply negative. Capex is guided above $25B for 2026, against $8.5B in 2025. Q2 FCF was about -$1.1B, and management is lining up up to $30B of borrowing capacity. FY2025 FCF of $6.2B was only 6.6% of revenue and was helped by non-cash charges and working capital. At a $25B+ capex run-rate, 2026 FCF is likely deeply negative, and the $43.5B cash pile funds it with no buyback or dividend.", "Dilution is heavy and growing. Shares outstanding rose 5.3% in six months, from 3.75B to 3.95B. About 194M shares were issued in Q2 for only $323M. SBC is up 77% year over year. $9.97B of SBC is still unrecognized. The board registered 304M shares for the 2018 award, now worth over $114B. A roughly $1T Musk package is also approved and ISS advised voting against it. Per-share value is diluted by management compensation, and this is not a one-off.", "Governance and related-party risk. A Delaware court found the board too close to Musk. Musk runs five companies. Filings reference SpaceX, an 'AI hardware company' and X.AI related-party items. Other non-current assets rose 87% in six months to $9.5B, with no disclosed terms. Tesla is incorporated in Texas, which I believe makes shareholder litigation harder. The 'shareholder settlement' credited straight to equity shows past governance failures.", "Competitive and moat erosion. BYD sold 557k BEVs in Q2 2026 against Tesla's 480k. Model 3 and Model Y are 97% of deliveries. Tesla's global EV share is about 12–13%. Automotive gross margin ex-credits is 16.3%. Energy gross margin fell from about 30% to about 20%. Services and other earns 14%. The NACS connector standard has opened the Supercharger network to rivals. Chinese overcapacity is being exported, and US EV tax credits have expired.", "Autonomy is unproven. Unsupervised robotaxi runs in about seven metros against Waymo's lead. Cybercab has only just started production, and Optimus has not begun. FSD has roughly 1.48M paid subscriptions, but the revenue contribution is not disclosed. Any serious safety incident or regulatory setback would hit the highest-multiple part of the thesis.", "Estimates are falling. FY2026 and FY2027 EPS were cut about 16–18% over 90 days. Revisions over 30 days ran 4 down to 1 up. Q2 EPS missed consensus by 18% to 39%, depending on the source." ],
+    "assumption_challenges" : [ {
+      "assumption" : "Base FCF of $4.72B (the 3-year average of 2023–2025) growing 8% a year",
+      "why_questionable" : "The base is stale and the sign is likely wrong for 2026. Capex guidance above $25B, against $8.5B in 2025, and Q2 FCF of -$1.1B point to negative near-term FCF. The 8% growth rate is just a midpoint between a -6.3% FCF CAGR and 21% H1 revenue growth, so it has no analytical basis. The DCF would also not capture any option value from autonomy, so both its level and its conclusion are fragile. 'Reliable: true' with empty notes overstates its quality."
+    }, {
+      "assumption" : "Revenue is accelerating, which supports FCF growth",
+      "why_questionable" : "H1 2026 growth of 21% comes off a weak 2025 base (FY2025 revenue was -2.9%). Consensus of $106.59B for 2026 implies H2 revenue of about $56.0B, only about +5.6% against H2 2025 (about $53.0B). That is a sharp deceleration, or the consensus is stale. Q2 sequential growth of 26% also did not lift operating income."
+    }, {
+      "assumption" : "Share count of 3.95B is the right denominator, and the share jump is 'unexplained'",
+      "why_questionable" : "GAAP EPS uses 3.24B basic and 3.54B diluted shares. Market cap and P/B use 3.95B, so multiples differ by up to 22% depending on the denominator. The accounting section calls the issuance unexplained, while the qualitative section notes 304M shares registered for the 2018 award and a roughly $1T award. These probably explain much of the jump, and it was never linked. If that's right, the dilution is a CEO compensation transfer, not an acquisition or incentive issue. The analysis needs a clear view of vested versus unvested shares."
+    }, {
+      "assumption" : "Yahoo/consensus EPS and 'adjusted EPS' are comparable to GAAP",
+      "why_questionable" : "Q2 non-GAAP EPS of $0.33 is almost the same as GAAP $0.32 despite $1.2B of SBC. Q1 non-GAAP $0.41 compares with an implied GAAP EPS of about $0.13. The adjustments are inconsistent between quarters. The Q2 consensus estimate is also $0.49 in one source and $0.54 in another. The forward P/E of 176x equals the FY2027 estimate ($2.14), not FY2026 ($1.74, which implies about 217x). The 'forward' multiple is therefore flattering."
+    }, {
+      "assumption" : "Strong balance sheet ($43.5B cash against about $9.3B debt) gives a safety cushion",
+      "why_questionable" : "Cash fell $0.5B in H1 despite equity issuance, debt is rising, and a warehouse line plus up to $30B of new borrowing is planned. At $25B+ annual capex and negative FCF, the cushion is about 1.5–2 years of spend. The market-data debt of $16.08B is also inconsistent with the 10-Q's $9.34B, so the leverage picture is unclear."
+    }, {
+      "assumption" : "'Record deliveries' and a record backlog show operating strength",
+      "why_questionable" : "Q2 deliveries of 480k are below the third-quarter 2025 level of about 497k, which I recall as the record. 'Record' therefore needs qualification, for example a Q2 record. A backlog doesn't help if margins are falling and BYD outsells Tesla. The revenue gain also seems to come mainly from volume, with weak pricing and margin."
+    }, {
+      "assumption" : "Narrow moat from fleet data, Superchargers and vertical integration",
+      "why_questionable" : "No returns evidence supports it: ROE is 4.7%, operating margin is 1.4–5% and gross margin ex-credits is 16%. Supercharger access has been opened to rivals. The data flywheel is not monetized beyond about 1.5M subscriptions. Some third-party sources rate the moat wider, but I would call it 'narrow and narrowing' until returns show it."
+    }, {
+      "assumption" : "Other income and interest income are sustainable support for earnings",
+      "why_questionable" : "Other income, net of +$590M in Q2 and about -$535M in Q1 is volatile and unexplained. Digital assets fell from $1,008M to $674M in H1, so the Q2 gain isn't from them. Interest income of $422M falls as cash is spent on capex."
+    } ],
+    "inconsistencies_found" : [ "The DCF base FCF ($4.72B, 3-year average) conflicts with the qualitative finding that 2026 capex exceeds $25B and Q2 FCF was -$1.1B. The valuation is not forward-looking.", "The growth rationale says revenue is 'accelerating' (+21% H1), but the cited consensus implies only about +5.6% in H2 2026. The 12–13% annual consensus growth contradicts the claim of acceleration.", "The filings summary leaves the share jump 'unexplained', while the governance section notes 304M shares registered for the 2018 award and a roughly $1T package. The two sections don't cross-reference.", "Q2 EPS consensus is $0.54 (Yahoo) in one place and $0.49 in another, a 39% versus 18% miss. Q1 'actual' EPS of $0.41 on Yahoo against about $0.13 implied GAAP shows different bases that the analysis mixes.", "The forward P/E of 176.2x implies EPS of about $2.14, the 2027 estimate, while the consensus FY2026 EPS is $1.74 (about 217x). 'Forward' is not defined consistently.", "Market-data total debt of $16.08B does not reconcile to the 10-Q's $9.34B. Debt/equity of 0.18373 fits about $16B (about 0.184 x $86.9B equity), so the leverage metric includes leases while the cash-versus-debt discussion uses the 10-Q figure.", "'Record deliveries' (Q2 480k) sits oddly with the prior 497k peak and with BYD's 557k. The 'record' claim isn't defined.", "Other income, net is +$590M in Q2 while digital assets fell by $334M in H1. The gain's source is unidentified, and the filings summary's own suggestion (digital-asset marks) can't explain it.", "Management is described as 'average' with 'unproven capital discipline', yet the thesis relies on a $25B+ spend program with no stated ROIC. The moat is rated 'narrow' while the same section lists a 'defensible but narrowing' tech lead and 'materially diminished' pricing power.", "The base-case 8% growth is labeled low-confidence and 'between' signals, yet it drives a computed 'reliable' valuation. Bear, base and bull intrinsic values ($20–38) are all about 90%+ below price, so the model can't produce a bullish outcome. The scenario range is too narrow to represent the real uncertainty about autonomy payoffs.", "Data gaps: the H1 cash flow statement, 10-K risk factors and MD&A are missing. The core FCF, capex and margin conclusions rest on third-party summaries (earnings-call write-ups) and not on audited filings." ],
+    "severity" : "major",
+    "severity_reason" : "I found no evidence of fraud or a restatement, and the arithmetic in the filings summary checks out. The case for avoiding the stock is structural. Free cash flow is moving from slightly positive to deeply negative on $25B+ capex. Operating margin is 1.4% and SBC is 3x operating income. Dilution of about 5% in six months is tied to CEO awards, with related-party AI and space exposure and weak board independence. The price embeds about 350x earnings for options that haven't produced returns. The valuation inputs are also stale and inconsistent, and the DCF can't support a bullish view. I rate this major on governance, dilution and capital-allocation risk that valuation doesn't fix."
+  },
+  "recommendation" : "AVOID",
+  "checks" : {
+    "margin_of_safety_ok" : false,
+    "margin_of_safety_actual" : -12.255644111808333,
+    "bear_not_catastrophic" : false,
+    "debt_ok" : true,
+    "roe_ok" : false,
+    "fcf_conversion" : 1.6394306800210858,
+    "cash_conversion_ok" : true,
+    "skeptic_severity" : "major",
+    "skeptic_ok" : false,
+    "accounting_red_flags" : 13
+  }
+}

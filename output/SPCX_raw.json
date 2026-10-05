@@ -1,0 +1,343 @@
+{
+  "market_data" : {
+    "ticker" : "SPCX",
+    "company" : "Space Exploration Technologies Corp.",
+    "currency" : "USD",
+    "price" : 167.38,
+    "shares" : 7.696293669E9,
+    "marketCap" : 2.20636643328E12,
+    "totalDebt" : 3.9708000256E10,
+    "totalCash" : 1.0000900096E11,
+    "trailingPe" : null,
+    "forwardPe" : 86.92672,
+    "evToEbitda" : 700.433,
+    "priceToBook" : 17.334301,
+    "roe" : null,
+    "debtToEquity" : 0.31211,
+    "sector" : "Industrials",
+    "industry" : "Aerospace & Defense",
+    "history" : {
+      "net_income" : {
+        "2023-12-31" : -4.628E9,
+        "2024-12-31" : 7.91E8,
+        "2025-12-31" : -4.937E9
+      },
+      "capex" : {
+        "2023-12-31" : -4.415E9,
+        "2024-12-31" : -1.1163E10,
+        "2025-12-31" : -2.0906E10
+      },
+      "revenue" : {
+        "2023-12-31" : 1.0387E10,
+        "2024-12-31" : 1.4015E10,
+        "2025-12-31" : 1.8674E10
+      },
+      "operating_income" : {
+        "2023-12-31" : 5.07E8,
+        "2024-12-31" : 7.42E8,
+        "2025-12-31" : -2.064E9
+      },
+      "free_cash_flow" : {
+        "2023-12-31" : 1.05E8,
+        "2024-12-31" : -5.387E9,
+        "2025-12-31" : -1.4121E10
+      },
+      "operating_cash_flow" : {
+        "2023-12-31" : 4.52E9,
+        "2024-12-31" : 5.776E9,
+        "2025-12-31" : 6.785E9
+      }
+    }
+  },
+  "filings" : {
+    "business_summary" : "Space Exploration Technologies Corp. (SPCX) has three segments (SEC 10-Q, Note 1). Space makes and launches reusable rockets, including Starship R&D. Connectivity runs the Starlink broadband and mobile network. AI covers Grok, the X platform, AI solutions and AI compute infrastructure; xAI/X were folded in via the common-control xAI Merger on 2026-02-02. The company IPO'd in June 2026, selling 638.9M Class A shares at $135.00 for net proceeds of $85,675M, and issued $25,000M of SpaceX Notes (SEC 10-Q, Notes 1 and 9). Q2 2026 revenue was $7,814M versus $4,071M a year earlier, up 91.9%. Connectivity contributed $4,291M and AI $2,561M, of which AI infrastructure grew by about $1,600M from new cloud-services contracts. Space contributed $962M (SEC 10-Q, Note 3 and MD&A). Consolidated GAAP operating loss was $(143)M in Q2 and $(2,086)M in H1. Capex is very heavy at $28,476M in H1 2026, mostly AI data centers, so free cash flow is deeply negative (SEC 10-Q, cash flow statement; MARKET DATA history). The stock trades at $167.38 with a market cap of about $2.2T (MARKET DATA).",
+    "key_figures" : [ {
+      "metric" : "Revenue",
+      "value" : "$7,814M (Q2 2026) vs $4,071M (Q2 2025), +91.9%",
+      "period" : "Q2 2026",
+      "source" : "SEC 10-Q (2026-08-04), Statement of Operations / MD&A"
+    }, {
+      "metric" : "Revenue",
+      "value" : "$12,508M vs $8,138M, +53.7%",
+      "period" : "H1 2026",
+      "source" : "SEC 10-Q (2026-08-04)"
+    }, {
+      "metric" : "Revenue by segment, Q2 2026",
+      "value" : "Space $962M; Connectivity $4,291M; AI $2,561M",
+      "period" : "Q2 2026",
+      "source" : "SEC 10-Q (2026-08-04), Note 3 / Note 18"
+    }, {
+      "metric" : "AI infrastructure revenue increase",
+      "value" : "~$1,600M increase in both Q2 and H1; AI Solutions & Infrastructure revenue $2,194M in Q2 vs $311M",
+      "period" : "Q2 2026",
+      "source" : "SEC 10-Q (2026-08-04), MD&A AI segment / Note 3"
+    }, {
+      "metric" : "Loss from operations",
+      "value" : "$(143)M Q2; $(2,086)M H1 (H1 2025: $(943)M)",
+      "period" : "Q2 / H1 2026",
+      "source" : "SEC 10-Q (2026-08-04)"
+    }, {
+      "metric" : "Segment operating income (loss), H1 2026",
+      "value" : "Space $(1,204)M; Connectivity $2,844M; AI $(3,726)M",
+      "period" : "H1 2026",
+      "source" : "SEC 10-Q (2026-08-04), Note 18"
+    }, {
+      "metric" : "Net loss",
+      "value" : "$(541)M Q2; $(4,817)M H1; net loss per share $(0.09) Q2 and $(1.12) H1",
+      "period" : "Q2 / H1 2026",
+      "source" : "SEC 10-Q (2026-08-04)"
+    }, {
+      "metric" : "Adjusted EBITDA (non-GAAP)",
+      "value" : "$3,538M Q2; $4,665M H1; excludes D&A $5,290M and SBC $1,470M for H1",
+      "period" : "Q2 / H1 2026",
+      "source" : "SEC 10-Q (2026-08-04), Non-GAAP reconciliation"
+    }, {
+      "metric" : "Operating cash flow",
+      "value" : "$3,466M (H1 2025: $351M)",
+      "period" : "H1 2026",
+      "source" : "SEC 10-Q (2026-08-04), Cash flow statement"
+    }, {
+      "metric" : "Purchases of PP&E (capex)",
+      "value" : "$28,476M (H1 2025: $6,965M); AI segment $23,551M",
+      "period" : "H1 2026",
+      "source" : "SEC 10-Q (2026-08-04), Cash flow statement / Note 18"
+    }, {
+      "metric" : "Free cash flow (computed: OCF minus PP&E purchases)",
+      "value" : "$(25,010)M, before $1,195M product rebates and excluding $3,921M of PP&E financed by other financings",
+      "period" : "H1 2026",
+      "source" : "Computed from SEC 10-Q (2026-08-04) cash flow statement"
+    }, {
+      "metric" : "Free cash flow history",
+      "value" : "2023: $105M; 2024: $(5,387)M; 2025: $(14,121)M",
+      "period" : "FY2023-FY2025",
+      "source" : "MARKET DATA history"
+    }, {
+      "metric" : "Revenue history",
+      "value" : "2023: $10,387M; 2024: $14,015M; 2025: $18,674M",
+      "period" : "FY2023-FY2025",
+      "source" : "MARKET DATA history"
+    }, {
+      "metric" : "Net income history",
+      "value" : "2023: $(4,628)M; 2024: $791M; 2025: $(4,937)M",
+      "period" : "FY2023-FY2025",
+      "source" : "MARKET DATA history"
+    }, {
+      "metric" : "Capex history",
+      "value" : "2023: $4,415M; 2024: $11,163M; 2025: $20,906M",
+      "period" : "FY2023-FY2025",
+      "source" : "MARKET DATA history"
+    }, {
+      "metric" : "Cash and marketable securities",
+      "value" : "$93,522M cash and equivalents + $6,487M marketable securities = $100,009M; matches MARKET DATA totalCash $100,009M",
+      "period" : "As of 2026-06-30",
+      "source" : "SEC 10-Q (2026-08-04), Balance Sheet; MARKET DATA"
+    }, {
+      "metric" : "Debt",
+      "value" : "Principal $38,433M; total debt and finance leases carrying value $39,364M ($2,525M current + $36,839M long-term). MARKET DATA totalDebt is $39,708M, which does not reconcile exactly.",
+      "period" : "As of 2026-06-30",
+      "source" : "SEC 10-Q (2026-08-04), Note 9; MARKET DATA"
+    }, {
+      "metric" : "Total shareholders' equity",
+      "value" : "$127,224M (vs $2,573M at 2025-12-31), mainly from IPO and preferred conversion",
+      "period" : "As of 2026-06-30",
+      "source" : "SEC 10-Q (2026-08-04), Balance Sheet"
+    }, {
+      "metric" : "Shares outstanding",
+      "value" : "7,696,293,669 Class A + 5,485,486,276 Class B = ~13,181.8M total (as of 2026-07-28). MARKET DATA 'shares' field of 7.696B is Class A only.",
+      "period" : "2026-07-28",
+      "source" : "SEC 10-Q (2026-08-04) cover; MARKET DATA"
+    }, {
+      "metric" : "Market cap / valuation",
+      "value" : "Price $167.38; market cap $2,206.4B (equals price x ~13.18B total shares); P/B 17.33; forward P/E 86.93; EV/EBITDA 700.4; trailing P/E null",
+      "period" : "Current",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "Price-to-sales (computed)",
+      "value" : "~96x on trailing-twelve-month revenue of ~$23,044M ($18,674M FY2025 + $12,508M H1 2026 - $8,138M H1 2025)",
+      "period" : "TTM to 2026-06-30",
+      "source" : "Computed from MARKET DATA and SEC 10-Q (2026-08-04)"
+    }, {
+      "metric" : "IPO",
+      "value" : "638.9M Class A shares at $135.00; net proceeds $85,675M after $575M of costs. Current price is $167.38, about 24% above the IPO price (computed).",
+      "period" : "June 2026",
+      "source" : "SEC 10-Q (2026-08-04), Note 1; MARKET DATA"
+    }, {
+      "metric" : "Backlog",
+      "value" : "$47,461M, of which $14,286M is deferred revenue; ~56% recognized within one year",
+      "period" : "As of 2026-06-30",
+      "source" : "SEC 10-Q (2026-08-04), Note 3"
+    }, {
+      "metric" : "Starlink subscribers / ARPU",
+      "value" : "12.0M subscribers (6.0M a year earlier); ARPU $66/month vs $85",
+      "period" : "Q2 2026",
+      "source" : "SEC 10-Q (2026-08-04), Key Business Metrics"
+    }, {
+      "metric" : "AI nameplate compute draw",
+      "value" : "1.4 GW vs 0.4 GW a year earlier",
+      "period" : "As of 2026-06-30",
+      "source" : "SEC 10-Q (2026-08-04)"
+    }, {
+      "metric" : "Non-cancelable unconditional obligations",
+      "value" : "$27,955M, of which $22,244M falls in 2027",
+      "period" : "As of 2026-06-30",
+      "source" : "SEC 10-Q (2026-08-04), Note 16"
+    }, {
+      "metric" : "Related-party (Valor) debt from failed sale-leasebacks",
+      "value" : "$2,039M current + $11,290M long-term = $13,329M (vs $4,507M at 2025-12-31); related interest expense $513M in H1",
+      "period" : "As of 2026-06-30",
+      "source" : "SEC 10-Q (2026-08-04), Notes 9 and 17"
+    }, {
+      "metric" : "Analyst revenue consensus",
+      "value" : "FY2026 $44.68B (21 analysts); FY2027 $113.5B (22 analysts; range $59.42B-$189.46B)",
+      "period" : "FY2026-FY2027E",
+      "source" : "Yahoo Finance - Analysis"
+    }, {
+      "metric" : "Analyst EPS consensus",
+      "value" : "FY2026 $0.07; FY2027 $1.94 (range $(0.68) to $3.19)",
+      "period" : "FY2026-FY2027E",
+      "source" : "Yahoo Finance - Analysis"
+    }, {
+      "metric" : "Litigation accrual",
+      "value" : "$354M accrued for probable and estimable losses",
+      "period" : "As of 2026-06-30",
+      "source" : "SEC 10-Q (2026-08-04), Note 16"
+    } ],
+    "recommended_base_growth_rate" : null,
+    "growth_rationale" : "No defensible annual FCF growth rate can be set. FCF is negative and worsening: $(5,387)M in 2024, $(14,121)M in 2025 (MARKET DATA) and about $(25,010)M in H1 2026 alone (computed from the SEC 10-Q). Percentage growth off a negative base is not meaningful, and capex is rising faster than operating cash flow (H1 2026 capex $28,476M vs OCF $3,466M). Revenue growth is strong, but it is partly one-time-step: Q2 AI revenue includes ~$1,600M of new AI infrastructure cloud revenue, and those contracts can be terminated on 90 days' notice after the ramp period (SEC 10-Q, Item 1A). Sell-side consensus implies revenue of $44.68B in 2026 and $113.5B in 2027 (+154%) with 2027 EPS of $1.94 (Yahoo Finance - Analysis). That is a revenue/EPS forecast, not an FCF forecast, and it has a very wide range (revenue $59.42B-$189.46B). Management gives no FCF or capex guidance in the provided documents, and it says it can reduce or reallocate data-center capex (SEC 10-Q, Liquidity). A DCF would need an explicit capex normalization and margin path, which the material does not provide, so the answer is null rather than a guess.",
+    "growth_sources" : [ "MARKET DATA history (free_cash_flow, capex, operating_cash_flow, revenue)", "SEC 10-Q (2026-08-04): cash flow statement, MD&A, Item 1A, Liquidity", "Yahoo Finance - Analysis: revenue and EPS consensus estimates (not FCF estimates)" ],
+    "stated_risks" : [ "AI infrastructure and data-center risk: revenue depends on continued AI adoption; a significant portion of AI infrastructure revenue is concentrated in a small number of customers; cloud agreements can be terminated by either party on 90 days' notice after the initial ramp; exposure to power, construction, supply-chain, permit and equipment constraints (SEC 10-Q, Item 1A).", "Customer concentration: Customer A was 18.3% of Q2 2026 revenue (all three segments) and Customer B 19.5% (AI segment) (SEC 10-Q, Note 3).", "Sustained operating losses and cash burn: H1 2026 loss from operations of $(2,086)M and net loss of $(4,817)M; AI segment operating loss of $(3,726)M; full valuation allowance on U.S. deferred tax assets (SEC 10-Q, Statement of Operations, Note 15, Note 18).", "Leverage and financing: $38,433M of debt principal, $13,329M of it related-party failed sale-leaseback debt; the credit facility had a technical default in February 2026 that was waived in March 2026; Spectrum cash payments to EchoStar will need cash or new financing (SEC 10-Q, Notes 9 and 17; MD&A).", "Large commitments: $27,955M of non-cancelable obligations, $22,244M of them in 2027; the Spectrum Transaction totals ~$19.6B including ~261.8M Class A shares at a fixed $42.40 per share (SEC 10-Q, Note 16 and MD&A).", "Connectivity pricing pressure: Starlink ARPU fell 22.4% in Q2 on international expansion and lower-priced plans (SEC 10-Q, MD&A Connectivity).", "Space segment softness: H1 Space revenue fell 1.9%; mass to orbit fell from 652 to 485 metric tons in Q2; Falcon launches fell from 45 to 37 (SEC 10-Q, MD&A and Key Business Metrics).", "Advertising decline: advertising revenue fell $59M in Q2 and $160M in H1 because of the transition to a new ad platform (SEC 10-Q, MD&A AI).", "Litigation and regulatory: Grok image-generation class actions and the Baltimore case; a EUR 120M EC DSA fine under appeal; a $105M jury verdict plus $67M prejudgment interest in Vidstream (on appeal); Clean Air Act suit over the COLOSSUS II turbines; privacy class actions. Only $354M is accrued, and other losses are not estimable (SEC 10-Q, Note 16).", "Integration and deal risk: the Cursor Merger (implied equity value $60B, to be paid in Class A stock) is subject to regulatory approvals and is expected to close in Q3 2026; the Mesh Optical merger closed on 2026-07-06 (SEC 10-Q, Note 20).", "Dilution: 1,331M performance/market-condition awards were outstanding but not yet met, in addition to 564M anti-dilutive SBC securities; the Spectrum equity and Cursor consideration are further share issuances (SEC 10-Q, Notes 13 and 20; MD&A).", "Market and valuation risk: the stock trades at ~96x TTM sales, 17.3x book and a forward P/E of 86.9 (MARKET DATA; computed). Lock-up expirations and Rule 10b5-1 plans exist, including up to 225.9M shares for Valor Entities (SEC 10-Q, Item 5)." ],
+    "accounting_red_flags" : [ {
+      "flag" : "Large related-party financing recorded as debt through failed sale-leasebacks",
+      "evidence" : "AI infrastructure hardware sale-leasebacks with Valor (whose CEO, Antonio Gracias, is a company director) failed sale-leaseback accounting and are carried as debt: $13,329M at 2026-06-30 vs $4,507M at 2025-12-31. Interest expense on these was $327M in Q2 and $513M in H1. The related assets sit in PP&E, and $3,921M of PP&E purchases were financed by other financings (non-cash). Reported cash capex therefore understates total asset additions.",
+      "source" : "SEC 10-Q (2026-08-04), Notes 9, 17 and cash flow supplemental disclosures"
+    }, {
+      "flag" : "Internal contradiction on debt maturities",
+      "evidence" : "The MD&A says 'no material debt principal payments are due until July 15, 2031', but the Note 9 maturity table shows $944M for the remainder of 2026, $2,402M in 2027, $2,867M in 2028, $3,422M in 2029 and $3,597M in 2030. Current debt is $2,525M.",
+      "source" : "SEC 10-Q (2026-08-04), MD&A Debt Agreements vs Note 9"
+    }, {
+      "flag" : "Inconsistent disclosure of SpaceX Notes redemption spread",
+      "evidence" : "Note 9 states a spread of 20 to 30 basis points; MD&A states 'between 0.002 and 0.003 basis points'. This points to a drafting or control error in a newly public filer.",
+      "source" : "SEC 10-Q (2026-08-04), Note 9 vs MD&A Debt Agreements"
+    }, {
+      "flag" : "Covenant technical default and waiver",
+      "evidence" : "The company had a technical default under the SpaceX Credit Facility when it acquired xAI on 2026-02-02 because of subsidiary-level debt assumed. A waiver was obtained on 2026-03-02, and the debt was then refinanced via the bridge loan.",
+      "source" : "SEC 10-Q (2026-08-04), Note 9 Covenants"
+    }, {
+      "flag" : "Significant debt-extinguishment costs and high-cost legacy debt",
+      "evidence" : "Loss on debt extinguishment was $1,545M in H1 (cash flow statement; $1,526M + $18M in Note 9) and prepayment penalties were $425M + $221M + $518M = $1,164M (Note 9), versus $1,153M paid per the cash flow statement ($11M unexplained difference). Refinanced instruments carried rates of 9.50% and 12.50%. These costs drive Other expense of $(1,962)M in H1 and are excluded from Adjusted EBITDA.",
+      "source" : "SEC 10-Q (2026-08-04), Note 9 and cash flow statement"
+    }, {
+      "flag" : "Judgmental allocation of AI compute costs between cost of revenue and R&D",
+      "evidence" : "The MD&A attributes the increase in AI cost of revenue to 'more compute costs being allocated to cost of revenue as our AI infrastructure revenue increased'. Much of AI infrastructure and cloud computing cost sits in R&D ($4,557M in H1 for AI segment vs cost of revenue $1,562M). The split affects reported gross margin and the apparent profitability of AI infrastructure revenue; the allocation methodology is not disclosed.",
+      "source" : "SEC 10-Q (2026-08-04), MD&A AI segment, Note 18"
+    }, {
+      "flag" : "Revenue quality: new, concentrated, cancellable AI cloud revenue recognized on a ramp pattern",
+      "evidence" : "AI infrastructure revenue rose by ~$1,600M in one quarter after cloud services began. Customer B was 19.5% of Q2 revenue (~$1.5B, computed). Contracts are fixed monthly fees recognized 'using a pattern that aligns with phased capacity availability during any ramp period' and are terminable on 90 days' notice after the ramp. A concurrent Cursor compute agreement and acquisition option (initial fair value of zero; $60B implied equity value, paid in SPCX stock) creates potential circularity, though the 10-Q says the net amount for Q2 was 'not material'.",
+      "source" : "SEC 10-Q (2026-08-04), Note 2, Note 3, Note 20, Item 1A"
+    }, {
+      "flag" : "Non-GAAP Adjusted EBITDA excludes major recurring costs",
+      "evidence" : "Q2 Adjusted EBITDA of $3,538M compares with a GAAP operating loss of $(143)M. The gap is D&A of $2,848M plus SBC of $831M and restructuring of $2M. For H1 the exclusions are D&A of $5,290M and SBC of $1,470M. Capex runs far above Adjusted EBITDA. MARKET DATA EV/EBITDA of 700x implies a much lower EBITDA (~$3.1B, computed) than the company's Adjusted EBITDA run-rate; the basis is not disclosed.",
+      "source" : "SEC 10-Q (2026-08-04), Non-GAAP reconciliation; MARKET DATA"
+    }, {
+      "flag" : "Free cash flow presentation may understate true investment",
+      "evidence" : "Cash purchases of PP&E ($28,476M) exclude $5,513M of PP&E in accrued expenses and accounts payable and $3,921M financed through other financings. Investing activities also include $1,195M of 'proceeds from product rebates', which effectively reduces net investment, and capitalized interest was only $20M against CIP of $12,554M.",
+      "source" : "SEC 10-Q (2026-08-04), cash flow statement and Note 5"
+    }, {
+      "flag" : "Operating cash flow trend between market-data history and the 10-Q is hard to reconcile",
+      "evidence" : "MARKET DATA shows FY2025 operating cash flow of $6,785M, while the 10-Q shows H1 2025 OCF of only $351M, implying H2 2025 of ~$6,434M (computed) with no explanation. H1 2026 OCF of $3,466M benefited from deferred revenue of +$2,169M. It is unclear whether the MARKET DATA history is recast for the common-control xAI merger.",
+      "source" : "MARKET DATA history; SEC 10-Q (2026-08-04), cash flow statement"
+    }, {
+      "flag" : "Spectrum acquisition equity priced far below market",
+      "evidence" : "~261.8M Class A shares are to be issued at a fixed $42.40 (about $11.1B) against a current price of $167.38, implying ~$43.8B of market value (computed). The measurement and recognition basis at closing is not explained, and total cash and equity consideration is described as ~$19.6B. Cash 'loans' to the Trust that are never expected to be repaid are carried as prepaid assets ($856M).",
+      "source" : "SEC 10-Q (2026-08-04), MD&A Spectrum Transaction and Note 6; MARKET DATA"
+    }, {
+      "flag" : "Large unvested performance awards not in diluted share count",
+      "evidence" : "1,331M share-based awards subject to performance and market conditions (not yet met) are excluded from EPS (about 10% of ~13.18B shares, computed). 564M other potentially dilutive securities are excluded as anti-dilutive. A $671M deemed dividend from preferred stock repurchases increased the H1 loss attributable to common holders.",
+      "source" : "SEC 10-Q (2026-08-04), Notes 13 and 14"
+    }, {
+      "flag" : "Goodwill concentrated in a loss-making segment",
+      "evidence" : "$11,130M of the $11,645M goodwill sits in the AI segment, which had an H1 operating loss of $(3,726)M. No impairment was recorded (Impairment line was zero in H1 2026). Goodwill was down $166M on currency translation.",
+      "source" : "SEC 10-Q (2026-08-04), Note 6 and Note 18"
+    }, {
+      "flag" : "Mismatch between market-data share count and market cap",
+      "evidence" : "MARKET DATA shares of 7.696B equals Class A only, but marketCap of $2.206T equals price x ~13.18B total shares (Class A + Class B). Per-share metrics computed off the 'shares' field would be overstated by ~71% (computed).",
+      "source" : "MARKET DATA; SEC 10-Q (2026-08-04) cover page"
+    }, {
+      "flag" : "Minor equity and cash-flow tie-out differences",
+      "evidence" : "Share-based compensation is $1,570M in the equity statement versus $1,470M expense in the cash flow statement plus $110M capitalized ($1,580M, a $10M difference). MARKET DATA totalDebt of $39,708M differs from the 10-Q debt of $39,364M carrying value or $39,512M principal.",
+      "source" : "SEC 10-Q (2026-08-04), equity statement and cash flow statement; MARKET DATA"
+    }, {
+      "flag" : "Control and governance: dual-class structure and related-party dealings",
+      "evidence" : "Class B carries 10 votes per share (5,485M Class B ≈ 54.9B votes vs 7.7B Class A votes, ~88% of votes, computed). Related-party transactions include Valor ($13.3B of debt) and Tesla Megapack purchases ($295M in Q2). Holders of Class B are not identified in the provided material.",
+      "source" : "SEC 10-Q (2026-08-04), cover page, Note 12, Note 17"
+    } ],
+    "data_gaps" : [ "Free cash flow forecast, capex guidance and margin targets: none provided; recommended_base_growth_rate is therefore null.", "Prospectus (Rule 424(b)(4)) and FY2025 audited annual statements, referenced for risk factors, critical accounting estimates and policies, are not provided.", "Whether MARKET DATA history (2023-2025) is recast for the common-control xAI and X mergers is not stated; 2024 net income of +$791M cannot be reconciled with the provided material.", "Basis for MARKET DATA evToEbitda of 700.433 (implied EBITDA ~$3.1B, computed) and the origin of MARKET DATA totalDebt of $39,708M are not given.", "Identity of Customer A and Customer B, and the Class B holders, is not disclosed in the 10-Q.", "Cost-allocation methodology between cost of revenue and R&D for AI compute costs is not disclosed; segment gross margin cannot be assessed.", "Expected total and timing of AI data-center capex beyond 2026 is not provided; only $27,955M of non-cancelable commitments is shown, mostly 2027.", "Yahoo Finance 'Year Ago Sales' shows '--' for 2026 and $44.68B for 2027, which looks like a data quirk; the Q1 FY26 revenue figure there is also blank. Yahoo's price of $167.20 (intraday) differs slightly from MARKET DATA's $167.38.", "Trailing P/E and ROE are null in MARKET DATA (consistent with net losses).", "Q3 2026 results, the Cursor Merger closing terms and the final accounting for the Spectrum Acquisition are not available." ]
+  },
+  "valuation" : {
+    "reliable" : false,
+    "notes" : [ "Average FCF <= 0: DCF not meaningful (also true for banks/insurers - use P/B & ROE instead)." ],
+    "scenarios" : { },
+    "base_fcf_used" : -6.467666666666667E9,
+    "fcf_history" : {
+      "2023-12-31" : 1.05E8,
+      "2024-12-31" : -5.387E9,
+      "2025-12-31" : -1.4121E10
+    }
+  },
+  "qualitative" : {
+    "moat" : {
+      "rating" : "wide",
+      "sources_of_moat" : [ "Vertical integration of launch and satellites: SpaceX launches Starlink on its own Falcon 9 rockets, and Starship is meant to cut costs further. Rivals such as Amazon must buy launches from third parties.", "Scale and first-mover lead in LEO broadband: 12.0M Starlink subscribers, about double a year earlier, and 170 markets.", "Cost and cadence advantage in launch: 78 launches and 1,041 tons to orbit in H1 2026.", "Regulatory and spectrum position, including EchoStar spectrum and active engagement in FCC proceedings.", "Enterprise and government demand: enterprise/government revenue of $1.8B, up 108% YoY. Backlog is $47.5B.", "Capital access: about $100B of cash and securities after the IPO and a $25B bond issue, which few rivals can match." ],
+      "evidence" : "The moat is strongest in Space and Connectivity, and it is weaker and unproven in AI. Connectivity revenue was $4.3B in Q2 2026 (+66% YoY). Connectivity operating income was $1.7B (+79% YoY). Connectivity revenue rose to $4.3B, up 66% year over year, with income from operations up 79% to $1.7B. One comparison table shows Starlink with about 11,150 active satellites against about 399 for Amazon Leo, though that table comes from a secondary website. SpaceX controls its own launch capability, which dramatically cuts deployment costs and removes third-party scheduling dependencies. The AI segment is a different story. It is largely resold Nvidia-based compute under cloud-services contracts, which is a commodity-like business with no clear structural advantage. Musk said SpaceX plans to build its AI data centers exclusively using Nvidia chips. Starlink ARPU fell to $66 from $85 a year earlier (SEC 10-Q), which suggests mix dilution or pricing pressure as the base grows. Amazon Leo is still small, but it is a well-funded entrant. Overall I rate the moat wide, driven by Space and Connectivity. The AI segment and the roughly 96x trailing price-to-sales valuation are not covered by that moat.",
+      "additional_note" : "Moat rating applies to the Space and Connectivity segments."
+    },
+    "management" : {
+      "rating" : "average",
+      "capital_allocation" : "Execution and engineering are very strong. Capital allocation is aggressive and carries a lot of risk. H1 2026 capex was $28.5B, mostly for AI data centers, and free cash flow was about $(25.0)B (SEC 10-Q). Q2 capex alone was $18.4B, with $15.8B of it in AI. The CFO said capex stays near $18.4B for two more quarters, and described AI compute capital as having a sub-one-year payback, almost like a COGS item. Management targets a $100B annualized revenue run-rate by December 2026 and $1T of revenue by 2030. Those targets are unproven. The company merged xAI and X in on a common-control basis. It is also pursuing a Cursor acquisition (the Q2 call included questions on the combined product road map). Cash is $100B after the IPO, and there is $27.96B of unconditional purchase obligations, $22.2B of it due in 2027. The Q2 GAAP operating loss was $(143)M, and adjusted EBITDA excludes $5.3B of D&A and $1.5B of SBC in H1. Returns on the AI spend are unproven and there is no track record of returning capital. I rate management average. The operating record is strong, but capital allocation and governance are concentrated and have little outside check.",
+      "governance_concerns" : [ "Dual-class structure: Class B has 10 votes per share. Musk has about 85% of the voting power with about 42% of the equity, and there is no sunset provision.", "Musk can only be removed as CEO, CTO and chairman by a vote of Class B holders, which he controls, and he can appoint a majority of the board.", "Mandatory binding arbitration for shareholder disputes, a waiver of jury trials, and a ban on class actions.", "Texas incorporation, with a 3% ownership threshold (about $52.5B) to file derivative suits, which limits shareholder litigation.", "Related-party and conflict-of-interest risks with Musk's other companies (Tesla, xAI/X history). The S-1 discloses these, and the merger with xAI was a common-control deal, so there was no independent price discovery.", "A compensation package that grants Musk up to 1B additional shares if the market cap reaches $7.5T and Mars milestones are met.", "Institutional investors (CalPERS, NY Comptroller, CII) have objected publicly. Key-person risk is very high." ]
+    },
+    "industry" : {
+      "growth_outlook" : "Strong. Starlink subscribers doubled to 12M year over year, and net adds were a record 1.7M in Q2. Demand is also growing in aviation, enterprise and government, and a direct-to-cell build-out is planned using the EchoStar spectrum. Launch demand is rising, and AI compute demand is very strong. Management expects to end 2026 with over 2GW of compute and to approach 10GW by the end of 2027. Backlog is $47.5B, and about 56% of it should be recognized within a year. Starship V3 progress, including two successful flights, could lower costs further. Human spaceflight readiness is targeted for end-2027. The AI cloud segment depends on a capital-intensive hyperscaler-style cycle and could see overbuild risk.",
+      "competitive_intensity" : "Moderate in launch and LEO broadband, where SpaceX is far ahead of rivals. High in AI compute and models, where hyperscalers and well-funded labs compete and SpaceX has no durable advantage. In satellite broadband the main challengers are Amazon Leo (Kuiper), Eutelsat OneWeb, Telesat Lightspeed and Chinese constellations. For launch, the competitors are ULA, Blue Origin, Rocket Lab and Chinese providers. Amazon, Blue Origin and others are investing heavily to catch up.",
+      "key_competitors" : [ "Amazon Leo (Project Kuiper)", "Blue Origin", "United Launch Alliance", "Eutelsat OneWeb", "Telesat Lightspeed", "Rocket Lab", "China's SpaceSail and other Chinese constellations and launchers", "Hyperscalers: AWS, Microsoft Azure, Google Cloud, Oracle, CoreWeave", "AI labs: OpenAI, Anthropic, Google DeepMind" ]
+    },
+    "catalysts" : [ "Starship Flight 14 is expected to deploy real Starlink V3 satellites into operational orbit, with a possible ship catch and rapid-reuse progress.", "$6.7B of additional contracted AI cloud revenue begins ramping in October 2026.", "Management's $100B annualized revenue run-rate target by December 2026.", "Compute capacity above 2GW by end-2026, approaching 10GW by end-2027.", "Terrestrial and direct-to-cell build-out using the EchoStar spectrum.", "The Cursor acquisition closing and its product integration.", "Starlink subscriber growth and ARPU stabilization. ARPU was flat at $66 sequentially.", "Index inclusion flows and lockup expirations, which could create volatility.", "Q3 2026 earnings, with a focus on capex, free cash flow and AI margins." ],
+    "citations" : [ "https://finance.yahoo.com/markets/stocks/articles/space-exploration-technologies-corp-spcx-050338024.html", "https://www.investing.com/news/transcripts/earnings-call-transcript-spacex-beats-revenue-estimates-in-q2-2026-shares-swing-93CH-4836052", "https://www.marketbeat.com/earnings/reports/2026-8-4-spacex-stock/", "https://www.cnbc.com/2026/08/04/spacex-spcx-earnings-live-updates-q2-2026.html", "https://www.fool.com/earnings/call-transcripts/2026/08/11/spacex-spcx-q2-2026-earnings-call-transcript/", "https://www.theglobeandmail.com/investing/markets/markets-news/Motley%20Fool/3793491/spacex-spcx-q2-2026-earnings-call-transcript/", "https://www.nextgcomm.com/spacex-q2-earnings/", "https://orbitalradar.com/satellite-internet/starlink-vs-kuiper", "https://www.zerohedge.com/technology/spacex-builds-regulatory-moat-around-it-starlink-empire", "https://www.morningstar.com/stocks/spacex-ipo-investors-long-list-unfriendly-shareholder-policies", "https://www.esgdive.com/news/institutional-investors-spacex-ipo-governance-concerns-share-structure-board-composition/822254/", "https://www.mondaq.com/unitedstates/shareholders/1816168/spacex-ipo-governance-why-elon-musks-control-could-become-a-bigger-investor-issue", "https://tradersunion.com/news/financial-news/show/2130816-spacex-ipo-governance-shareholder-risk/", "https://www.softwareseni.com/spacex-ipo-governance-red-flags/", "https://corpgov.law.harvard.edu/2026/05/19/top-ipo-weak-governance/", "SEC 10-Q filed 2026-08-04 (per the filings analysis summary provided)" ]
+  },
+  "skeptic" : {
+    "bear_case" : [ "The cash burn is far larger than the valuation work shows. H1 2026 capex was $28.5B against operating cash flow of $3.5B. Q2 capex alone was $18.4B, and the CFO guided to roughly that level for two more quarters. That puts 2026 capex near $65B and 2026 FCF near -$50B or worse. Against that, Q2 Adjusted EBITDA was $3.5B and the GAAP operating loss was $(143)M. The $100B cash pile is not a safety net. Roughly 18 to 24 months of burn, $22.2B of 2027 purchase obligations, about $3.3B of debt amortization in 2026-27 and the cash leg of the EchoStar spectrum deal (about $8.5B) all draw on it.", "The AI build-out plan does not fit the funding. The company targets over 2GW by end-2026 and about 10GW by end-2027, up from 1.4GW today. H1 AI capex of $23.6B bought roughly 1GW of year-over-year nameplate growth. Adding about 8GW in 2027 at a similar cost per GW implies well over $100B of 2027 AI capex, not the roughly $74B annualized run-rate the CFO described. Either the 10GW target is unreachable or a large raise of debt or equity is coming. Related-party sale-leaseback debt has already tripled in six months, from $4.5B to $13.3B. Expect more of this, plus dilution.", "The claim that AI compute pays back in under a year is contradicted by the filings. AI infrastructure and solutions revenue was $2.2B in Q2, or about $8.8B annualized. That is on 1.4GW, and some of that compute is consumed internally by Grok. Against about $20B or more of capex per GW, the implied payback is multi-year. The AI segment lost $(3.7)B at the operating line in H1, and $11.1B of goodwill sits in it with no impairment recorded.", "The Q2 growth headline of +91.9% is mostly one step-up. AI infrastructure revenue rose by about $1.6B in one quarter. Q1 2026 revenue was about $4.69B against about $4.07B a year earlier (computed from H1 less Q2), which is only about +15%. Excluding the $1.6B step, Q2 growth is about +52%. Starlink ARPU fell 22% to $66, and H1 Space revenue fell 1.9% with fewer Falcon launches (45 to 37) and less mass to orbit. The core moat businesses are not accelerating. The acceleration comes from cancellable, concentrated AI cloud contracts.", "Revenue quality is poor and may be circular. Customer B was 19.5% of Q2 revenue, about $1.5B, which is nearly the whole $1.6B AI infrastructure step-up. Customer A was 18.3%, so two customers make up about 38% of revenue. Cloud contracts can be terminated on 90 days' notice after the ramp. Revenue is recognized on a ramp-aligned pattern. A concurrent Cursor compute agreement and acquisition option was valued at zero, and Cursor is to be bought for $60B of SPCX stock. SpaceX is therefore selling compute to a company it is paying in its own highly valued shares. The 'not material' net effect in Q2 does not rule out growing circularity.", "The valuation leaves no margin of safety. At $2.2T the stock trades at about 96x TTM sales, 17x book and 87x forward EPS. Even on FY2027 consensus revenue of $113.5B (which implies +154% growth) it is about 19x sales. That consensus has a wide range ($59B to $189B). Backlog of $47.5B, with about 56% recognized within a year, covers only about a quarter of 2027 consensus revenue. A DCF cannot be built because FCF is negative and worsening. The price therefore rests entirely on terminal-state assumptions: $100B run-rate by December 2026, $1T by 2030, and Starship cost curves.", "Governance gives public holders no recourse. Class B has 10 votes per share and about 88% of the votes. There is no sunset, Musk can only be removed by Class B holders, and disputes go to binding arbitration with a class-action ban. Texas incorporation and a 3% ownership threshold for derivative suits block shareholder litigation. Related-party exposure includes Valor (a director's firm, $13.3B of debt), Tesla and the xAI/X common-control merger, which had no arm's-length price. The management package is large (up to 1B extra shares) and 1,331M performance awards sit outside diluted EPS.", "Supply of stock is about to rise. The IPO was priced at $135 and the stock is about 24% above it. Lock-up expirations and 10b5-1 plans are pending, including up to 225.9M shares for Valor entities. The Spectrum deal adds about 262M shares, the Cursor deal about 360M shares at the current price, and SBC runs at $1.5B in H1. There are further dilution pressures from a likely financing need to fund the AI build-out.", "Reporting quality is weak for a newly public $2T company. Debt-maturity and redemption-spread disclosures are internally contradictory. There was a covenant technical default in February 2026, a waiver in March, and then $1.5B of debt-extinguishment losses on 9.5% to 12.5% legacy debt. The split of AI compute costs between cost of revenue and R&D is judgmental and undisclosed, so AI gross margin cannot be verified. Cash capex excludes $5.5B in accruals and $3.9M... of PP&E financed non-cash ($3.9B), so true investment is higher than reported." ],
+    "assumption_challenges" : [ {
+      "assumption" : "Moat is 'wide' (Space and Connectivity).",
+      "why_questionable" : "Space lost $(1.2)B at the operating line in H1 and its revenue fell 1.9%. Launch cadence fell in Q2. Connectivity earned $2.8B in H1, so the two moat segments together earned only about $1.6B, against $28B of capex. Starlink ARPU fell 22% in a year, which is pricing pressure, not pricing power. The moat rating also does not cover the segment where nearly all the capital is going (AI), so it does not support a $2.2T valuation."
+    }, {
+      "assumption" : "Management is 'average' with strong execution.",
+      "why_questionable" : "The record is operational. Capital allocation is the main issue: AI capex far exceeds EBITDA, the plan of 8GW added in 2027 is not funded by the stated capex run-rate, and there is a pattern of related-party failed sale-leaseback debt. There was a covenant default within weeks of the xAI merger. Targets ($100B run-rate by December 2026, $1T by 2030) are unproven. Ratings that blend engineering excellence with capital discipline overstate quality. Control by one person with no outside check argues for below average."
+    }, {
+      "assumption" : "AI compute capital has a sub-one-year payback (CFO).",
+      "why_questionable" : "Reported numbers do not support it. Q2 AI infrastructure revenue annualizes to about $8.8B on 1.4GW, and the segment lost $3.7B in H1. Even the newly contracted $6.7B ramping in October is small against $18.4B of capex per quarter. The claim is management's own framing and the analysis repeats it without testing it."
+    }, {
+      "assumption" : "The $100B cash balance provides ample liquidity.",
+      "why_questionable" : "Most of it is IPO and bond proceeds that are already being spent. Burn of about $18B per quarter of capex, $22.2B of 2027 commitments, debt amortization, spectrum cash and a possible Cursor cash component point to a funding need within about 6 to 8 quarters, before the 10GW target. Management says data-center capex can be cut, but that would undermine the revenue targets that the valuation depends on."
+    }, {
+      "assumption" : "Backlog of $47.5B and $6.7B of contracted AI cloud revenue provide visibility.",
+      "why_questionable" : "AI cloud contracts can be terminated on 90 days' notice after the ramp, and revenue is concentrated in a few customers. Backlog of this kind is closer to an option than a commitment. About 44% of backlog is recognized after one year, and the near-term portion covers only a fraction of consensus 2027 revenue."
+    }, {
+      "assumption" : "Sell-side FY2027 consensus (revenue $113.5B, EPS $1.94) is a usable anchor.",
+      "why_questionable" : "It implies H2 2026 revenue of about $32B against H1 of $12.5B, which is a doubling per quarter. It has a wide range ($59B to $189B), and it is a revenue and EPS view with no FCF or capex input. A $2.2T cap capitalizes 2027 EPS at 86x, even assuming the targets are met. Analyst estimates after a hot IPO tend to be biased upward."
+    }, {
+      "assumption" : "Base FCF of -$6.5B (three-year average) used by the valuation code.",
+      "why_questionable" : "It averages in the 2023 positive FCF and understates the current run-rate by an order of magnitude. H1 2026 FCF was about -$25B and the 2026 run-rate is about -$50B or worse. Using a stale average makes the burn look smaller than it is. The MARKET DATA history may also not be recast for the xAI/X common-control merger, so the 2023-25 series may not be comparable with 2026."
+    }, {
+      "assumption" : "Operating leverage will appear as revenue scales (Q2 operating loss narrowed to $(143)M).",
+      "why_questionable" : "The Q2 improvement coincides with new AI revenue that still has ramp-based recognition and uncertain cost allocation. Compute costs are allocated between cost of revenue and R&D at management's discretion. D&A is already $2.8B per quarter and will grow rapidly with $18B per quarter of capex, which will push GAAP margins down even if EBITDA grows."
+    } ],
+    "inconsistencies_found" : [ "Market cap versus share count: MARKET DATA 'shares' of 7.696B is Class A only, but the $2.206T market cap equals price times about 13.18B total shares. Any per-share metric based on the 'shares' field is overstated by about 71%. Class A alone would imply about $1.29T.", "Debt principal is stated two ways: $38,433M in the key-figures table and $39,512M in the red-flag section, against $39,364M carrying value and MARKET DATA's $39,708M. The totals do not reconcile.", "10-Q internal contradiction: MD&A says no material debt principal is due until July 2031, but the Note 9 maturity table shows $944M in the remainder of 2026, $2.4B in 2027, $2.9B in 2028, $3.4B in 2029 and $3.6B in 2030.", "SpaceX Notes redemption spread is 20 to 30 bps in Note 9 and '0.002 to 0.003 basis points' in MD&A, which is a drafting or control error.", "Customer B is described as 19.5% of Q2 revenue (about $1.5B) in the red flags, but as 19.5% of the AI segment in the risk list. Those are very different: about $1.5B versus about $0.5B. Customer B is possibly the same counterparty that drives the roughly $1.6B AI infrastructure step-up.", "Voting power is given as about 85% for Musk (with 42% of equity) in governance notes, while the filings calculation gives Class B at about 88% of votes. Class B holders are 'not identified' in the filings analysis, yet 42% of equity is attributed to Musk. Class B is 41.6% of shares outstanding, so the two statements may be consistent only if Musk holds all Class B.", "The 3% derivative-suit threshold is quoted as about $52.5B. Three percent of the current $2.2T cap is about $66B. $52.5B corresponds to a lower, IPO-era valuation of about $1.75T, so the figure is stale.", "A 10GW target by end-2027 is inconsistent with capex held near $18.4B per quarter. H1 AI capex of $23.6B added roughly 1GW of year-over-year nameplate capacity, so 8GW of additions needs several times the guided spend.", "Payback claim (sub-one-year) conflicts with AI segment H1 operating loss of $(3.7)B and with revenue per GW versus capex per GW.", "The moat is rated 'wide' on the basis of launch cadence (78 launches in H1), but the 10-Q shows Q2 Falcon launches down (45 to 37), mass to orbit down (652 to 485 tons), and Space revenue down 1.9% in H1. The ARPU 'stabilization' catalyst is already in the Q2 figures (flat at $66).", "Operating cash flow history: FY2025 OCF of $6,785M in MARKET DATA against H1 2025 OCF of $351M in the 10-Q implies H2 2025 OCF of about $6.4B with no explanation. H1 2026 OCF of $3.5B includes a $2.2B deferred-revenue benefit. Whether the history is recast for xAI/X is unknown.", "The 2023 net loss was $(4.6)B against operating income of +$0.5B, and 2024 net income was +$791M against operating income of $742M. Below-the-line items of about $5B in 2023 and a swing to profit in 2024 are unexplained and look non-comparable with 2025 ($(4.9)B net loss).", "EV/EBITDA of 700x implies EBITDA of about $3.1B, while H1 Adjusted EBITDA is $4.7B (TTM would be higher). The EBITDA definition behind the market-data multiple is not disclosed.", "Spectrum acquisition shares are fixed at $42.40 against a $167.38 market price, a gap of about $32B in market terms. The filings analysis flags this, but the qualitative section ignores it. The accounting measurement at close (fair value versus fixed price) is unexplained.", "The 'sources of cash' comfort ($100B) ignores that debt and related-party leaseback financing are rising as the company also raised equity. The financial summary mentions the technical default but the qualitative section describes capital access as a moat.", "Typographical and tie-out issues: SBC is $1,570M in equity versus $1,580M in the cash flow statement plus capitalized amounts, and debt prepayment penalties total $1,164M against $1,153M paid. These are small but add to the picture of weak controls at a new filer." ],
+    "severity" : "major",
+    "severity_reason" : "The core thesis depends on an AI build-out (1.4GW to about 10GW by end-2027) that the stated capex pace and the $100B cash balance cannot fund without large new debt or equity. FCF is about -$25B in H1 alone and the burn is accelerating. The recent revenue acceleration rests on concentrated, 90-day-cancellable AI cloud contracts, with possible circularity through the Cursor deal. Unit economics are unproven, with the AI segment at a $(3.7)B H1 operating loss. The 10-Q has internal contradictions on debt, a covenant default occurred, and billions sit in related-party failed sale-leaseback debt. Governance gives public shareholders essentially no recourse. At about 96x sales and 17x book, this is a reason to avoid or underweight regardless of valuation, until funding, AI margins and customer concentration are shown to be sound."
+  },
+  "recommendation" : "AVOID / INSUFFICIENT DATA",
+  "checks" : {
+    "valuation_reliable" : false,
+    "notes" : [ "Average FCF <= 0: DCF not meaningful (also true for banks/insurers - use P/B & ROE instead)." ]
+  }
+}

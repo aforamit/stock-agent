@@ -1,0 +1,117 @@
+package com.stockagent;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.stockagent.Models.Collected;
+import com.stockagent.Models.Decision;
+import com.stockagent.Models.Doc;
+
+import java.util.stream.Collectors;
+
+/** Agents 2, 4, 5, 6: filings analyst, qualitative analyst, skeptic (red team), synthesizer. */
+final class Agents {
+    private final Llm llm;
+    private final Config cfg;
+
+    Agents(Llm llm, Config cfg) {
+        this.llm = llm;
+        this.cfg = cfg;
+    }
+
+    private static String docsBlock(Collected data) {
+        String s = data.documents().stream()
+                .filter(d -> d.text() != null && !d.text().isBlank())
+                .map((Doc d) -> "=== SOURCE: " + d.name() + " | " + d.url() + " ===\n" + d.text() + "\n")
+                .collect(Collectors.joining("\n"));
+        return s.isBlank() ? "(no documents retrieved)" : s;
+    }
+
+    // ---------------- Agent 2: Filings analyst ----------------
+    JsonNode filingsAnalyst(Collected data) throws Exception {
+        String system = "You are a forensic equity analyst. Use ONLY the provided documents and market data. "
+                + "Cite the SOURCE name for every figure. If something is not in the material, use null and say so; never guess.";
+        String user = "Company: " + data.marketData().company() + " (" + data.marketData().ticker() + ")\n\n"
+                + "MARKET DATA:\n" + Json.pretty(data.marketData()) + "\n\n"
+                + "DOCUMENTS:\n" + docsBlock(data) + "\n\n"
+                + """
+                Return JSON:
+                {
+                 "business_summary": str,
+                 "key_figures": [{"metric": str, "value": str, "period": str, "source": str}],
+                 "recommended_base_growth_rate": float|null,   // annual FCF growth for first 5 years, decimal e.g. 0.08
+                 "growth_rationale": str,
+                 "growth_sources": [str],
+                 "stated_risks": [str],
+                 "accounting_red_flags": [{"flag": str, "evidence": str, "source": str}],
+                 "data_gaps": [str]
+                }""";
+        return llm.askJson(system, user, false);
+    }
+
+    // ---------------- Agent 4: Qualitative analyst ----------------
+    JsonNode qualitativeAnalyst(Collected data, JsonNode filings) throws Exception {
+        String company = data.marketData().company();
+        StringBuilder queries = new StringBuilder();
+        for (JsonNode q : cfg.at("/search_queries")) {
+            queries.append("- ").append(q.asText().replace("{company}", company)).append("\n");
+        }
+        String system = "You are a long-term quality investor assessing moat, management and industry. "
+                + "Use web search when enabled and cite URLs. Say 'unknown' rather than guess.";
+        String f = filings.toString();
+        String user = "Company: " + company + ". Sector: " + data.marketData().sector()
+                + ", industry: " + data.marketData().industry() + ".\n"
+                + "Filings analysis summary: " + f.substring(0, Math.min(6000, f.length())) + "\n\n"
+                + "Research topics:\n" + queries + "\n"
+                + """
+                Return JSON:
+                {
+                 "moat": {"rating": "none|narrow|wide|unknown", "sources_of_moat": [str], "evidence": str},
+                 "management": {"rating": "weak|average|strong|unknown", "capital_allocation": str, "governance_concerns": [str]},
+                 "industry": {"growth_outlook": str, "competitive_intensity": str, "key_competitors": [str]},
+                 "catalysts": [str],
+                 "citations": [str]
+                }""";
+        return llm.askJson(system, user, true);
+    }
+
+    // ---------------- Agent 5: Skeptic ----------------
+    JsonNode skeptic(Collected data, JsonNode filings, JsonNode qualitative, JsonNode valuation) throws Exception {
+        String system = "You are a skeptical short-seller analyst. Your job is to find the strongest reasons the "
+                + "bullish thesis is WRONG and to catch errors or inconsistencies in the analysis. Be specific.";
+        String user = "Company: " + data.marketData().company() + "\n"
+                + "Market data: " + Json.pretty(data.marketData()) + "\n"
+                + "Filings analysis: " + filings + "\n"
+                + "Qualitative analysis: " + qualitative + "\n"
+                + "Valuation (computed in code): " + valuation + "\n\n"
+                + """
+                Return JSON:
+                {
+                 "bear_case": [str],
+                 "assumption_challenges": [{"assumption": str, "why_questionable": str}],
+                 "inconsistencies_found": [str],
+                 "severity": "none|minor|major",     // 'major' = a reason to avoid regardless of valuation
+                 "severity_reason": str
+                }""";
+        return llm.askJson(system, user, true);
+    }
+
+    // ---------------- Agent 6: Synthesizer ----------------
+    String synthesizer(Collected data, JsonNode filings, JsonNode qualitative, JsonNode valuation,
+                       JsonNode skeptic, Decision decision) throws Exception {
+        String system = "You are a senior investment analyst writing a research report. The final recommendation has "
+                + "ALREADY been decided by a rule engine; you must report it exactly and explain the reasoning. "
+                + "Do not change any numbers. Clearly state uncertainties. You are not a licensed financial advisor.";
+        String user = "Write a markdown report for " + data.marketData().company()
+                + " (" + data.marketData().ticker() + ").\n\n"
+                + "RECOMMENDATION (fixed): " + decision.recommendation() + "\n"
+                + "Rule checks: " + decision.checks() + "\n\n"
+                + "Valuation: " + valuation + "\n"
+                + "Filings: " + filings + "\n"
+                + "Qualitative: " + qualitative + "\n"
+                + "Skeptic: " + skeptic + "\n\n"
+                + "Sections: 1. Executive summary 2. Business overview 3. Financial snapshot "
+                + "4. Valuation (bear/base/bull table vs price) 5. Moat & management 6. Risks & bear case "
+                + "7. Rule-by-rule decision 8. Data gaps & caveats 9. Sources.\n"
+                + "Cite sources inline. End with a note that this is research support, not financial advice.";
+        return llm.ask(system, user, false);
+    }
+}
