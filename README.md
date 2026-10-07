@@ -28,6 +28,124 @@ Examples:
     java -jar target/stock-agent-1.0.0.jar --watchlist         # every ticker in the watchlist
 
 
+## Architecture
+
+The app is layered: `Main` hands each ticker to `Monitor`, which uses three groups of classes. Only the
+middle group calls the LLM; data collection and every rule (valuation, recommendation, signal) are plain Java.
+
+```text
++-----------------------------------------------------------------------------+
+| ENTRY          Main - command line, or Task Scheduler via run-watchlist.cmd |
+|                one ticker or --watchlist; --tier check | full | auto        |
++-----------------------------------------------------------------------------+
+| ORCHESTRATION  Monitor - picks the tier, checks triggers, runs the agents,  |
+|                confirms signal changes                                      |
++------------------------+------------------------+---------------------------+
+| DATA (no LLM)          | LLM AGENTS             | RULES (no LLM)            |
+|                        |                        |                           |
+| DataCollector          | Agents                 | Valuation                 |
+| YahooClient            |   filings analyst      |   DCF bear/base/bull      |
+| WebFetcher             |   qualitative analyst  |   INVEST/WATCHLIST/AVOID  |
+| PdfText                |   skeptic panel        | Signal                    |
+|                        |   synthesizer          |   BUY/SELL/HOLD/WATCH/    |
+|                        | Llm                    |   AVOID                   |
+|       |                |       |                |                           |
+|       v                |       v                |                           |
+| Yahoo Finance          | Anthropic Messages API | nothing external          |
+| SEC EDGAR              | + web search tool      |                           |
+| configured websites    |                        |                           |
++------------------------+------------------------+---------------------------+
+| PERSISTENCE    State  work/state/<TICKER>.json, signals.csv                 |
+|                Log    work/logs/<run>.log, alerts.log                       |
+|                Report work/output/<TICKER>_report.md, _raw.json             |
++-----------------------------------------------------------------------------+
+```
+
+### Agent flow and tiers
+
+A run has two tiers. **Tier 1 (check)** is the cheap pass and makes no LLM calls. **Tier 2 (full analysis)**
+is the agent pipeline. `--tier check` stops after Tier 1, `--tier full` goes straight to Tier 2, and `--tier auto`
+runs Tier 1 and continues to Tier 2 only when a trigger fires. The signal step runs after either tier.
+Each step is tagged `[code]` (no LLM) or `[LLM xN]` (N model calls).
+
+```text
+                 for each ticker (one, or every watchlist entry)
+                                    |
+                                    v
+          SEC EDGAR: ids of the latest 10-K / 10-Q          [code]
+                                    |
+          --tier check / auto       |       --tier full
+         +--------------------------+---------------------------------+
+         |                                                            |
+         v                                                            |
++==================================================================+  |
+| TIER 1 - CHECK                     no LLM calls, no API key      |  |
+|                                                                  |  |
+| Yahoo Finance: current price                          [code]     |  |
+|      |                                                           |  |
+|      v                                                           |  |
+| Triggers: no stored analysis / analysis too old /     [code]     |  |
+|           new 10-K or 10-Q / big price move                      |  |
++========+=================================+=======================+  |
+         |                                 |                          |
+         | no trigger,                     | trigger fired            |
+         | or --tier check                 | and --tier auto          |
+         |                                 v                          v
+         |   +==================================================================+
+         |   | TIER 2 - FULL ANALYSIS             4 LLM agents, up to 6 calls   |
+         |   |                                                                  |
+         |   | Agent 1  Data collector                               [code]     |
+         |   |          Yahoo fundamentals, 10-K/10-Q text, websites, PDFs      |
+         |   |      |                                                           |
+         |   |      v                                                           |
+         |   | Agent 2  Filings analyst                              [LLM x1]   |
+         |   |          skipped while there is no new 10-K/10-Q:                |
+         |   |          the stored filings analysis is reused                   |
+         |   |      |                                                           |
+         |   |      +---------------------------+                               |
+         |   |      v                           v                               |
+         |   | Agent 3  Valuation  [code]    Agent 4  Qualitative    [LLM x1]   |
+         |   |          DCF bear/base/bull              analyst + web search    |
+         |   |      |                           |                               |
+         |   |      +-------------+-------------+                               |
+         |   |                    v                                             |
+         |   | Agent 5  Skeptic panel + web search                   [LLM x3]   |
+         |   |          3 parallel runs, the median severity decides            |
+         |   |      |                                                           |
+         |   |      v                                                           |
+         |   | Decision rule: INVEST / WATCHLIST / AVOID             [code]     |
+         |   |          analysis and valuation saved to work/state              |
+         |   |      |                                                           |
+         |   |      v                                                           |
+         |   | Agent 6  Synthesizer                                  [LLM x1]   |
+         |   |          writes work/output/<TICKER>_report.md                   |
+         |   +================================+=================================+
+         |                                    |
+         v                                    v
++===============================================================================+
+| SIGNAL - runs after either tier    no LLM calls                               |
+|                                                                               |
+| Signal rules: stored valuation vs price               [code]                  |
+|      -> BUY / SELL / HOLD / WATCH / AVOID                                     |
+|      |                                                                        |
+|      v                                                                        |
+| Confirmation: a changed signal must repeat on         [code]                  |
+|      confirm_runs consecutive runs                                            |
+|      |                                                                        |
+|      +--> work/logs/alerts.log      BUY / SELL changes, once confirmed        |
+|      +--> work/state/signals.csv    every evaluation                          |
+|      +--> work/state/<TICKER>.json  current signal                            |
++===============================================================================+
+```
+
+| | Tier 1 - check | Tier 2 - full analysis |
+|---|---|---|
+| Agents run | None | Agents 1 to 6 |
+| LLM calls | 0 | Up to 6: filings analyst 1 (0 when reused), qualitative analyst 1, skeptic panel 3, synthesizer 1 |
+| Needs `ANTHROPIC_API_KEY` | No | Yes |
+| External calls | SEC EDGAR filing index, Yahoo price | SEC EDGAR, Yahoo fundamentals, configured websites, Anthropic API, web search |
+| Updates | Signal, `signals.csv` | Stored analysis and valuation, report, then signal and `signals.csv` |
+
 ## Monitoring
 Edit `watchlist:` and `monitor:` in `config.yaml`. Give a ticker `shares` above 0 to mark it as held:
 only held positions can get a SELL signal.
