@@ -1,0 +1,8 @@
+{
+  "ticker" : "TSLA",
+  "last_check" : {
+    "at" : "2026-10-07T07:29:41+05:30",
+    "price" : 380.68,
+    "tier" : "check"
+  }
+}

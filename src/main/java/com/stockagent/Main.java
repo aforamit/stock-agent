@@ -1,92 +1,106 @@
 package com.stockagent;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.stockagent.Models.Collected;
-import com.stockagent.Models.Decision;
 
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.concurrent.Executors;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
-/** Orchestrator. Usage: java -jar stock-agent.jar AAPL [--config config.yaml] [--out output] */
+/** Command line entry point: one ticker or the whole watchlist, through the check and/or full tier. */
 public final class Main {
-    private static void step(String msg) {
-        Log.info("\n>>> " + msg);
+    private static final List<String> TIERS = List.of("check", "full", "auto");
+
+    private static void usage() {
+        System.out.println("""
+                Usage: java -jar stock-agent.jar <TICKER> | --watchlist  [options]
+                  --tier check   price vs the stored valuation, no LLM calls
+                  --tier full    run the full agent analysis
+                  --tier auto    check, then full only if a trigger fires (default: monitor.default_tier)
+                  --refresh      full analysis re-reads the filings instead of reusing the stored filings analysis
+                  --config FILE  config file (default config.yaml, else the bundled one)
+                  --out DIR      report directory (default work/output)
+                Examples: AAPL --tier full | RELIANCE.NS --tier check | --watchlist""");
     }
 
     public static void main(String[] args) throws Exception {
         try {
-            run(args);
+            if (!run(args)) System.exit(1);
         } catch (Exception e) {
             Log.error("Run failed: " + e, e);
             throw e;
         }
     }
 
-    private static void run(String[] args) throws Exception {
-        if (args.length == 0) {
-            System.out.println("Usage: java -jar stock-agent.jar <TICKER> [--config config.yaml] [--out output]");
-            System.out.println("Examples: AAPL, MSFT, RELIANCE.NS, TCS.NS");
-            return;
+    /** @return false if any ticker failed */
+    private static boolean run(String[] args) throws Exception {
+        String ticker = null, tier = null, configPath = "config.yaml", outDir = "work/output";
+        boolean watchlist = false, refresh = false;
+        for (int i = 0; i < args.length; i++) {
+            switch (args[i]) {
+                case "--watchlist" -> watchlist = true;
+                case "--refresh" -> refresh = true;
+                case "--tier", "--config", "--out" -> {
+                    if (i + 1 >= args.length) throw new IllegalArgumentException(args[i] + " needs a value");
+                    String v = args[++i];
+                    switch (args[i - 1]) {
+                        case "--tier" -> tier = v.toLowerCase();
+                        case "--config" -> configPath = v;
+                        default -> outDir = v;
+                    }
+                }
+                default -> {
+                    if (args[i].startsWith("--")) throw new IllegalArgumentException("Unknown option " + args[i]);
+                    ticker = args[i].toUpperCase();
+                }
+            }
         }
-        String ticker = args[0].toUpperCase();
-        String configPath = "config.yaml", outDir = "output";
-        for (int i = 1; i + 1 < args.length; i++) {
-            if (args[i].equals("--config")) configPath = args[i + 1];
-            if (args[i].equals("--out")) outDir = args[i + 1];
+        if (ticker == null && !watchlist) {
+            usage();
+            return true;
         }
 
         Config cfg = Config.load(configPath);
+        if (tier == null) tier = cfg.at("/monitor/default_tier").asText("auto");
+        if (!TIERS.contains(tier)) throw new IllegalArgumentException("--tier must be one of " + TIERS);
+
+        // ticker -> held (shares > 0); SELL signals are only raised for held positions
+        Map<String, Boolean> listed = new LinkedHashMap<>();
+        for (JsonNode w : cfg.at("/watchlist")) {
+            String t = (w.isTextual() ? w.asText() : w.path("ticker").asText()).toUpperCase();
+            if (!t.isBlank()) listed.put(t, w.path("shares").asDouble(0) > 0);
+        }
+        Map<String, Boolean> targets = new LinkedHashMap<>();
+        if (ticker != null) targets.put(ticker, listed.getOrDefault(ticker, false));
+        else targets.putAll(listed);
+        if (targets.isEmpty()) throw new IllegalStateException("The watchlist in " + configPath + " is empty");
+
         String logDir = cfg.str("/log_dir");
-        Log.init(logDir.isBlank() ? "work/logs" : logDir, ticker);
-        Log.info("Stock agent run for " + ticker + " (model " + cfg.str("/model") + "), log: " + Log.file());
-        Llm llm = new Llm(cfg);
-        Agents agents = new Agents(llm, cfg);
+        Log.init(logDir.isBlank() ? "work/logs" : logDir, ticker != null ? ticker : "WATCHLIST");
+        Log.info("Stock agent: " + String.join(", ", targets.keySet()) + " | tier " + tier
+                + " | model " + cfg.str("/model") + " | log " + Log.file());
 
-        step("Agent 1: collecting data");
-        Collected data = new DataCollector(cfg).collect(ticker);
-        data.documents().forEach(d -> Log.info("   - " + d.name() + ": "
-                + (d.error() != null ? "ERROR " + d.error() : d.text().length() + " chars")));
-
-        step("Agent 2: filings analyst");
-        JsonNode filings = agents.filingsAnalyst(data);
-
-        step("Agents 3 + 4: valuation (code) and qualitative analyst, in parallel");
-        JsonNode valuation, qualitative;
-        try (var ex = Executors.newVirtualThreadPerTaskExecutor()) {
-            var valF = ex.submit(() -> (JsonNode) Valuation.compute(cfg, data, filings));
-            var qualF = ex.submit(() -> agents.qualitativeAnalyst(data, filings));
-            valuation = valF.get();
-            qualitative = qualF.get();
+        Monitor monitor = new Monitor(cfg, outDir);
+        List<Monitor.Result> results = new ArrayList<>();
+        List<String> failed = new ArrayList<>();
+        for (var t : targets.entrySet()) {
+            Log.info("\n=== " + t.getKey() + (t.getValue() ? " (held)" : "") + " ===");
+            try {
+                results.add(monitor.run(t.getKey(), tier, t.getValue(), refresh));
+            } catch (Exception e) {
+                if (ticker != null) throw e;
+                failed.add(t.getKey());
+                Log.info("   ! " + t.getKey() + " failed: " + e.getMessage());
+                Log.error(t.getKey() + " failed", e);
+            }
         }
 
-        step("Agent 5: skeptic / red team");
-        JsonNode skeptic = agents.skeptic(data, filings, qualitative, valuation);
-
-        step("Decision rule (code)");
-        Decision decision = Valuation.decide(cfg, data, valuation, skeptic, filings);
-        Log.info("   => " + decision.recommendation());
-        Log.detail("Decision checks", Json.pretty(decision.checks()));
-
-        step("Agent 6: synthesizer");
-        String report = agents.synthesizer(data, filings, qualitative, valuation, skeptic, decision);
-
-        Files.createDirectories(Path.of(outDir));
-        String base = Path.of(outDir, ticker.replace('.', '_')).toString();
-        Files.writeString(Path.of(base + "_report.md"), report, StandardCharsets.UTF_8);
-
-        ObjectNode raw = Json.MAPPER.createObjectNode();
-        raw.set("market_data", Json.MAPPER.valueToTree(data.marketData()));
-        raw.set("filings", filings);
-        raw.set("valuation", valuation);
-        raw.set("qualitative", qualitative);
-        raw.set("skeptic", skeptic);
-        raw.put("recommendation", decision.recommendation());
-        raw.set("checks", decision.checks());
-        Files.writeString(Path.of(base + "_raw.json"), Json.pretty(raw), StandardCharsets.UTF_8);
-
-        Log.info("\nSaved: " + base + "_report.md and " + base + "_raw.json");
+        Log.info("\n=== Summary ===");
+        for (var r : results) {
+            Log.info(String.format("%-12s %-5s %10.2f  %s%s", r.ticker(), r.tier(), r.price(), r.signal(),
+                    r.note().isEmpty() ? "" : "  [" + r.note() + "]"));
+        }
+        failed.forEach(f -> Log.info(String.format("%-12s FAILED (see log)", f)));
+        return failed.isEmpty();
     }
 }

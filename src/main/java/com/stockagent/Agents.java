@@ -5,10 +5,20 @@ import com.stockagent.Models.Collected;
 import com.stockagent.Models.Decision;
 import com.stockagent.Models.Doc;
 
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
 /** Agents 2, 4, 5, 6: filings analyst, qualitative analyst, skeptic (red team), synthesizer. */
 final class Agents {
+    private static final List<String> SEVERITIES = List.of("none", "minor", "major");
+
     private final Llm llm;
     private final Config cfg;
 
@@ -92,6 +102,34 @@ final class Agents {
                  "severity_reason": str
                 }""";
         return llm.askJson(system, user, true);
+    }
+
+    /**
+     * Runs the skeptic skeptic_runs times in parallel and keeps the reply with the median severity, so one
+     * unusually harsh or lenient run cannot flip the recommendation on its own.
+     */
+    JsonNode skepticPanel(Collected data, JsonNode filings, JsonNode qualitative, JsonNode valuation) throws Exception {
+        int n = Math.max(1, cfg.intVal("/skeptic_runs", 3));
+        List<JsonNode> votes = new ArrayList<>();
+        Exception last = null;
+        try (var ex = Executors.newVirtualThreadPerTaskExecutor()) {
+            List<Future<JsonNode>> runs = new ArrayList<>();
+            for (int i = 0; i < n; i++) runs.add(ex.submit(() -> skeptic(data, filings, qualitative, valuation)));
+            for (var r : runs) {
+                try {
+                    votes.add(r.get());
+                } catch (ExecutionException e) {
+                    last = e;
+                    Log.error("Skeptic run failed", e.getCause());
+                }
+            }
+        }
+        if (votes.isEmpty()) throw new RuntimeException("All skeptic runs failed", last);
+        votes.sort(Comparator.comparingInt(v -> SEVERITIES.indexOf(v.path("severity").asText("none"))));
+        ObjectNode chosen = (ObjectNode) votes.get(votes.size() / 2);
+        var panel = chosen.putArray("panel_severities");
+        votes.forEach(v -> panel.add(v.path("severity").asText("none")));
+        return chosen;
     }
 
     // ---------------- Agent 6: Synthesizer ----------------

@@ -3,6 +3,31 @@ model: claude-sonnet-5-5        # change to any model available on your account
 max_tokens: 16000               # includes the model's thinking tokens, so keep this generous
 use_web_search: true            # lets the qualitative analyst + skeptic search the web (Anthropic server tool)
 
+skeptic_runs: 3                 # the skeptic runs this many times; the median severity decides (odd numbers work best)
+anthropic_workspace_id: ""      # only for API keys not scoped to a workspace; env ANTHROPIC_WORKSPACE_ID wins
+
+# ---------------- Watchlist ----------------
+# Used by: java -jar stock-agent.jar --watchlist
+# shares > 0 marks a position you hold: only those can get a SELL signal (others get BUY / WATCH / AVOID).
+watchlist:
+  - {ticker: NKE, shares: 0}
+  - {ticker: TSLA, shares: 0}
+  - {ticker: SPCX, shares: 0}
+
+# ---------------- Monitoring ----------------
+monitor:
+  default_tier: auto            # used when --tier is not given: check | full | auto
+  state_dir: work/state         # per-ticker memory (<TICKER>.json) and signals.csv
+  # Triggers that make "auto" escalate from the cheap check to a full analysis:
+  reanalyze_after_days: 30      # stored analysis is older than this
+  price_move_trigger: 0.15      # price moved this much (either way) since the analysis
+  trigger_forms: [10-K, 10-Q]   # a newer SEC filing of these forms exists (8-K can be added, but its text is not analysed)
+  # Signal rules (BUY uses decision.margin_of_safety below):
+  sell_above_base: 0.10         # held position: SELL when price is this far above base value
+  sell_on_thesis_break: true    # held position: SELL when the skeptic or a quality check fails
+  hysteresis: 0.05              # once BUY/SELL is on, the price must move back this far past the line to turn it off
+  confirm_runs: 2               # a changed signal must repeat on this many consecutive runs before it is alerted
+
 # Run logs (console messages + full LLM prompts and replies), one file per run
 log_dir: work/logs
 

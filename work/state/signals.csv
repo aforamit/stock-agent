@@ -1,0 +1,6 @@
+timestamp,ticker,tier,price,bear,base,bull,recommendation,signal,status,reason
+"2026-10-07T07:29:22+05:30","NKE","full","34.61","25.77080298139976","43.20512203382065","62.31220005782918","WATCHLIST","WATCH","pending 1/2","price 34.61, buy below 32.40, base value 43.21, sell above 47.53"
+"2026-10-07T07:29:34+05:30","NKE","check","34.61","25.77080298139976","43.20512203382065","62.31220005782918","WATCHLIST","WATCH","confirmed","price 34.61, buy below 32.40, base value 43.21, sell above 47.53"
+"2026-10-07T07:29:36+05:30","NKE","check","34.61","25.77080298139976","43.20512203382065","62.31220005782918","WATCHLIST","WATCH","unchanged","price 34.61, buy below 32.40, base value 43.21, sell above 47.53"
+"2026-10-07T07:29:39+05:30","NKE","check","34.61","25.77080298139976","43.20512203382065","62.31220005782918","WATCHLIST","WATCH","unchanged","price 34.61, buy below 32.40, base value 43.21, sell above 47.53"
+"2026-10-07T07:33:44+05:30","NKE","full","34.61","25.77080298139976","43.20512203382065","62.31220005782918","WATCHLIST","WATCH","unchanged","price 34.61, buy below 32.40, base value 43.21, sell above 47.53"

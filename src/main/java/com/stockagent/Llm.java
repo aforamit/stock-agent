@@ -10,7 +10,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
 
-/** Minimal Anthropic Messages API client (plain HTTP, no SDK). Reads ANTHROPIC_API_KEY and optional ANTHROPIC_WORKSPACE_ID. */
+/** Minimal Anthropic Messages API client (plain HTTP, no SDK). Reads ANTHROPIC_API_KEY and optional ANTHROPIC_WORKSPACE_ID (or anthropic_workspace_id in config.yaml). */
 final class Llm {
     private static final String ENDPOINT = "https://api.anthropic.com/v1/messages";
     private final HttpClient http = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(20)).build();
@@ -21,7 +21,8 @@ final class Llm {
     Llm(Config cfg) {
         this.cfg = cfg;
         this.apiKey = System.getenv("ANTHROPIC_API_KEY");
-        this.workspaceId = System.getenv("ANTHROPIC_WORKSPACE_ID");
+        String ws = System.getenv("ANTHROPIC_WORKSPACE_ID");
+        this.workspaceId = ws == null || ws.isBlank() ? cfg.str("/anthropic_workspace_id") : ws;
         if (apiKey == null || apiKey.isBlank()) {
             throw new IllegalStateException("Set the ANTHROPIC_API_KEY environment variable.");
         }

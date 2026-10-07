@@ -3,11 +3,13 @@ package com.stockagent;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.stockagent.Models.Collected;
 import com.stockagent.Models.Doc;
+import com.stockagent.Models.Filing;
 import com.stockagent.Models.MarketData;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
@@ -16,10 +18,15 @@ import java.util.concurrent.Future;
 
 /** Agent 1: market data (Yahoo), SEC filings (US), and every website configured in config.yaml (fetched in parallel). */
 final class DataCollector {
-    private final Config cfg;
+    /** Forms whose full text is sent to the filings analyst. */
+    static final List<String> ANALYSIS_FORMS = List.of("10-K", "10-Q");
 
-    DataCollector(Config cfg) {
+    private final Config cfg;
+    private final YahooClient yahoo;
+
+    DataCollector(Config cfg, YahooClient yahoo) {
         this.cfg = cfg;
+        this.yahoo = yahoo;
     }
 
     static String marketOf(String ticker) {
@@ -32,14 +39,67 @@ final class DataCollector {
         return i < 0 ? ticker : ticker.substring(0, i);
     }
 
-    Collected collect(String ticker) throws Exception {
+    private Map<String, String> secHeaders() {
+        return Map.of("User-Agent", cfg.str("/sec_user_agent"));
+    }
+
+    /**
+     * Latest filing of each wanted form on SEC EDGAR (two small requests, no document download).
+     * Empty for non-US tickers; null when EDGAR could not be reached, so callers can tell "none" from "unknown".
+     */
+    List<Filing> latestFilings(String ticker, Collection<String> wantedForms) {
+        if (!marketOf(ticker).equals("US")) return List.of();
+        List<Filing> out = new ArrayList<>();
+        try {
+            String tickersJson = fetchRaw("https://www.sec.gov/files/company_tickers.json", secHeaders());
+            String sym = symbolOf(ticker).toUpperCase();
+            Long cik = null;
+            for (JsonNode v : Json.MAPPER.readTree(tickersJson)) {
+                if (v.path("ticker").asText().equalsIgnoreCase(sym)) {
+                    cik = v.path("cik_str").asLong();
+                    break;
+                }
+            }
+            if (cik == null) return out;
+
+            JsonNode recent = Json.MAPPER.readTree(
+                    fetchRaw(String.format("https://data.sec.gov/submissions/CIK%010d.json", cik), secHeaders()))
+                    .at("/filings/recent");
+            JsonNode forms = recent.path("form");
+            for (String wanted : wantedForms) {
+                for (int i = 0; i < forms.size(); i++) {
+                    if (!forms.get(i).asText().equals(wanted)) continue;
+                    String acc = recent.path("accessionNumber").get(i).asText();
+                    String url = "https://www.sec.gov/Archives/edgar/data/" + cik + "/" + acc.replace("-", "") + "/"
+                            + recent.path("primaryDocument").get(i).asText();
+                    out.add(new Filing(wanted, acc, recent.path("filingDate").get(i).asText(), url));
+                    break;
+                }
+            }
+            return out;
+        } catch (Exception e) {
+            Log.info("   ! SEC EDGAR unavailable: " + e.getMessage());
+            return null;
+        }
+    }
+
+    /** Market data, plus (when withDocs) the 10-K/10-Q among the given filings and every configured source. */
+    Collected collect(String ticker, List<Filing> filings, boolean withDocs) throws Exception {
         String market = marketOf(ticker);
-        MarketData md = new YahooClient().fetch(ticker);
+        MarketData md = yahoo.fetch(ticker);
+        if (!withDocs) return new Collected(market, md, List.of());
         String company = URLEncoder.encode(md.company(), StandardCharsets.UTF_8);
 
         List<Callable<List<Doc>>> tasks = new ArrayList<>();
 
-        if (market.equals("US")) tasks.add(() -> secFilings(ticker));
+        if (filings == null) {
+            tasks.add(() -> List.of(Doc.failed("SEC EDGAR", "", "unavailable")));
+        } else {
+            for (Filing f : filings) {
+                if (!ANALYSIS_FORMS.contains(f.form())) continue;
+                tasks.add(() -> List.of(fetchDoc("SEC " + f.form() + " (" + f.date() + ")", f.url(), secHeaders())));
+            }
+        }
 
         for (JsonNode s : cfg.at("/sources")) {
             if (!s.path("enabled").asBoolean(true)) continue;
@@ -74,42 +134,6 @@ final class DataCollector {
         } catch (Exception e) {
             return Doc.failed(name, url, String.valueOf(e.getMessage()));
         }
-    }
-
-    /** Latest 10-K and 10-Q via SEC EDGAR. */
-    private List<Doc> secFilings(String ticker) {
-        List<Doc> docs = new ArrayList<>();
-        Map<String, String> ua = Map.of("User-Agent", cfg.str("/sec_user_agent"));
-        try {
-            String tickersJson = fetchRaw("https://www.sec.gov/files/company_tickers.json", ua);
-            String sym = symbolOf(ticker).toUpperCase();
-            Long cik = null;
-            for (JsonNode v : Json.MAPPER.readTree(tickersJson)) {
-                if (v.path("ticker").asText().equalsIgnoreCase(sym)) {
-                    cik = v.path("cik_str").asLong();
-                    break;
-                }
-            }
-            if (cik == null) return docs;
-
-            JsonNode recent = Json.MAPPER.readTree(
-                    fetchRaw(String.format("https://data.sec.gov/submissions/CIK%010d.json", cik), ua))
-                    .at("/filings/recent");
-            JsonNode forms = recent.path("form");
-            for (String wanted : List.of("10-K", "10-Q")) {
-                for (int i = 0; i < forms.size(); i++) {
-                    if (!forms.get(i).asText().equals(wanted)) continue;
-                    String acc = recent.path("accessionNumber").get(i).asText().replace("-", "");
-                    String url = "https://www.sec.gov/Archives/edgar/data/" + cik + "/" + acc + "/"
-                            + recent.path("primaryDocument").get(i).asText();
-                    docs.add(fetchDoc("SEC " + wanted + " (" + recent.path("filingDate").get(i).asText() + ")", url, ua));
-                    break;
-                }
-            }
-        } catch (Exception e) {
-            docs.add(Doc.failed("SEC EDGAR", "", String.valueOf(e.getMessage())));
-        }
-        return docs;
     }
 
     private static String fetchRaw(String url, Map<String, String> headers) throws Exception {

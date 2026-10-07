@@ -66,6 +66,16 @@ final class YahooClient {
         return n.isNumber() ? n.asDouble() : null;
     }
 
+    /** Current price only: one request, for the cheap monitoring check. */
+    double price(String ticker) throws Exception {
+        String qs = get("https://query1.finance.yahoo.com/v10/finance/quoteSummary/"
+                + URLEncoder.encode(ticker, StandardCharsets.UTF_8) + "?modules=price&crumb="
+                + URLEncoder.encode(crumb(), StandardCharsets.UTF_8), true);
+        Double p = num(Json.MAPPER.readTree(qs), "/quoteSummary/result/0/price/regularMarketPrice/raw");
+        if (p == null) throw new IOException("No price for " + ticker);
+        return p;
+    }
+
     MarketData fetch(String ticker) throws Exception {
         String c = URLEncoder.encode(crumb(), StandardCharsets.UTF_8);
         String sym = URLEncoder.encode(ticker, StandardCharsets.UTF_8);
@@ -77,14 +87,21 @@ final class YahooClient {
 
         Double de = num(r, "/financialData/debtToEquity/raw");
         Double price = num(r, "/price/regularMarketPrice/raw");
+        Double marketCap = num(r, "/summaryDetail/marketCap/raw");
+        if (marketCap == null) marketCap = num(r, "/price/marketCap/raw");
+        // sharesOutstanding covers only the listed class for dual-class companies (NKE, GOOGL, ...),
+        // so prefer a count that spans all classes.
+        Double shares = marketCap != null && price != null && price > 0 ? Double.valueOf(marketCap / price) : null;
+        if (shares == null) shares = num(r, "/defaultKeyStatistics/impliedSharesOutstanding/raw");
+        if (shares == null) shares = num(r, "/defaultKeyStatistics/sharesOutstanding/raw");
 
         Map<String, TreeMap<String, Double>> history = fetchHistory(sym, c);
 
         String company = r.at("/price/longName").asText(r.at("/price/shortName").asText(ticker));
         return new MarketData(
                 ticker, company, r.at("/price/currency").asText(null), price,
-                num(r, "/defaultKeyStatistics/sharesOutstanding/raw"),
-                num(r, "/summaryDetail/marketCap/raw"),
+                shares,
+                marketCap,
                 num(r, "/financialData/totalDebt/raw"),
                 num(r, "/financialData/totalCash/raw"),
                 num(r, "/summaryDetail/trailingPE/raw"),

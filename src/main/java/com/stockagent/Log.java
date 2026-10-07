@@ -7,6 +7,7 @@ import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -20,11 +21,11 @@ final class Log {
 
     private Log() {}
 
-    /** Opens <dir>/<ticker>_<timestamp>.log. Until this is called, messages go to the console only. */
-    static synchronized void init(String dir, String ticker) throws IOException {
+    /** Opens <dir>/<name>_<timestamp>.log. Until this is called, messages go to the console only. */
+    static synchronized void init(String dir, String name) throws IOException {
         Path d = Path.of(dir);
         Files.createDirectories(d);
-        file = d.resolve(ticker.replace('.', '_') + "_" + LocalDateTime.now().format(FILE_TS) + ".log");
+        file = d.resolve(name.replace('.', '_') + "_" + LocalDateTime.now().format(FILE_TS) + ".log");
         out = Files.newBufferedWriter(file, StandardCharsets.UTF_8);
     }
 
@@ -36,6 +37,24 @@ final class Log {
     static void info(String msg) {
         System.out.println(msg);
         write("INFO", msg.strip());
+    }
+
+    /** A BUY/SELL signal change: console, run log, and alerts.log (one file across all runs). */
+    static void alert(String msg) {
+        System.out.println("*** ALERT " + msg);
+        write("ALERT", msg);
+        Path dir;
+        synchronized (Log.class) {
+            dir = file == null ? null : file.getParent();
+        }
+        if (dir == null) return;
+        try {
+            Files.writeString(dir.resolve("alerts.log"),
+                    LocalDateTime.now().format(LINE_TS) + " " + msg + System.lineSeparator(),
+                    StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            System.err.println("Alert write failed: " + e.getMessage());
+        }
     }
 
     /** Log file only: for long content such as prompts and model replies. */

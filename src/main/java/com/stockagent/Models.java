@@ -25,6 +25,9 @@ final class Models {
             Double priceToBook, Double roe, Double debtToEquity, String sector, String industry,
             Map<String, TreeMap<String, Double>> history) {}
 
+    /** A filing on SEC EDGAR; accession is its unique id, e.g. 0000320187-26-000045. */
+    record Filing(String form, String accession, String date, String url) {}
+
     record Collected(String market, MarketData marketData, List<Doc> documents) {}
 
     record Decision(String recommendation, com.fasterxml.jackson.databind.node.ObjectNode checks) {}
