@@ -1,0 +1,236 @@
+{
+  "market_data" : {
+    "ticker" : "AER",
+    "company" : "AerCap Holdings N.V.",
+    "currency" : "USD",
+    "price" : 143.85,
+    "shares" : 1.571840640667362E8,
+    "marketCap" : 2.2610927616E10,
+    "totalDebt" : 4.283246592E10,
+    "totalCash" : 1.718706944E9,
+    "trailingPe" : 7.048016,
+    "forwardPe" : 7.894061,
+    "evToEbitda" : 12.376,
+    "priceToBook" : 1.2067144,
+    "roe" : 0.18662001,
+    "debtToEquity" : 2.32664,
+    "sector" : "Industrials",
+    "industry" : "Rental & Leasing Services",
+    "history" : {
+      "free_cash_flow" : {
+        "2022-12-31" : 1.29939E9,
+        "2023-12-31" : -9.70951E8,
+        "2024-12-31" : -1.179715E9,
+        "2025-12-31" : -6.81174E8
+      },
+      "net_income" : {
+        "2022-12-31" : -7.26041E8,
+        "2023-12-31" : 3.136091E9,
+        "2024-12-31" : 2.098632E9,
+        "2025-12-31" : 3.750612E9
+      },
+      "operating_income" : {
+        "2022-12-31" : 1.808743E9,
+        "2023-12-31" : 2.072832E9,
+        "2024-12-31" : 2.126601E9,
+        "2025-12-31" : 2.694068E9
+      },
+      "revenue" : {
+        "2022-12-31" : 7.01355E9,
+        "2023-12-31" : 7.580418E9,
+        "2024-12-31" : 7.996644E9,
+        "2025-12-31" : 8.516668E9
+      },
+      "operating_cash_flow" : {
+        "2022-12-31" : 5.170962E9,
+        "2023-12-31" : 5.261435E9,
+        "2024-12-31" : 5.436643E9,
+        "2025-12-31" : 5.393124E9
+      },
+      "capex" : {
+        "2022-12-31" : -3.871572E9,
+        "2023-12-31" : -6.232386E9,
+        "2024-12-31" : -6.616358E9,
+        "2025-12-31" : -6.074298E9
+      }
+    }
+  },
+  "filings" : {
+    "business_summary" : "The documents give almost no business description. MARKET DATA classifies AerCap Holdings N.V. (AER) as Sector: Industrials, Industry: Rental & Leasing Services, reporting in USD. The Yahoo Finance - Analysis page contains only navigation text, a quote (143.91) and an empty Growth Estimates table. It says nothing about operations, fleet, customers or strategy, so anything beyond the industry classification is null.",
+    "key_figures" : [ {
+      "metric" : "Share price",
+      "value" : "USD 143.85 (the Yahoo Finance - Analysis page shows an intraday quote of 143.91)",
+      "period" : "Current",
+      "source" : "MARKET DATA; Yahoo Finance - Analysis"
+    }, {
+      "metric" : "Market capitalization",
+      "value" : "USD 22.61B",
+      "period" : "Current",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "Total debt",
+      "value" : "USD 42.83B",
+      "period" : "Latest",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "Total cash",
+      "value" : "USD 1.72B",
+      "period" : "Latest",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "Net debt (derived: total debt minus total cash)",
+      "value" : "approx. USD 41.11B",
+      "period" : "Latest",
+      "source" : "MARKET DATA (derived)"
+    }, {
+      "metric" : "Revenue",
+      "value" : "USD 8.517B (2024: 7.997B; 2023: 7.580B; 2022: 7.014B); 2025 growth approx. +6.5%",
+      "period" : "FY2025",
+      "source" : "MARKET DATA history.revenue"
+    }, {
+      "metric" : "Operating income",
+      "value" : "USD 2.694B (approx. 31.6% of revenue); 2024: 2.127B",
+      "period" : "FY2025",
+      "source" : "MARKET DATA history.operating_income"
+    }, {
+      "metric" : "Net income",
+      "value" : "USD 3.751B (2024: 2.099B; 2023: 3.136B; 2022: -0.726B)",
+      "period" : "FY2025",
+      "source" : "MARKET DATA history.net_income"
+    }, {
+      "metric" : "Operating cash flow",
+      "value" : "USD 5.393B (2024: 5.437B; 2023: 5.261B; 2022: 5.171B)",
+      "period" : "FY2025",
+      "source" : "MARKET DATA history.operating_cash_flow"
+    }, {
+      "metric" : "Capex",
+      "value" : "USD -6.074B (2024: -6.616B; 2023: -6.232B; 2022: -3.872B)",
+      "period" : "FY2025",
+      "source" : "MARKET DATA history.capex"
+    }, {
+      "metric" : "Free cash flow",
+      "value" : "USD -0.681B (2024: -1.180B; 2023: -0.971B; 2022: +1.299B)",
+      "period" : "FY2025",
+      "source" : "MARKET DATA history.free_cash_flow"
+    }, {
+      "metric" : "Cumulative FCF vs cumulative net income",
+      "value" : "FCF approx. -2.83B vs net income approx. +8.99B",
+      "period" : "FY2023-FY2025",
+      "source" : "MARKET DATA history (derived)"
+    }, {
+      "metric" : "Trailing P/E / Forward P/E",
+      "value" : "7.05 / 7.89",
+      "period" : "Current",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "EV/EBITDA",
+      "value" : "12.376",
+      "period" : "Current",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "Price/Book",
+      "value" : "1.207",
+      "period" : "Current",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "ROE",
+      "value" : "18.66%",
+      "period" : "Trailing",
+      "source" : "MARKET DATA"
+    }, {
+      "metric" : "Debt/Equity",
+      "value" : "2.327 (as provided; unit basis not stated)",
+      "period" : "Latest",
+      "source" : "MARKET DATA"
+    } ],
+    "recommended_base_growth_rate" : null,
+    "growth_rationale" : "I am not recommending a growth rate. The Yahoo Finance - Analysis page shows an empty Growth Estimates table (AER and S&P 500 entries are blank), so there are no analyst or management projections. Reported FCF was negative in FY2023, FY2024 and FY2025 (-0.971B, -1.180B, -0.681B), so a growth rate on a negative base is not meaningful. Capex exceeded operating cash flow in each of those years. A rate would have to be guessed, so it is null. Revenue grew about 8.1% in 2023, 5.5% in 2024 and 6.5% in 2025 (derived from MARKET DATA), but that is not an FCF growth forecast.",
+    "growth_sources" : [ "MARKET DATA history (revenue, free_cash_flow, operating_cash_flow, capex)", "Yahoo Finance - Analysis (Growth Estimates table empty; no figures provided)" ],
+    "stated_risks" : [ ],
+    "accounting_red_flags" : [ {
+      "flag" : "Persistently negative free cash flow despite large reported profits",
+      "evidence" : "FCF was -0.971B (2023), -1.180B (2024) and -0.681B (2025), cumulatively about -2.83B. Net income over the same years totaled about +8.99B. Capex of 6.07-6.62B exceeded operating cash flow of 5.26-5.44B in each year. The documents do not say how much capex is growth investment versus maintenance, so the cause is unverified.",
+      "source" : "MARKET DATA history"
+    }, {
+      "flag" : "Net income well above operating income",
+      "evidence" : "FY2025 net income of 3.751B is about 1.39x operating income of 2.694B. FY2023 net income of 3.136B is about 1.51x operating income of 2.073B. This implies sizable non-operating or one-off items (for example gains, tax effects or other income), but the documents do not break them down. Net income also swung from -0.726B (2022) to +3.136B (2023).",
+      "source" : "MARKET DATA history"
+    }, {
+      "flag" : "High leverage",
+      "evidence" : "Total debt of 42.83B against cash of 1.72B and a market cap of 22.61B. Debt/Equity is 2.327. Debt is roughly 1.9x market cap.",
+      "source" : "MARKET DATA"
+    }, {
+      "flag" : "Minor valuation-metric inconsistency",
+      "evidence" : "Trailing P/E of 7.05 implies EPS of about 20.41 at a price of 143.85. FY2025 net income divided by the share count (3.751B / 157.18M shares) is about 23.86, which implies a P/E of about 6.0. The difference may come from timing or share-count definitions, which the documents do not explain. The Yahoo quote (143.91) also differs slightly from the MARKET DATA price (143.85), probably because of intraday timing.",
+      "source" : "MARKET DATA; Yahoo Finance - Analysis"
+    } ],
+    "data_gaps" : [ "No business description, fleet, customer or strategy information in the documents; the only classification is Industrials / Rental & Leasing Services.", "No management or analyst growth estimates (the Yahoo Finance - Analysis Growth Estimates table is empty).", "No risk-factor disclosures (stated_risks is empty because nothing was provided).", "No filings, footnotes or income statement breakdown, so the drivers of net income exceeding operating income (non-operating items, gains, taxes) are unknown.", "No split of capex into growth versus maintenance, and no information on depreciation, asset sales or lease terms.", "No debt maturity schedule, interest cost, covenant or liquidity detail.", "No quarterly data, guidance, buyback or dividend information.", "The unit and basis of the Debt/Equity figure (ratio versus percent) are not specified." ]
+  },
+  "valuation" : {
+    "reliable" : false,
+    "notes" : [ "Average FCF <= 0: DCF not meaningful (also true for banks/insurers - use P/B & ROE instead)." ],
+    "scenarios" : { },
+    "base_fcf_used" : -9.439466666666666E8,
+    "fcf_history" : {
+      "2022-12-31" : 1.29939E9,
+      "2023-12-31" : -9.70951E8,
+      "2024-12-31" : -1.179715E9,
+      "2025-12-31" : -6.81174E8
+    }
+  },
+  "qualitative" : {
+    "moat" : {
+      "rating" : "narrow",
+      "sources_of_moat" : [ "Scale: AerCap calls itself the industry leader across aviation leasing, with about 3,500 aircraft, engines and helicopters owned, on order or managed at 12/31/2025", "Manufacturer purchasing power: large orders get favorable pricing and delivery terms, and AerCap can secure scarce delivery slots (for example 15 Boeing 787s for 2030-2033, as the world's largest 787 owner)", "Funding advantage: investment-grade unsecured debt access at attractive spreads, with an average cost of debt of 4.2%", "Platform and remarketing capability: 705 transactions in 2025, an 85% passenger lease extension rate in Q2 2026, and 99% owned-aircraft utilization in 2024", "M&A integration track record (ILFC, GECAS), which AerCap itself describes as a key competitive advantage" ],
+      "evidence" : "The moat comes from scale, cost of funds and OEM relationships. It is not a pricing-power or switching-cost moat. Management says AerCap competes on execution certainty rather than the cheapest lease rate. Q2 2026 showed lease yield up 30bp and net spread up 50bp year over year, and asset sales at a 20% gain margin. Part of this reflects an industry-wide aircraft supply shortage, not only AerCap-specific strengths. AerCap said it can buy narrowbody delivery slots at a price 16-17% below competitors. I rate the moat narrow because aircraft are a cyclical, capital-intensive asset class and competition is still high. Returns depend on the cycle and on airline credit quality. The FY2023-25 FCF figures are negative on a reported basis, because growth capex exceeded operating cash flow. I did not verify the maintenance versus growth capex split.",
+      "sources" : [ "https://www.sec.gov/Archives/edgar/data/1378789/000162828026007513/aer-20251231.htm", "https://finance.yahoo.com/markets/stocks/articles/aercap-holdings-n-v-q2-174137648.html", "https://www.theglobeandmail.com/investing/markets/stocks/AER/pressreleases/3623571/aercap-aer-q2-2026-earnings-call-transcript/", "https://umbrex.com/resources/company-profiles/aercap-holdings-n-v/", "https://www.sec.gov/Archives/edgar/data/1378789/000137878925000007/aer-20241231.htm" ]
+    },
+    "management" : {
+      "rating" : "strong",
+      "capital_allocation" : "Capital allocation has been shareholder-friendly. Since 2023 AerCap has repurchased over 93 million shares, about 40% of those outstanding, for roughly $8B. It returned more than $1.4-1.5B to shareholders in H1 2026 and approved a new $1B buyback on Sep 16, 2026, running to June 2027. It raised the quarterly dividend from $0.27 to $0.40. Leverage is 2.05x, below the 2.5x target, and liquidity is about $22B. Management argues that buybacks beat sale-leasebacks at current economics. In Q2 2026 it raised 2026 adjusted EPS guidance to about $16.80. About $2.80 of that comes from asset-sale gains, and core EPS is about $14.00. Adjusted ROE was 18%. Asset sales for 2026 are expected at $4-5B. One caution: earnings are partly driven by gains on sale, which are cyclical and not guaranteed to recur. Management also chose not to guide to any second-half gains. Aengus Kelly has been CEO since 2011 and has led the ILFC and GECAS deals. The Russia insurance recovery effort has been successful: about $2.5B of pretax recoveries are expected against the $2.7B pretax net charge taken in 2022.",
+      "governance_concerns" : [ "Key-person risk: Aengus Kelly has been CEO since 2011. I found no disclosed CEO succession plan in these results, so that is unknown.", "Russia: the recovery of stranded aircraft is ongoing. AerCap has litigation against Russian operator insurers and reinsurers. Appeal risk remains (Fidelis said it was considering one), and the size and timing of further recoveries are uncertain.", "Legacy contingent litigation: a long-running Brazilian VASP case. AerCap believes it is unlikely to pay damages.", "Shareholder engagement in 2026 focused on board composition and executive compensation. The board kept separate CEO and chair roles and is majority independent. I found no specific governance scandal in the sources.", "Pay details: I found no data on CEO pay levels or pay-for-performance in the search results, so that is unknown." ],
+      "sources" : [ "https://www.fool.com/earnings/call-transcripts/2026/08/03/aercap-aer-q2-2026-earnings-call-transcript/", "https://finance.yahoo.com/markets/stocks/articles/aercap-holdings-nv-aer-q2-090024520.html", "https://www.marketscreener.com/news/aercap-approves-1-billion-share-repurchase-program-through-june-2027-ce785bd2dc81ff26", "https://www.sec.gov/Archives/edgar/data/1378789/000095015726000221/ex99-2.htm", "https://beinsure.com/news/uk-court-awards-aercap-1bn/", "https://www.sec.gov/Archives/edgar/data/0001378789/000162828026050456/aer-20260630_d2.htm", "https://www.marketbeat.com/instant-alerts/stock-buyback-program-declared-by-aercap-nyseaer-board-of-directors-2026-04-29/" ]
+    },
+    "industry" : {
+      "growth_outlook" : "Near-term outlook is favorable. Management describes demand above supply, with constrained aircraft and engine availability. Lease extension rates were 85-87% in 2026, and secondary-market buyer demand is strong. About half of the less favorable pandemic-era leases have already rolled off. The rest are expected to roll off over the next five years and lift portfolio yields. Risks include higher oil prices and geopolitical shocks that squeeze airline margins, and some weakness in the Middle East and Asia Pacific. If OEM production recovers, the supply shortage that currently supports lease rates and asset values could ease. Long-term growth in air traffic is a general tailwind, but I did not find a quantified industry growth rate, so that is unknown.",
+      "competitive_intensity" : "Moderate to high overall, but the top end of the market is concentrated and benefiting from the supply shortage. The 20-F says the business is highly competitive. Competitors include manufacturers, financial institutions, other lessors, brokers and airlines. Competition is based on delivery dates, lease rates, terms and aircraft condition. Scale and cost of funds give large lessors an edge over smaller ones.",
+      "key_competitors" : [ "SMBC Aviation Capital", "Air Lease Corporation", "Avolon", "BOC Aviation", "Dubai Aerospace Enterprise (DAE)", "Aviation Capital Group", "Aircraft manufacturers, banks and other financial institutions, and airlines (per the 20-F)" ]
+    },
+    "catalysts" : [ "H2 2026 asset sales, guided at $4-5B for the full year, and gain-on-sale margins", "Continued buybacks: $1B program through June 2027, and 2026 EPS guidance of about $16.80", "Leverage of 2.05x is below the 2.5x target, which leaves room for buybacks or growth investment", "Continued roll-off of less favorable pandemic-era leases, which should lift lease yields over the next five years", "Further Russia-related insurance recoveries from litigation against operator insurers and reinsurers", "Deliveries of the 787 order and other widebody positions, which tighten supply and support lease rates", "Risks to watch: higher oil prices and geopolitical shocks that could hurt airline credit, and an easing of the supply shortage" ],
+    "citations" : [ "https://www.marketbeat.com/instant-alerts/aercap-q2-earnings-call-highlights-2026-07-29/", "https://finance.yahoo.com/markets/stocks/articles/aercap-holdings-nv-aer-q2-090024520.html", "https://finance.yahoo.com/markets/stocks/articles/aercap-holdings-n-v-q2-174137648.html", "https://www.theglobeandmail.com/investing/markets/stocks/AER/pressreleases/3623571/aercap-aer-q2-2026-earnings-call-transcript/", "https://www.fool.com/earnings/call-transcripts/2026/08/03/aercap-aer-q2-2026-earnings-call-transcript/", "https://ca.investing.com/news/company-news/aercap-holdings-nv-aer-q2-2026-earnings-call-highlights-record-asset-sales-raised--4762618", "https://www.sec.gov/Archives/edgar/data/0001378789/000162828026028212/aercap2026firstquarterearn.htm", "https://www.sec.gov/Archives/edgar/data/1378789/000162828026007513/aer-20251231.htm", "https://www.sec.gov/Archives/edgar/data/1378789/000137878925000007/aer-20241231.htm", "https://www.sec.gov/Archives/edgar/data/0001378789/000104746918001434/a2234723z20-f.htm", "https://umbrex.com/resources/company-profiles/aercap-holdings-n-v/", "https://www.marketscreener.com/news/aercap-approves-1-billion-share-repurchase-program-through-june-2027-ce785bd2dc81ff26", "https://www.marketbeat.com/instant-alerts/stock-buyback-program-declared-by-aercap-nyseaer-board-of-directors-2026-04-29/", "https://www.sec.gov/Archives/edgar/data/1378789/000095015726000221/ex99-2.htm", "https://beinsure.com/news/uk-court-awards-aercap-1bn/", "https://www.hsfkramer.com/notes/insurance/2025-posts/russian-aircraft-policy-claims-update-on-appeal-and-costs", "https://www.sec.gov/Archives/edgar/data/0001378789/000162828026050456/aer-20260630_d2.htm", "https://www.sec.gov/Archives/edgar/data/0001378789/000162828026028212/aer-03312026xinterimreport.htm" ]
+  },
+  "skeptic" : {
+    "bear_case" : [ "The 7x P/E rests on earnings that probably won't repeat. FY2025 net income of $3.75B is 1.39x operating income of $2.69B. FY2023 net income was 1.51x operating income. The gap likely comes from Russia insurance recoveries (about $2.5B pretax expected against the 2022 charge), gains on asset sales and tax items. Management's own 2026 adjusted EPS guide is about $16.80, and core EPS is about $14.00. That is well below the roughly $20-24 of trailing EPS implied by the market data. On core EPS the stock trades at about 10.3x, not 7x, and earnings are guided down year over year.", "Earnings quality is weak. About $2.80 of the $16.80 guide (about 17%) comes from gains on aircraft sales. Those gains depend on a supply-constrained, peak-like market for used aircraft. If OEM output recovers, if airline credit weakens, or if oil or geopolitics shock demand, gain margins (about 20% in Q2 2026) and lease rates can compress together. Management declined to guide to H2 gains.", "Cash conversion is poor and getting worse relative to growth. Revenue rose about 21% from 2022 to 2025 ($7.01B to $8.52B), but operating cash flow rose only about 4% ($5.17B to $5.39B). OCF was flat from 2024 to 2025 while revenue grew 6.5%. Cumulative FY2023-25 FCF was about -$2.83B against about +$8.99B of reported net income. Reported profits are not turning into distributable cash.", "Buybacks are effectively debt- and asset-sale-funded. About $8B went to repurchases since 2023, plus $1.4-1.5B in H1 2026 and a new $1B program. Reported FCF has been negative every year in that span. The shrinking share count flatters per-share metrics. Repurchases at 1.2x book carry less value-accretion than the earlier sub-book buybacks, and they leave less equity cushion. The 2026 plan needs $4-5B of asset sales to square the cash math, which is cyclical-peak dependence.", "Leverage is high. Total debt is $42.8B against $1.7B of cash and a $22.6B market cap, so debt is about 1.9x market cap. Debt/equity is 2.33 on the data provided. The business needs continuous access to unsecured debt markets, and liquidity of about $22B is mostly committed lines, not cash. The 4.2% average cost of debt is a backward-looking blend. Refinancing at higher marginal rates, or a spread-widening event, would squeeze the lease-yield spread. Net spread is the profit engine and a few dozen bp matters a lot on a $40B+ liability base.", "The headline multiples hide an expensive asset-heavy business. EV is about $63.7B against operating income of $2.69B, or about 23.7x EV/EBIT. EV/EBITDA of 12.4x is the more flattering lens because depreciation is the core cost of the business. A low P/E on one-off-boosted earnings is not the same as cheap.", "The moat is narrow and partly cyclical. Scale and cost of funds are real. But the current spread expansion (lease yield +30bp, net spread +50bp) is attributed in part to an industry-wide aircraft shortage that is not AerCap-specific. The shortage can end as Boeing and Airbus production normalizes. Competitors such as SMBC, Avolon, ALC and DAE have similar funding and OEM access. Management's claim of buying narrowbody slots 16-17% below competitors is unverified.", "Tail and key-person risks remain. Russia recoveries are still in litigation, with appeal risk (Fidelis said it was considering an appeal). The long-running VASP case is a contingent liability. CEO Aengus Kelly has been in place since 2011 with no disclosed succession plan. Much of the buyback and M&A strategy is tied to him.", "Returns are peak-cycle. ROE of 18.7% is inflated by one-off gains and by shrinking equity through buybacks. Book value of about $18.7B at 1.2x P/B leaves little margin of safety if aircraft values mean-revert, because residual value is the largest unhedgeable assumption in the book." ],
+    "assumption_challenges" : [ {
+      "assumption" : "Low P/E (7.0x trailing, 7.9x forward) means the stock is cheap",
+      "why_questionable" : "Trailing earnings include non-recurring Russia recoveries and gains on sale. Guided 2026 adjusted EPS (about $16.80) implies about 8.6x on the current price, and core EPS of $14.00 implies about 10.3x. The data's forward P/E implies EPS of about $18.2, which is above the company's own guide. Trailing EPS of about $20.4 to $23.9 is not a sustainable base."
+    }, {
+      "assumption" : "Negative FCF is just growth capex, so it is benign",
+      "why_questionable" : "The split between growth and maintenance capex was not verified. Capex exceeded OCF in each of the last three years, and OCF was flat while revenue grew. Aircraft purchases are discretionary, but the buyback, dividend increase and growth plan together exceed internally generated cash. The gap is closed by debt and by selling aircraft at gains. 'Growth' that never self-funds is a financing dependency. (In fairness, FCF as defined excludes asset-sale proceeds, so it overstates the burn, but that only highlights the reliance on sales.)"
+    }, {
+      "assumption" : "Leverage of 2.05x, below the 2.5x target, means ample balance sheet capacity",
+      "why_questionable" : "Reported debt/equity in the market data is 2.33. Net debt/book equity from the same data is about 2.2x. The 2.05x figure uses a company-specific definition (probably adjusted equity and/or net debt) that is not reconciled here. Headroom is smaller on the unadjusted figure, and the company's own target is itself a self-set, flexible one."
+    }, {
+      "assumption" : "The supply shortage and lease-roll tailwind persist for years",
+      "why_questionable" : "OEM production recovery is the key unknown. The same shortage inflates asset sale gains and lease extension rates (85-87%). Sell-side and management narratives are anchored to the peak of a shortage. The pandemic-era lease roll-off is a one-time repricing, not a durable growth rate. Middle East and Asia Pacific weakness is already cited."
+    }, {
+      "assumption" : "Management is 'strong' on capital allocation",
+      "why_questionable" : "Per-share growth was bought by shrinking the share count (about 40% of shares) with leverage-financed repurchases and with gains on sales. Excluding Russia recoveries and gains, organic earnings power is the $14 core EPS. Buybacks at 1.2x P/B earn less than those done below book. The adjusted-EPS metric is management-defined and includes sale gains."
+    }, {
+      "assumption" : "Moat protects returns through the cycle",
+      "why_questionable" : "A funding-cost advantage depends on staying investment grade and on open credit markets. Scale did not protect FY2022 results, when net income was -$726M after Russia. Aircraft are commodity-like assets and customers (airlines) are cyclical credits. The moat is real but does not remove cycle risk."
+    }, {
+      "assumption" : "No valuation model is needed or the DCF failure is just a lessor quirk",
+      "why_questionable" : "Code-based valuation is 'not reliable' (average FCF is about -$944M on 3 years). Without a DCF, the bull case relies on P/E and P/B alone. P/E is the metric most distorted by the one-offs above, and there is no independent cross-check from cash returns."
+    } ],
+    "inconsistencies_found" : [ "Trailing P/E of 7.05 at $143.85 implies EPS of about $20.4. FY2025 net income / current shares (3.751B / 157.2M) gives about $23.9. The company's 2026 adjusted EPS guide is about $16.80. Three different EPS bases (about 23.9, 20.4 and 16.8) are in play, and they decline in that order. The difference is not reconciled, and the weighted-average share count in the trailing figure must have been much higher than 157M, which shows how much the count has shrunk.", "The forward P/E of 7.89 implies forward EPS of about $18.2. That is about 8% above management's 2026 adjusted EPS guide of about $16.80, and about 30% above core EPS of $14.00. So the 'forward' figure appears to rely on stale or optimistic estimates. The filings analysis also says the Yahoo growth estimates table is empty, so analyst support for this forward multiple is not documented.", "Management's 2.05x leverage conflicts with the 2.33 debt/equity in the market data and with the roughly 2.2x net debt/equity derived from the same data. The qualitative section does not reconcile the definitions. The filings analysis even flags that the unit basis of debt/equity is unstated.", "The qualitative analysis calls management 'strong' and the balance sheet roomy, while the same analysis says earnings are partly driven by cyclical gains, FCF is negative, and the Russia recovery is not yet complete. The 'strong' rating is not tested against the quality of the earnings it credits.", "Net income swung from -$726M (2022) to +$3.14B (2023) to $2.10B (2024) to $3.75B (2025), while operating income moved smoothly from $1.81B to $2.69B. The filings analysis notes the net-to-operating gap but provides no breakdown. 'Adjusted ROE of 18%' (management) and the 18.66% trailing ROE from data are presented as similar, though they are probably on different bases.", "Lease extension rate is stated as 85% in one place (Q2 2026) and 85-87% in another. The Q2 2026 cites utilization of 99% from 2024, which is a stale datapoint for a 2026 argument. The Yahoo quote (143.91) differs from the market data price (143.85), which is minor timing noise.", "The qualitative moat text says the FY2023-25 FCF is negative 'on a reported basis' and that the capex split was not verified, but the same text lists the thesis as supportive. Cumulative FCF of -$2.83B is not reconciled with the $8B of repurchases and the dividend. The funding source (debt, asset sales) is implied, not shown." ],
+    "severity" : "minor",
+    "severity_reason" : "The bear case is meaningful: trailing earnings are inflated by one-offs, FCF is negative, leverage is about 2.2-2.3x and cyclical, and the EPS bases do not reconcile. But these are structural features of a large, investment-grade aircraft lessor, not signs of accounting fraud or an impaired franchise. Core EPS of about $14 still gives roughly 10x, and book value, buybacks and liquidity support the equity. This is a valuation and cycle-risk issue, not a reason to avoid the stock regardless of price.",
+    "panel_severities" : [ "minor", "minor", "minor" ]
+  },
+  "recommendation" : "AVOID / INSUFFICIENT DATA",
+  "checks" : {
+    "valuation_reliable" : false,
+    "notes" : [ "Average FCF <= 0: DCF not meaningful (also true for banks/insurers - use P/B & ROE instead)." ]
+  }
+}

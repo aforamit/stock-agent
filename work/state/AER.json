@@ -1,0 +1,26 @@
+{
+  "ticker" : "AER",
+  "analysis" : {
+    "at" : "2026-10-07T20:52:07+05:30",
+    "price" : 143.85,
+    "recommendation" : "AVOID / INSUFFICIENT DATA",
+    "checks" : {
+      "valuation_reliable" : false,
+      "notes" : [ "Average FCF <= 0: DCF not meaningful (also true for banks/insurers - use P/B & ROE instead)." ]
+    },
+    "valuation" : {
+      "reliable" : false,
+      "notes" : [ "Average FCF <= 0: DCF not meaningful (also true for banks/insurers - use P/B & ROE instead)." ]
+    }
+  },
+  "seen_filings" : { },
+  "last_check" : {
+    "at" : "2026-10-07T20:52:48+05:30",
+    "price" : 143.85,
+    "tier" : "full"
+  },
+  "signal" : {
+    "pending" : "AVOID",
+    "pending_count" : 1
+  }
+}
