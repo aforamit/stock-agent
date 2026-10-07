@@ -1,205 +1,247 @@
-# NIKE, Inc. (NYSE: NKE): Research Report
+# NIKE, Inc. (NKE): Research Report
 
-**Recommendation: WATCHLIST** (fixed by the rule engine; this report explains it, it does not alter it)
-**Price:** $34.61 | **Market cap:** about $51.4B (Market Data) | **Currency:** USD
+*Price used in the valuation: $34.045. The filings summary cites $34.61 and a market cap of about $51.4B; see Section 8.*
 
 ---
 
 ## 1. Executive summary
 
-NIKE is still the world's largest athletic footwear and apparel company, but it is in a multi-year reset that has not yet shown up in earnings or cash flow. The stock is **not rejected** and **not rated actionable**. It is placed on the **Watchlist**.
+| Risk profile | Recommendation (fixed by rule engine) |
+|---|---|
+| Conservative | **AVOID** |
+| Moderate | **AVOID** |
+| Aggressive | **AVOID** |
 
-- **Why not a buy:** The rule engine's margin-of-safety check **failed**. The base-case margin of safety is **19.9%** (base intrinsic value $43.21 vs. price $34.61), which did not meet the required threshold. The threshold itself is not stated in the inputs.
-- **Why not an outright pass:** Every other rule check passed. The bear case is not catastrophic (-25.5%), debt and ROE are acceptable, cash conversion is acceptable (FCF/net income of 0.70), and the skeptic review rated severity "minor".
-- **Biggest uncertainty:** The base-case DCF starts from a **normalised FCF of $4.023B**. That is above FY26 actual FCF of $2.184B. The skeptic argues that restating to about $2.2B would put base-case value near $23-24 per share (a skeptic estimate, not a rule-engine figure). The reported 19.9% margin of safety is therefore sensitive to this choice (Market Data; Skeptic review).
-- **Operating trend:** Q1 FY27 revenue was $11.2B (-4% reported, -5% currency-neutral). Implied FCF was about -$64M. Management guides FY27 adjusted EPS to $1.15-$1.35 versus $2.10 in FY26 (SEC 10-Q 2026-10-02; Qualitative analysis).
+**Why all three profiles say AVOID.**
+
+- The skeptic review rated the thesis **"major"** severity. That blocks all three profiles, because the thresholds block on "major" for moderate and aggressive and on "minor" or above for conservative.
+- The base-case DCF gives $43.21 per share, or +26.9% versus the price. After the margin-of-safety calculation the rule engine records **21.2%**. That clears only the aggressive threshold (10%). It misses the moderate (25%) and conservative (35%) thresholds.
+- The DCF starts from **$4.023B of FCF**. This is the FY24–FY26 three-year average, not the latest figure. FY26 FCF was **$2.184B**, and Q1 FY27 FCF was about **-$64M** (calculated) (Market Data; SEC 10-K 2026-07-15; SEC 10-Q 2026-10-02). The skeptic argues this starting point drives the apparent upside.
+- Management guides FY27 revenue down high single digits and adjusted EPS to $1.15–$1.35, against $2.10 in FY26 (CNBC and earnings-call summaries, see Sources).
+- The FY26 dividend ($2,407M) exceeded FCF ($2,184M) (SEC 10-K).
+- The rule engine flagged **12 accounting red flags**.
+
+NIKE still has a strong brand, a gross margin of about 43% and an A+/A2 credit rating. The AVOID calls reflect valuation inputs and earnings visibility, not a view that the franchise is broken.
 
 ---
 
 ## 2. Business overview
 
-NIKE designs, develops, markets and sells athletic footwear, apparel, equipment and accessories under the NIKE, Jordan and Converse brands. It sells through wholesale accounts and NIKE Direct (owned stores and digital) (SEC 10-K 2026-07-15, Item 1).
+NIKE designs, develops, markets and sells athletic footwear, apparel, equipment and accessories under the NIKE, Jordan and Converse brands. It sells through wholesale accounts and NIKE Direct (owned stores and digital). It describes itself as the world's largest seller of athletic footwear and apparel (SEC 10-K 2026-07-15, Item 1).
 
-**Where the business stands:**
-- **FY2026 (year ended May 31, 2026):** revenue $46.4B, flat reported and -2% currency-neutral. Net income was $3.1B and diluted EPS $2.10 (SEC 10-K).
-- **The reset:** rebalancing footwear supply, repositioning NIKE Digital toward full price, reinvesting in wholesale, and cutting costs.
-- **Weak areas:** Greater China (-26% currency-neutral in Q1 FY27, EBIT -34%) and Converse (-28%). Sportswear and Jordan are also down. North America grew 2% in Q1 (SEC 10-Q; Qualitative analysis).
-- **"Pace" program (Oct 2026):** about $1.0B of further pre-tax charges (about $0.3B in FY27) and about $2.5B of cumulative savings through FY31, before charges and reinvestment (SEC 10-Q, Note 14).
-- **Leadership:** CEO Elliott Hill (a Nike insider since 1988) has led since October 2024. CFO Matthew Friend left in August/September 2026 and David Denton now signs as CFO (SEC 10-Q; Qualitative analysis).
+- **FY26 (year ended May 31, 2026):** revenue $46.4B, flat reported and down 2% currency-neutral. Net income was $3.1B and diluted EPS $2.10 (SEC 10-K).
+- **Multi-year reset:** NIKE is rebalancing footwear supply, repositioning NIKE Digital as full-price, reinvesting in wholesale and cutting costs (SEC 10-K).
+- **Weak spots (Q1 FY27):** Greater China was -26% currency-neutral and Converse -28% (SEC 10-Q 2026-10-02).
+- **Pace program (announced October 2026):** about $1.0B of further pre-tax charges and about $2.5B of cumulative savings through FY31. The savings are before charges and reinvestment (SEC 10-Q, Note 14 and MD&A).
+- **Sourcing concentration:** Vietnam makes 52% of footwear, Indonesia 27% and China 16%. Four contract manufacturers make about 60% of footwear production (SEC 10-K).
 
 ---
 
 ## 3. Financial snapshot
 
-| Metric | FY2026 | Comparison | Source |
+| Metric | Latest | Prior / comparison | Source |
 |---|---|---|---|
-| Revenue | $46,398M | FY25 $46,309M; FY24 $51,362M | SEC 10-K |
-| Gross margin | 42.9% | FY25 42.7%; FY24 44.6% | SEC 10-K MD&A |
-| Operating income (GP less S&A) | $3,797M | FY25 $3,702M; FY24 $6,311M | Market Data; SEC 10-K |
-| EBIT / margin | $3,850M / 8.3% | FY24 12.7% | SEC 10-K non-GAAP |
+| Revenue FY26 | $46,398M | FY25 $46,309M; FY24 $51,362M | SEC 10-K |
+| Gross margin | 42.9% | FY25 42.7%; FY24 44.6% | SEC 10-K |
+| Operating income (gross profit less S&A) | $3,797M | FY25 $3,702M; FY24 $6,311M | Market Data; SEC 10-K |
+| EBIT / margin | $3,850M / 8.3% | FY24 12.7% | SEC 10-K, non-GAAP table |
 | Net income / diluted EPS | $3,108M / $2.10 | FY25 $3,219M / $2.16 | SEC 10-K |
 | Operating cash flow | $2,868M | FY25 $3,698M; FY24 $7,429M | SEC 10-K |
 | Capex | $684M | FY25 $430M | SEC 10-K |
 | Free cash flow | $2,184M | FY25 $3,268M; FY24 $6,617M; FY23 $4,872M | Market Data; SEC 10-K |
-| FCF margin (calculated) | about 4.7% | FY24 about 12.9% | Calculated |
-| FCF yield on market cap (calculated) | about 4.2% | | Calculated |
-| Dividends paid | $2,407M | exceeds FCF of $2,184M | SEC 10-K |
+| FCF margin (calculated) | about 4.7% | about 12.9% in FY24 | Calculated |
+| FCF yield on market cap (calculated) | about 4.2% | n/a | Calculated |
+| Dividends paid vs FCF | $2,407M vs $2,184M | Buybacks only $146M | SEC 10-K |
+| Q1 FY27 revenue | $11,213M, -4% reported, -5% currency-neutral | n/a | SEC 10-Q |
+| Q1 FY27 net income / EPS | $712M / $0.48 | Prior year $727M / $0.49 | SEC 10-Q |
+| Q1 FY27 OCF / capex | $135M / $199M, implied FCF about -$64M (calculated) | n/a | SEC 10-Q |
+| Q1 FY27 gross margin | 42.8% (+60 bps) | n/a | SEC 10-Q |
+| Cash and short-term investments | $8,368M | Aug 31, 2026 | Market Data; SEC 10-Q |
+| Total debt incl. leases | $11,125M | Aug 31, 2026 | Market Data |
+| Shareholders' equity | $15,220M | Aug 31, 2026 | SEC 10-Q |
 
-**Latest quarter (Q1 FY27, ended Aug 31, 2026):** revenue $11,213M (-4%); net income $712M; EPS $0.48 (prior year $0.49); gross margin 42.8% (+60 bps); OCF $135M; capex $199M; implied FCF about -$64M (calculated) (SEC 10-Q).
+**Multiples (Market Data):** trailing P/E 16.4, forward P/E 20.0, EV/EBITDA 11.07, P/B 3.40. The filings summary lists ROE of 21.6%.
 
-**Balance sheet (Aug 31, 2026):** cash and short-term investments $8,368M. Total debt including operating leases is $11,125M per Market Data. Shareholders' equity is $15,220M. Credit ratings were downgraded in 2025 but remain A+/A2 (SEC 10-K; SEC 10-Q).
-
-**Multiples (Market Data):** trailing P/E 16.3, forward P/E 20.3, EV/EBITDA 11.07, P/B 3.45, ROE 21.6%.
-
-**Earnings-quality items to keep in mind:**
-- FY26 gross profit and operating income include a **$986M one-time IEEPA tariff recovery** credited to cost of sales (SEC 10-K, MD&A and Note 1).
-- FY26 included $385M of severance charges (SEC 10-K, Note 18).
+**Points to note:**
+- Revenue fell from $51.4B to $46.4B between FY24 and FY26. EBIT margin fell from 12.7% to 8.3%.
+- FY26 operating income and gross profit include a **one-time $986M IEEPA tariff recovery** credited to cost of sales (SEC 10-K, MD&A and Note 1). Excluding it, gross margin would be about 40.8% (calculated). That ignores any offsetting tariff costs, which are not quantified.
+- Net debt including leases is about $2.8B ($11.1B less $8.4B). Excluding leases, debt of about $7.9B roughly equals cash (calculated).
+- Endorsement obligations total about $15.5B, with about $1.7B payable within 12 months (SEC 10-K, Liquidity).
 
 ---
 
 ## 4. Valuation
 
-**Method:** a scenario DCF on free cash flow. The valuation was flagged **reliable** with no notes. The base FCF used is **$4.023B**. The inputs do not describe how it was derived. The skeptic reports it as the FY24-FY26 average of $6.617B, $3.268B and $2.184B, which is consistent with the stated FCF history.
+Price: **$34.045** (Market Data). The valuation was marked reliable, with no notes. Base FCF used was **$4.023B**.
 
-| Scenario | FCF growth | Discount rate | Terminal growth | Intrinsic value / share | vs. price ($34.61) |
+| Scenario | FCF growth | Discount rate | Terminal growth | Intrinsic value / share | Upside vs price |
 |---|---|---|---|---|---|
-| Bear | 2% | 12% | 2.0% | $25.77 | **-25.5%** |
-| Base | 6% | 10% | 3.0% | $43.21 | **+24.8%** |
-| Bull | 9% | 9% | 3.5% | $62.31 | **+80.0%** |
+| Bear | 2% | 12% | 2% | $25.77 | -24.3% |
+| Base | 6% | 10% | 3% | $43.21 | +26.9% |
+| Bull | 9% | 9% | 3.5% | $62.31 | +83.0% |
 
-*Source: Valuation model output; Market Data price.*
+**How the numbers relate.**
+- The 21.2% margin of safety is consistent with the base case: 1 − $34.045 / $43.205 ≈ 21.2%.
+- The 6% growth rate is the analyst's judgment, held with low confidence. No analyst consensus or management FCF guidance was available (Filings, growth rationale).
+- Arguments for growth from a depressed base: about $0.5B a year of average Pace savings, some working-capital timing in FY26 OCF, North America and wholesale growth, and gross margin up 60 bps in Q1.
+- Arguments against: China and Converse weakness through FY27, about $1.0B of cash restructuring charges, higher capex, an uncovered dividend, and the one-time tariff credit in FY26 profit.
 
-**Margin of safety:** the rule engine's base-case margin of safety is **19.9%**, consistent with 1 − $34.61 / $43.21. This **failed** the margin-of-safety check.
+**The skeptic's challenge (not part of the rule engine's numbers).**
+- The $4.023B base equals the three-year average of $6.617B, $3.268B and $2.184B. That is about 84% above the latest FCF.
+- The skeptic rescaled the model's outputs to $2.184B. This was its own arithmetic, not a filing figure or a re-run model. It gives roughly **$23 (base), $13 (bear) and $33 (bull)**. On that basis the base case sits about 33% below the price, and the bull case only about matches it.
+- Terminal value is about 73% of base value (per the skeptic), so the point estimate is sensitive to the discount and terminal-growth assumptions.
+- Guided FY27 adjusted EPS of $1.15–$1.35 implies roughly 25–30x at the current price. That is well above the 16x trailing and 20x "forward" P/E shown.
 
-**Growth assumption:** the 6% base growth is a judgment call with **low confidence**, not a company forecast. NIKE provides no FCF guidance and no analyst growth estimates were available. The rationale weighs these points:
-- *For recovery:* about $2.5B of cumulative Pace savings (roughly $0.5B per year on average, pre-charge and pre-reinvestment), working-capital drag in FY26, and North America and wholesale growth.
-- *Against:* China and Converse are expected to stay negative through FY27, Sportswear and Jordan actions extend beyond FY27, about $1.0B of restructuring cash costs are coming, capex is up, and dividends already exceed FCF.
-
-**Skeptic challenges to the valuation (reported, not adopted into the numbers above):**
-- The $4.023B base is about 84% above FY26 FCF and leans on FY24's pre-reset peak. The skeptic estimates that rerunning the base case near $2.18B would give roughly **$23-24 per share, about 30% below the current price**.
-- The bear case also starts from the $4.0B base. Its 2% growth implicitly assumes FCF nearly doubles from the FY26 level, so it may be too mild.
-- The 20.3x forward P/E in Market Data implies about $1.70 of EPS, above management's FY27 guidance of $1.15-$1.35. At the guidance midpoint (about $1.25) the skeptic computes about 28x. The source of the 20.3x is not documented.
-- The 16.3x trailing P/E benefits from the $986M tariff credit, though the gross tariff costs offset by it are not quantified.
-
----
-
-## 5. Moat & management
-
-### Moat: **Narrow**
-**Supports:**
-- Brand and cultural equity (NIKE, Jordan), and global scale in marketing and athlete endorsements. Endorsement obligations are about $15.5B (SEC 10-K, Liquidity).
-- Global wholesale and direct distribution, and a performance business of about $16B growing high-single digits (Qualitative analysis).
-- Pricing power is dented but not gone, with gross margin of about 42.8% and recovering.
-
-**Undermines:**
-- Consumer switching costs are negligible, so the moat depends on brand heat and execution.
-- Share loss: Euromonitor puts NIKE's 2025 global sports-footwear share at 22.9%, down from 25.9%, while Adidas rose from 11.7% to 12.2% (Qualitative analysis). The analysis also cites a higher 27-30% estimate. The skeptic notes the "narrow" rating leans on the more favourable figure.
-- Competitors On, New Balance, Asics, Hoka and Adidas are growing at double-digit rates while NIKE shrinks.
-- Whether the damage is cyclical or structural is **unknown**.
-
-### Management: **Average**
-**Positives:**
-- Q1 gross margin was up 60 bps and SG&A down 3%.
-- Q1 EPS of $0.48 beat the $0.43 consensus.
-- The CEO is a long-tenured insider. Running has grown for six straight quarters.
-
-**Negatives:**
-- About 124.4M shares were repurchased at an average of $97.57 (about $12.1B). The stock is now $34.61. Repurchases have been paused since Q1 FY26 (SEC 10-K; SEC 10-Q).
-- The FY26 dividend ($2,407M) exceeded FCF ($2,184M).
-- The turnaround is taking longer than hoped. Management says changes could take 24-36 months to show fully, with pressure likely into FY28.
-- Turnover: CFO change within weeks of the 10-K filing, a COO role created in December 2025, and average management tenure of 1.8 years.
-
-**Governance:**
-- The 10-K states that Swoosh, LLC owns about 79% of Class A, and Class A holders elect three-quarters of the board. The qualitative analysis did not retrieve voting detail, and the skeptic flags that inconsistency.
-- Executive Chairman Mark Parker (CEO 2006-2020) remains on the Executive Committee.
-- CEO reported pay is about $36.3M with minimal direct share ownership (Simply Wall St, via Qualitative analysis).
+The rule engine's numbers are reported unchanged above. Treat the skeptic's rebasing as an indication of sensitivity, not a competing valuation.
 
 ---
 
-## 6. Risks & bear case
+## 5. Moat and management
 
-**Company-stated risks (SEC 10-K / 10-Q):**
-- **Execution:** management says its reset actions will "adversely affect" revenue and profitability.
-- **Competition:** adidas, Anta, ASICS, Deckers, Li Ning, lululemon, New Balance, On, Puma, Under Armour, VF.
-- **Greater China:** declining traffic, elevated promotions, high marketplace inventory.
-- **Sourcing and tariffs:** Vietnam makes 52% of footwear, Indonesia 27% and China 16%. Four contract manufacturers make about 60% of production.
-- **Pace program:** savings may not materialize, charges are preliminary, and the new three-geography structure could disrupt operations.
-- **Tax and legal:** $953M gross unrecognized tax benefits (plus $438M interest and penalties), an IRS audit of FY2017-2023, the EC State Aid investigation, Pillar Two changes, and a Belgian customs claim with no loss estimate (bank guarantees of $1.3B outstanding, covering several items). There are also securities class actions and derivative suits.
-- **Fixed commitments:** $15.5B endorsements, $4.9B product purchase obligations, $2.4B other purchase obligations, and about $3.1B lease liabilities. Inventory is $7.8B, up 5% since May.
-- **Control and overhang:** Swoosh, LLC's holdings and the dual-class structure.
+### Moat: narrow (judgment call)
 
-**Skeptic's bear case (severity rated "minor"; panel severities were minor, minor and major):**
-1. The DCF base FCF ($4.0B) is above actual FY26 FCF ($2.18B), so the upside may be an artifact of normalization.
-2. FY27 guidance implies sharply lower Q2-Q4 EPS. After the $0.48 Q1, $0.67-$0.87 remains for the rest of the year, versus about $1.67 in the prior year (skeptic calculation).
-3. The dividend of about $1.62 per share against EPS guidance of $1.15-$1.35 implies a payout above 100%. The skeptic considers a cut likely and notes $2.0B of debt maturing within a year.
-4. Earnings quality: ex-tariff credit, FY26 operating income would be about $2.8B (down about 24%). Sales-related reserves, returns reserves and inventory reserves all fell while management cites rising returns and discounts.
-5. Cash conversion is deteriorating. About 30% of accounts payable is supplier-finance obligations with undisclosed terms. SBC of $715M equals about 33% of FCF.
-6. Structural share loss, with intentional shrinkage of high-margin franchises (Dunk, Jordan) and no evidence yet of demand returning.
-7. Pace's net savings (about $1.5B over five years after charges, before reinvestment) are small against the $2.6B fall in operating income since FY24.
+**Sources of moat (Qualitative):**
+- **Brand:** NIKE, Jordan and Converse form the largest athletic brand. Brand value is cited above $50B versus about $16B for Adidas.
+- **Scale:** FY26 revenue of $46.4B is almost twice Adidas's. That gives sourcing, marketing and endorsement leverage.
+- **Performance innovation:** Performance revenue is about $16B and grew high single digits in Q1 FY27.
+- **Distribution:** about 190 countries, owned stores, wholesale and the NIKE app.
 
-**Skeptic's conclusion:** no solvency or fraud-level problem (A+/A2 ratings, net debt of about $2.8B). The issue is that the headline upside is unsupported by the current trajectory, which is a valuation and timing problem, not a reason to avoid the stock at any price. That conclusion fits a Watchlist rating.
+**Evidence of erosion:**
+- Consumer switching costs are negligible (koalagains.com, lower-quality).
+- Euromonitor puts NIKE's global sports-footwear share at 22.9%, down from 25.9% (founderpin.com, citing Euromonitor).
+- Q1 FY27: Sportswear fell low double digits, Jordan fell mid-teens and Greater China fell 26% (SEC 10-Q).
+- Third-party sources report faster growth at On, New Balance, Asics, Hoka and Adidas, from smaller bases (businessmodelanalyst.com, lower-quality).
 
-**Accounting red flags counted by the rule engine: 12**, covering the tariff credit, receivables growth (+25.7% vs. revenue +0.2%), declining reserves, recurring restructuring charges, tax-rate volatility, the dividend exceeding FCF and capital allocation, supplier finance, SBC, CFO turnover, the Belgian customs claim, the non-GAAP ROIC definition, and the hedge-gain swing.
+NIKE still has a gross margin of about 43% and A+/A2 credit ratings, so the franchise is not broken. A wide moat is not supported by current results. The industry growth outlook is mixed, and long-term growth is unknown.
 
----
+### Management: average
 
-## 7. Rule-by-rule decision
-
-| Rule | Result | Detail |
-|---|---|---|
-| Margin of safety | **FAIL** | Actual 19.9% (base IV $43.21 vs. $34.61). Did not meet the required threshold (threshold value not provided). |
-| Bear case not catastrophic | PASS | Bear value $25.77, -25.5% vs. price |
-| Debt | PASS | Total debt $11,125M vs. cash $8,368M; net debt about $2.8B; A+/A2 ratings |
-| ROE | PASS | 21.6% per Market Data. The skeptic computes about 20.3-20.4% from filings, a minor difference. |
-| Cash conversion | PASS | FCF / net income = 0.70 ($2,184M / $3,108M) |
-| Skeptic severity | PASS | "Minor" |
-| Accounting red flags | Informational | 12 flagged (see Section 6) |
-
-**Outcome:** one failed gating rule (margin of safety), with all other rules passing, gives **WATCHLIST**. The company clears the quality and downside screens, but the price does not offer a sufficient discount to estimated value, and that discount rests on a contested base-FCF assumption.
-
-**What could change the picture** (observations, not changes to the recommendation): Q2 FY27 results, FY28 guidance, evidence of Greater China and Sportswear stabilisation, dividend policy under the new CFO, and FCF recovering from the FY26 base (Qualitative analysis, Catalysts).
+- **Capital allocation is mixed to poor.**
+  - About $12.1B of buybacks (124.4M shares) were done at an average of $97.57. The price is now about $34, and repurchases have been paused since Q1 FY26.
+  - FY26 dividends exceeded FCF.
+  - Capex rose to $684M.
+  - Stock options average a $96.44 strike (76.8M outstanding), so they are far out of the money (SEC 10-K Note 9).
+  - The skeptic argues "poor" is the better label.
+- **Positives:** SG&A was cut (Q1 down 3%), Performance categories are responding to CEO Elliott Hill's "Sport Offense" and the wholesale reset, and about $5.9B of buyback authorization remains.
+- **Leadership change:** CFO Matthew Friend signed the 10-K on July 15, 2026 and ceased being CFO on August 17. David Denton signed the Q1 10-Q as CFO. Denton warned that actions will weigh on results into FY28 (earnings-call summaries).
+- **Governance concerns:**
+  - Class A holders elect 8 of 11 directors.
+  - Swoosh, LLC holds about 78.8% of Class A (Forbes, Stocktitan DEF 14A).
+  - Swoosh said it would vote against a dual-class sunset proposal (Forbes).
+  - Travis Knight is not independent under NYSE rules, and Phil Knight is Chairman Emeritus (DEF 14A).
+  - Activism has little leverage.
 
 ---
 
-## 8. Data gaps & caveats
+## 6. Risks and bear case
 
-- No analyst consensus, growth estimates or management FCF guidance were available. The origin of the 20.3x forward P/E is undocumented.
-- The gross cost of IEEPA tariffs in FY26 is not quantified, so underlying margin cannot be determined. One cited source puts the FY26 tariff impact at about $1.5B, which conflicts with the net-recovery framing in the 10-K.
-- Q1 FY27 normalised FCF cannot be derived. The split between permanent and timing working-capital items is not given.
-- Market Data debt ($11,125M) differs slightly from the balance-sheet sum ($11,072M). The skeptic also notes that subtracting lease liabilities from EV may double-count lease costs already in OCF.
-- FY2023 FCF cannot be reconciled to the provided filings, which cover FY2024-FY2026.
-- Supplier-finance payment terms and the Belgian customs claim (no range, accrual or timeline) are undisclosed.
-- The timing of Pace savings versus reinvestment, and guidance beyond FY27, are not given.
-- The proxy statement (executive pay, related-party items) and peer valuation data were not provided.
-- The 6% growth rate is a low-confidence judgment. The valuation is highly sensitive to the starting FCF, discount rate and terminal growth.
-- Some qualitative inputs come from lower-quality secondary sources (e.g., SWOT sites, aggregators).
-- Dates and figures in this report are taken from the supplied inputs. They have not been independently verified.
+**Company-stated and analytical risks (SEC 10-K and 10-Q unless noted):**
+- **Competition:** adidas, Anta, ASICS, Deckers, Li Ning, lululemon, New Balance, On, Puma, Under Armour, VF and others.
+- **Execution of the reset:** management says actions will "adversely affect" revenue and profitability. Sportswear and Jordan actions extend beyond FY27. China and Converse will keep dragging through FY27.
+- **Greater China:** revenue was $1,180M, -26% currency-neutral, and EBIT was $248M, -34%.
+- **Tariffs and sourcing concentration.**
+- **Pace program risk:** savings may not materialize, charges may rise, and the new three-geography structure could disrupt operations.
+- **Tax:** $953M of gross unrecognized tax benefits, an IRS audit of FY2017–2023, the EU State Aid investigation and Pillar Two changes. Income taxes were the auditor's critical audit matter.
+- **Belgian customs claim:** no loss estimate or accrual is disclosed, and an adverse outcome could be material.
+- **Litigation:** securities class actions and derivative suits.
+- **Other:** credit ratings downgraded in 2025 (still A+/A2), Swoosh share-sale overhang, heavy fixed commitments ($15.5B endorsement, $4.9B product purchase and $2.4B other purchase obligations, about $3.1B leases), and inventory of $7.8B (up 5% versus May 31).
+
+**Bear case (skeptic, severity "major"; the three-member panel voted minor, major, major):**
+1. **Valuation base.** The DCF's $4.023B starting FCF is 84% above FY26 FCF. FCF has fallen three years running ($6.6B, $3.3B, $2.2B), and Q1 FY27 was about -$64M.
+2. **Guidance.** Guided FY27 adjusted EPS of $1.15–$1.35 versus $2.10 implies a roughly 36–45% decline. After Q1's $0.48, only about $0.67–$0.87 is left for the last three quarters.
+3. **Dividend.**
+   - The dividend of about $1.62 per share would exceed 100% of guided earnings (skeptic's calculation).
+   - Q1 FY27 dividends were $610M against negative FCF.
+   - About $2.0B of debt is current, and about $1.0B of cash restructuring charges are coming.
+4. **Earnings quality.**
+   - FY26 operating income includes the $986M tariff credit. Excluding it, operating income would be about $2.8B and gross margin about 40.8% versus 42.7% a year earlier (calculated; ignores offsetting tariff costs).
+   - Hedge gains in cost of sales fell from $295M (FY25) to $20M (FY26) and a $30M loss in Q1 FY27 (SEC 10-K Note 12; SEC 10-Q Note 7).
+   - FX was cited for 40 of Q1's 60 bps of gross margin gain.
+5. **Reserves and receivables.**
+   - Receivables rose 25.7% versus revenue +0.2%. Excluding the $684M IEEPA receivable, they rose about 11% (calculated) against wholesale +6%.
+   - Sales-related reserves fell from $1,834M to $1,589M and the returns reserve from $1,277M to $1,099M, even though management cites higher returns and discounts.
+   - The inventory reserve fell from $233M to $213M.
+6. **Restructuring is recurring.** FY24 $443M, FY26 $385M, and now about $1.0B more.
+7. **Pace is small relative to the profit decline.** About $0.5B a year on average, pre-reinvestment, against a roughly $2.4–2.9B fall in operating income since FY24.
+8. **Other accounting items:** supplier finance of about $1.1B (about 30% of $3.6B accounts payable, calculated), SBC of $715M (about 33% of FY26 FCF), a rising valuation allowance ($51M to $192M) and a ROIC definition that nets out all cash (SEC 10-K).
+
+**Balancing points.**
+- Performance categories are growing.
+- Gross margin is about 43%.
+- The credit rating remains A+/A2.
+- Cash is $8.4B.
+- Q1 EPS of $0.48 was close to the prior year's $0.49.
+- The bear-case value ($25.77, -24.3%) is within every profile's downside limit.
+
+---
+
+## 7. Decision by risk profile
+
+### Rule checks and thresholds
+
+| Check | Actual | Conservative threshold | Result | Moderate threshold | Result | Aggressive threshold | Result |
+|---|---|---|---|---|---|---|---|
+| Margin of safety (min) | 21.2% | 35% | **Fail** | 25% | **Fail** | 10% | **Pass** |
+| Bear-case downside (max) | 24.3% (bear value $25.77 vs price) | 30% | Pass | 50% | Pass | 70% | Pass |
+| Debt-to-equity (max) | Not supplied by the engine; the check passed in all profiles. Rough calculation: $11,125M debt incl. leases / $15,220M equity ≈ 0.73 | 1.0 | Pass | 1.5 | Pass | 2.5 | Pass |
+| ROE (min) | 21.6% per Market Data; engine "ok" | 12% | Pass | 10% | Pass | 5% | Pass |
+| FCF conversion (min) | 70.3% (FY26 FCF $2,184M / net income $3,108M) | 80% | **Fail** (cash conversion check false) | 60% | Pass | 40% | Pass |
+| Skeptic severity (blocks at or above) | Major | Blocks at "minor" | **Fail** | Blocks at "major" | **Fail** | Blocks at "major" | **Fail** |
+| Accounting red flags (count) | 12 | No numeric threshold supplied | Reported only | No numeric threshold supplied | Reported only | No numeric threshold supplied | Reported only |
+| **Recommendation** | | | **AVOID** | | **AVOID** | | **AVOID** |
+
+### Why the profiles agree and where they differ
+
+- **All three agree on AVOID because of the skeptic gate.** Every profile fails the skeptic check because severity is "major". For the aggressive profile this is the only failed check. Every quantitative test passes, but the skeptic block overrides.
+- **Moderate fails on two checks.** Both the 25% margin-of-safety hurdle and the skeptic gate fail. FCF conversion of 70.3% clears the moderate minimum of 60%.
+- **Conservative fails on three checks.** It fails the 35% margin-of-safety hurdle, the 80% FCF-conversion minimum and the skeptic gate. It is the strictest profile on both valuation cushion and cash quality.
+- **Balance-sheet and return checks pass for everyone.** Debt, ROE and bear-case downside are not what drives the outcome.
+- **The margin-of-safety result depends on the base FCF.** The aggressive pass (21.2% vs 10%) rests on the $4.023B starting FCF that the skeptic challenges. If FY26 FCF were used, the skeptic's rescaling suggests a negative margin of safety. This is the skeptic's arithmetic, not a rule-engine output.
+- **The recommendations are fixed.** This report does not alter them.
+
+---
+
+## 8. Data gaps and caveats
+
+- **No consensus or guidance:** there are no analyst estimates or management FCF guidance. The source of the 20.0–20.3x forward P/E is not provided. The skeptic notes it implies EPS of about $1.70, above the guided $1.15–$1.35.
+- **Inconsistent inputs:**
+  - The filings summary cites a price of $34.61 and a market cap of about $51.4B. The valuation uses $34.045 (market cap $50.57B per the skeptic).
+  - P/B is 3.45 versus 3.40, and forward P/E 20.3 versus 20.0. The inputs likely come from different dates or sources.
+  - Upside is computed on $34.045.
+- **Debt mismatch:** Market Data total debt is $11,125M versus $11,072M from the balance sheet plus leases. The composition is undocumented.
+- **FY23 FCF ($4,872M)** cannot be reconciled to the provided filings, which cover FY2024–FY2026.
+- **Tariff effects:** the gross IEEPA tariff cost incurred in FY26 is not quantified, so the underlying margin effect of the $986M credit is uncertain. Other tariff regimes are not quantified.
+- **Q1 FY27 working capital:** the normalized FCF cannot be derived because the split between timing and permanent items is not given.
+- **Supplier finance:** payment terms and the effect on OCF are undisclosed.
+- **Pace timing:** the timing of savings versus reinvestment is not given.
+- **Belgian customs claim:** no loss range, accrual or timeline is disclosed.
+- **Proxy statement:** executive compensation and related-party details are not provided.
+- **No peer valuation data** was provided.
+- **Low-quality industry sources:** the 7.2% industry growth and competitor growth rates come from lower-quality sites. Industry data are labeled "unknown" in the structured industry note.
+- **The DCF is highly assumption-sensitive.** Growth is a judgment call with low confidence, and the discount and terminal rates drive most of the value.
 
 ---
 
 ## 9. Sources
 
-- SEC Form 10-K, fiscal year ended May 31, 2026 (filed 2026-07-15): https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000088/nke-20260531.htm
-- SEC Form 10-Q, quarter ended Aug 31, 2026 (filed 2026-10-02)
-- SEC press releases: https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000070/pressrelease062326.htm and https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000170/a091626pressrelease.htm
-- Market Data (price, multiples, FCF history, cash and debt)
-- Internal valuation model and skeptic review
-- Q1 FY27 earnings coverage and transcripts:
-  - https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html
-  - https://www.fool.com/earnings/call-transcripts/2026/10/02/nike-nke-q1-2027-earnings-call-transcript/
-  - https://finance.yahoo.com/markets/stocks/articles/nike-inc-nke-q1-2027-050050135.html
-  - https://finance.yahoo.com/markets/stocks/articles/nike-q1-earnings-call-highlights-000223968.html
-  - https://ca.investing.com/news/company-news/nike-inc-nke-q1-2027-earnings-call-highlights-performance-gains-offset-by-china-reset-and--4863264
-  - https://singjupost.com/transcript-nike-inc-nke-q1-2027-earnings-call-conference/
-- Competitive and moat commentary:
-  - https://founderpin.com/nike-vs-adidas-2026-which-sportswear-brand-leads/
-  - https://businessmodelanalyst.com/nike-competitors-alternatives/
-  - https://koalagains.com/stocks/NYSE/NKE/competition
-  - https://www.companieshistory.com/nike-swot-analysis/
-- Management and governance:
-  - https://fortune.com/article/nike-ceo-veteran-elliott-hill-turnaround-growth/
-  - https://simplywall.st/stocks/de/consumer-durables/etr-nke/nike-shares/management
+- SEC 10-K, fiscal year ended May 31, 2026 (filed 2026-07-15): https://www.sec.gov/Archives/edgar/data/0000320187/000032018726000089/nke-20260715.htm
+- SEC 10-Q, quarter ended Aug 31, 2026 (filed 2026-10-02)
+- Market Data: price, multiples, FCF history, debt and cash
+- CNBC, Q1 FY27 earnings: https://www.cnbc.com/2026/10/01/nike-nke-q1-2027-earnings.html
+- Yahoo Finance: https://finance.yahoo.com/markets/stocks/articles/nike-q1-earnings-call-highlights-000223968.html and https://finance.yahoo.com/markets/stocks/articles/nike-inc-nke-q1-2027-050050135.html
+- Motley Fool call transcript: https://www.fool.com/earnings/call-transcripts/2026/10/02/nike-nke-q1-2027-earnings-call-transcript/
+- Investing.com: https://ca.investing.com/news/company-news/nike-inc-nke-q1-2027-earnings-call-highlights-performance-gains-offset-by-china-reset-and--4863264
+- TradingKey transcript: https://www.tradingkey.com/news/transcripts/262197031-tradingkey
+- WWD/Footwear News: https://wwd.com/footwear-news/shoe-industry-news/nike-running-basketball-training-growth-categories-q1-2027-1239306437/
+- Founderpin (citing Euromonitor): https://founderpin.com/nike-vs-adidas-2026-which-sportswear-brand-leads/
+- Business Model Analyst: https://businessmodelanalyst.com/nike-competitors-alternatives/
+- KoalaGains: https://koalagains.com/stocks/NYSE/NKE/competition
+- Companies History: https://www.companieshistory.com/nike-swot-analysis/
+- Sinofinetex: https://sinofinetex.com/nike-vs-adidas-2025-who-leads-global-sportswear-market/
+- Forbes: https://www.forbes.com/sites/jimosman/2026/09/08/nike-stock-is-ripe-for-an-activist-but-theres-one-big-problem/
+- Stocktitan DEF 14A: https://www.stocktitan.net/sec-filings/NKE/def-14a-nike-inc-definitive-proxy-statement-0e0f84e540fc.html
+- WhoIsTheOwnerOf: https://whoistheownerof.com/who-is-the-owner-of-nike-2025-guide/
 
 ---
 
-*This report is research support only and not financial advice. The author is not a licensed financial advisor. The WATCHLIST recommendation was set by a rule engine, and all figures are reported as provided. Forecasts and valuations are uncertain and may be wrong. Consider your own circumstances and consult a licensed professional before making investment decisions.*
+*This report is research support, not financial advice. I am not a licensed financial advisor. Recommendations were generated by a fixed rule engine, and all figures are taken from the supplied data without modification. Verify them independently and consider your own circumstances before making any investment decision.*

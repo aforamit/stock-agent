@@ -7,6 +7,7 @@ import com.stockagent.Models.Decision;
 import com.stockagent.Models.MarketData;
 
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -100,8 +101,16 @@ final class Valuation {
         return res;
     }
 
-    /** Final call is made here, in code, using thresholds from config.yaml. */
-    static Decision decide(Config cfg, Collected data, JsonNode valuation, JsonNode skeptic, JsonNode filings) {
+    private static final List<String> SEVERITIES = List.of("none", "minor", "major");
+
+    /** True when the skeptic's severity reaches the profile's blocking level (minor blocks on minor and major). */
+    static boolean skepticBlocks(String severity, String blockAt) {
+        int at = SEVERITIES.indexOf(blockAt);
+        return at >= 0 && SEVERITIES.indexOf(severity) >= at;
+    }
+
+    /** Final call is made here, in code, using one risk profile's thresholds from config.yaml. */
+    static Decision decide(JsonNode profile, Collected data, JsonNode valuation, JsonNode skeptic, JsonNode filings) {
         MarketData md = data.marketData();
         ObjectNode checks = Json.MAPPER.createObjectNode();
 
@@ -116,15 +125,15 @@ final class Valuation {
         JsonNode bearNode = valuation.at("/scenarios/bear/intrinsic_value_per_share");
         double bear = bearNode.isNumber() ? bearNode.asDouble() : base;
 
-        double mos = cfg.dbl("/decision/margin_of_safety");
+        double mos = profile.path("margin_of_safety").asDouble();
         boolean mosOk = price <= base * (1 - mos);
         checks.put("margin_of_safety_ok", mosOk);
         checks.put("margin_of_safety_actual", 1 - price / base);
-        boolean bearOk = bear >= price * (1 - cfg.dbl("/decision/max_bear_downside"));
+        boolean bearOk = bear >= price * (1 - profile.path("max_bear_downside").asDouble());
         checks.put("bear_not_catastrophic", bearOk);
 
-        boolean debtOk = md.debtToEquity() == null || md.debtToEquity() <= cfg.dbl("/decision/max_debt_to_equity");
-        boolean roeOk = md.roe() == null || md.roe() >= cfg.dbl("/decision/min_roe");
+        boolean debtOk = md.debtToEquity() == null || md.debtToEquity() <= profile.path("max_debt_to_equity").asDouble();
+        boolean roeOk = md.roe() == null || md.roe() >= profile.path("min_roe").asDouble();
         checks.put("debt_ok", debtOk);
         checks.put("roe_ok", roeOk);
 
@@ -137,13 +146,13 @@ final class Valuation {
             if (n > 0 && fcf.containsKey(latest)) {
                 double conv = fcf.get(latest) / n;
                 checks.put("fcf_conversion", conv);
-                cashOk = conv >= cfg.dbl("/decision/min_fcf_conversion");
+                cashOk = conv >= profile.path("min_fcf_conversion").asDouble();
             }
         }
         checks.put("cash_conversion_ok", cashOk);
 
         String severity = skeptic.path("severity").asText("none");
-        boolean skepticOk = !severity.equals(cfg.str("/decision/block_on_skeptic_severity"));
+        boolean skepticOk = !skepticBlocks(severity, profile.path("block_on_skeptic_severity").asText("major"));
         checks.put("skeptic_severity", severity);
         checks.put("skeptic_ok", skepticOk);
         checks.put("accounting_red_flags", filings.path("accounting_red_flags").size());

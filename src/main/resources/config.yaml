@@ -22,7 +22,8 @@ monitor:
   reanalyze_after_days: 30      # stored analysis is older than this
   price_move_trigger: 0.15      # price moved this much (either way) since the analysis
   trigger_forms: [10-K, 10-Q]   # a newer SEC filing of these forms exists (8-K can be added, but its text is not analysed)
-  # Signal rules (BUY uses decision.margin_of_safety below):
+  risk_profile: moderate        # your profile (see risk_profiles below): its BUY/SELL changes go to alerts.log
+  # Signal rules (BUY uses the profile's margin_of_safety):
   sell_above_base: 0.10         # held position: SELL when price is this far above base value
   sell_on_thesis_break: true    # held position: SELL when the skeptic or a quality check fails
   hysteresis: 0.05              # once BUY/SELL is on, the price must move back this far past the line to turn it off
@@ -88,11 +89,33 @@ valuation:
   growth_floor: -0.05
   growth_fade: true             # fade growth linearly toward terminal growth
 
-# ---------------- Decision rule (applied in code, not by the LLM) ----------------
-decision:
-  margin_of_safety: 0.25        # price must be >= 25% below base intrinsic value
-  max_bear_downside: 0.50       # bear value must not be >50% below current price
-  max_debt_to_equity: 1.5       # (as ratio, e.g. 1.5 = 150%)
-  min_roe: 0.10
-  min_fcf_conversion: 0.6       # FCF / net income
-  block_on_skeptic_severity: major
+# ---------------- Risk profiles: the decision rule (applied in code, not by the LLM) ----------------
+# Every run decides once per profile, from the same analysis. monitor.risk_profile picks the one that raises alerts.
+#   margin_of_safety           price must be at least this far below base intrinsic value
+#   max_bear_downside          bear value must not be more than this far below the current price
+#   max_debt_to_equity         as a ratio (1.5 = 150%)
+#   min_roe                    minimum return on equity
+#   min_fcf_conversion         minimum free cash flow / net income
+#   block_on_skeptic_severity  minor = avoid on a minor or major skeptic rating; major = avoid on major only
+risk_profiles:
+  conservative:
+    margin_of_safety: 0.35
+    max_bear_downside: 0.30
+    max_debt_to_equity: 1.0
+    min_roe: 0.12
+    min_fcf_conversion: 0.8
+    block_on_skeptic_severity: minor
+  moderate:
+    margin_of_safety: 0.25
+    max_bear_downside: 0.50
+    max_debt_to_equity: 1.5
+    min_roe: 0.10
+    min_fcf_conversion: 0.6
+    block_on_skeptic_severity: major
+  aggressive:
+    margin_of_safety: 0.10
+    max_bear_downside: 0.70
+    max_debt_to_equity: 2.5
+    min_roe: 0.05
+    min_fcf_conversion: 0.4
+    block_on_skeptic_severity: major

@@ -1,32 +1,66 @@
 {
   "ticker" : "NKE",
   "last_check" : {
-    "at" : "2026-10-07T07:33:44+05:30",
-    "price" : 34.61,
-    "tier" : "full"
+    "at" : "2026-10-07T22:45:59+05:30",
+    "price" : 34.055,
+    "tier" : "check"
   },
   "analysis" : {
-    "at" : "2026-10-07T07:32:57+05:30",
-    "price" : 34.61,
-    "recommendation" : "WATCHLIST",
-    "checks" : {
-      "margin_of_safety_ok" : false,
-      "margin_of_safety_actual" : 0.1989375710382777,
-      "bear_not_catastrophic" : true,
-      "debt_ok" : true,
-      "roe_ok" : true,
-      "fcf_conversion" : 0.7027027027027027,
-      "cash_conversion_ok" : true,
-      "skeptic_severity" : "minor",
-      "skeptic_ok" : true,
-      "accounting_red_flags" : 12
+    "at" : "2026-10-07T22:44:58+05:30",
+    "price" : 34.045,
+    "profiles" : {
+      "conservative" : {
+        "recommendation" : "AVOID",
+        "checks" : {
+          "margin_of_safety_ok" : false,
+          "margin_of_safety_actual" : 0.21201474465671188,
+          "bear_not_catastrophic" : true,
+          "debt_ok" : true,
+          "roe_ok" : true,
+          "fcf_conversion" : 0.7027027027027027,
+          "cash_conversion_ok" : false,
+          "skeptic_severity" : "major",
+          "skeptic_ok" : false,
+          "accounting_red_flags" : 12
+        }
+      },
+      "moderate" : {
+        "recommendation" : "AVOID",
+        "checks" : {
+          "margin_of_safety_ok" : false,
+          "margin_of_safety_actual" : 0.21201474465671188,
+          "bear_not_catastrophic" : true,
+          "debt_ok" : true,
+          "roe_ok" : true,
+          "fcf_conversion" : 0.7027027027027027,
+          "cash_conversion_ok" : true,
+          "skeptic_severity" : "major",
+          "skeptic_ok" : false,
+          "accounting_red_flags" : 12
+        }
+      },
+      "aggressive" : {
+        "recommendation" : "AVOID",
+        "checks" : {
+          "margin_of_safety_ok" : true,
+          "margin_of_safety_actual" : 0.21201474465671188,
+          "bear_not_catastrophic" : true,
+          "debt_ok" : true,
+          "roe_ok" : true,
+          "fcf_conversion" : 0.7027027027027027,
+          "cash_conversion_ok" : true,
+          "skeptic_severity" : "major",
+          "skeptic_ok" : false,
+          "accounting_red_flags" : 12
+        }
+      }
     },
     "valuation" : {
       "reliable" : true,
       "notes" : [ ],
-      "bear" : 25.77080298139976,
-      "base" : 43.20512203382065,
-      "bull" : 62.31220005782918
+      "bear" : 25.77080364907281,
+      "base" : 43.205123153184125,
+      "bull" : 62.31220167222112
     }
   },
   "seen_filings" : {
@@ -222,8 +256,18 @@
     } ],
     "data_gaps" : [ "No analyst consensus, growth estimates or management FCF guidance in the material. The Yahoo Finance Analysis page shows only a blank estimates table, and the source of the 20.3x forward P/E is not provided.", "Gross cost of IEEPA tariffs incurred in FY26 is not quantified, so the net effect of the $986M recovery on underlying margins cannot be calculated.", "Q1 FY27 normalized FCF cannot be derived; the split between permanent and timing items in working capital is not given.", "Market Data total debt of $11,125M differs slightly from balance sheet debt plus lease liabilities ($11,072M at Aug 31, 2026). The exact composition used by Market Data is not documented.", "Market Data capex/OCF/FCF figures are labeled by fiscal year-end dates (2023-05-31 to 2026-05-31). FY2023 figures cannot be reconciled to the provided filings, which cover FY2024-FY2026.", "Supplier finance payment terms and actual effect on operating cash flow are not disclosed.", "Q2 FY27 and later guidance, plus the timing of Pace savings versus reinvestment, is not given. The $2.5B savings figure is cumulative, pre-charge and pre-reinvestment.", "Belgian customs claim: no loss range, accrual or timeline is disclosed.", "Tariff-related cost trends beyond the IEEPA ruling (for example other tariff regimes) are not quantified.", "Proxy statement (executive compensation, related-party transactions) is incorporated by reference and not provided.", "No peer valuation or industry data is provided for relative valuation." ]
   },
-  "signal" : {
-    "current" : "WATCH",
-    "since" : "2026-10-07T07:29:34+05:30"
+  "signals" : {
+    "conservative" : {
+      "current" : "AVOID",
+      "since" : "2026-10-07T22:45:59+05:30"
+    },
+    "moderate" : {
+      "current" : "AVOID",
+      "since" : "2026-10-07T22:45:59+05:30"
+    },
+    "aggressive" : {
+      "current" : "AVOID",
+      "since" : "2026-10-07T22:45:59+05:30"
+    }
   }
 }

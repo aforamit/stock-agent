@@ -2,7 +2,6 @@ package com.stockagent;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.stockagent.Models.Collected;
-import com.stockagent.Models.Decision;
 import com.stockagent.Models.Doc;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -133,22 +132,26 @@ final class Agents {
     }
 
     // ---------------- Agent 6: Synthesizer ----------------
+    /** @param profiles risk profile name -> {recommendation, checks}, as decided by the rule engine */
     String synthesizer(Collected data, JsonNode filings, JsonNode qualitative, JsonNode valuation,
-                       JsonNode skeptic, Decision decision) throws Exception {
-        String system = "You are a senior investment analyst writing a research report. The final recommendation has "
-                + "ALREADY been decided by a rule engine; you must report it exactly and explain the reasoning. "
-                + "Do not change any numbers. Clearly state uncertainties. You are not a licensed financial advisor.";
+                       JsonNode skeptic, JsonNode profiles) throws Exception {
+        String system = "You are a senior investment analyst writing a research report. The recommendation for each "
+                + "investor risk profile has ALREADY been decided by a rule engine; you must report each one exactly and "
+                + "explain the reasoning. Do not change any numbers. Clearly state uncertainties. "
+                + "You are not a licensed financial advisor.";
         String user = "Write a markdown report for " + data.marketData().company()
                 + " (" + data.marketData().ticker() + ").\n\n"
-                + "RECOMMENDATION (fixed): " + decision.recommendation() + "\n"
-                + "Rule checks: " + decision.checks() + "\n\n"
+                + "RECOMMENDATION PER RISK PROFILE (fixed), with the rule checks behind each: " + profiles + "\n"
+                + "Thresholds each risk profile applies: " + Json.MAPPER.valueToTree(cfg.riskProfiles()) + "\n\n"
                 + "Valuation: " + valuation + "\n"
                 + "Filings: " + filings + "\n"
                 + "Qualitative: " + qualitative + "\n"
                 + "Skeptic: " + skeptic + "\n\n"
-                + "Sections: 1. Executive summary 2. Business overview 3. Financial snapshot "
+                + "Sections: 1. Executive summary (open with a table of the recommendation for every risk profile) "
+                + "2. Business overview 3. Financial snapshot "
                 + "4. Valuation (bear/base/bull table vs price) 5. Moat & management 6. Risks & bear case "
-                + "7. Rule-by-rule decision 8. Data gaps & caveats 9. Sources.\n"
+                + "7. Decision by risk profile (one table: each rule check, the threshold and pass/fail per profile; "
+                + "then explain why the profiles agree or differ) 8. Data gaps & caveats 9. Sources.\n"
                 + "Cite sources inline. End with a note that this is research support, not financial advice.";
         return llm.ask(system, user, false);
     }

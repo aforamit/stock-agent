@@ -18,15 +18,19 @@ final class Signal {
         return "BUY".equals(signal) || "SELL".equals(signal);
     }
 
-    /** @param previous the last confirmed signal (may be null); used to widen the band so a price on the line does not flip daily */
-    static Result evaluate(Config cfg, JsonNode analysis, double price, boolean held, String previous) {
-        JsonNode v = analysis.path("valuation"), c = analysis.path("checks");
+    /**
+     * @param profile  the risk profile's thresholds
+     * @param v        the stored valuation (shared by all profiles)
+     * @param c        the stored rule checks for this profile
+     * @param previous the last confirmed signal (may be null); used to widen the band so a price on the line does not flip daily
+     */
+    static Result evaluate(Config cfg, JsonNode profile, JsonNode v, JsonNode c, double price, boolean held, String previous) {
         if (!v.path("reliable").asBoolean(false)) {
             return new Result(held ? "HOLD" : "AVOID", "no reliable valuation: " + v.path("notes"));
         }
         double base = v.path("base").asDouble();
         double bear = v.path("bear").isNumber() ? v.path("bear").asDouble() : base;
-        double mos = cfg.dbl("/decision/margin_of_safety");
+        double mos = profile.path("margin_of_safety").asDouble();
         double band = cfg.at("/monitor/hysteresis").asDouble(0.05);
         double buyBelow = base * (1 - mos + ("BUY".equals(previous) ? band : 0));
         double sellAbove = base * (1 + cfg.at("/monitor/sell_above_base").asDouble(0.10) - ("SELL".equals(previous) ? band : 0));
@@ -45,7 +49,7 @@ final class Signal {
 
         if (held && price >= sellAbove) return new Result("SELL", "price above value; " + levels);
         if (price <= buyBelow) {
-            if (bear >= price * (1 - cfg.dbl("/decision/max_bear_downside"))) {
+            if (bear >= price * (1 - profile.path("max_bear_downside").asDouble())) {
                 return new Result("BUY", "margin of safety met; " + levels);
             }
             return new Result(held ? "HOLD" : "WATCH", String.format("cheap but bear value %.2f is too far below; %s", bear, levels));

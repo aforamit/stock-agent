@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 /** What the monitor remembers between runs: one JSON file per ticker, plus a CSV history of every signal. */
 final class State {
-    private static final String CSV_HEADER = "timestamp,ticker,tier,price,bear,base,bull,recommendation,signal,status,reason";
+    private static final String CSV_HEADER = "timestamp,ticker,risk_profile,tier,price,bear,base,bull,recommendation,signal,status,reason";
 
     private State() {}
 
@@ -38,6 +38,14 @@ final class State {
         String row = Arrays.stream(cols)
                 .map(c -> c == null ? "" : "\"" + String.valueOf(c).replace("\"", "\"\"") + "\"")
                 .collect(Collectors.joining(","));
+        // A file written with an older column layout is set aside rather than mixed with new rows.
+        if (Files.exists(p)) {
+            String header;
+            try (var lines = Files.lines(p, StandardCharsets.UTF_8)) {
+                header = lines.findFirst().orElse("");
+            }
+            if (!CSV_HEADER.equals(header)) Files.move(p, Path.of(dir, "signals_" + System.currentTimeMillis() + ".csv"));
+        }
         String text = (Files.exists(p) ? "" : CSV_HEADER + System.lineSeparator()) + row + System.lineSeparator();
         Files.writeString(p, text, StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
     }

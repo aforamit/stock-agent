@@ -113,8 +113,8 @@ Each step is tagged `[code]` (no LLM) or `[LLM xN]` (N model calls).
          |   |          3 parallel runs, the median severity decides            |
          |   |      |                                                           |
          |   |      v                                                           |
-         |   | Decision rule: INVEST / WATCHLIST / AVOID             [code]     |
-         |   |          analysis and valuation saved to work/state              |
+         |   | Decision rule, once per risk profile                  [code]     |
+         |   |          INVEST / WATCHLIST / AVOID, saved in state              |
          |   |      |                                                           |
          |   |      v                                                           |
          |   | Agent 6  Synthesizer                                  [LLM x1]   |
@@ -125,7 +125,7 @@ Each step is tagged `[code]` (no LLM) or `[LLM xN]` (N model calls).
 +===============================================================================+
 | SIGNAL - runs after either tier    no LLM calls                               |
 |                                                                               |
-| Signal rules: stored valuation vs price               [code]                  |
+| Signal per risk profile: value vs price               [code]                  |
 |      -> BUY / SELL / HOLD / WATCH / AVOID                                     |
 |      |                                                                        |
 |      v                                                                        |
@@ -150,14 +150,28 @@ Each step is tagged `[code]` (no LLM) or `[LLM xN]` (N model calls).
 Edit `watchlist:` and `monitor:` in `config.yaml`. Give a ticker `shares` above 0 to mark it as held:
 only held positions can get a SELL signal.
 
+**Risk profiles**: every full analysis applies the decision rule once per profile in `risk_profiles:`
+(conservative, moderate, aggressive), from the same analysis and with no extra LLM calls. The report, the log,
+`_raw.json` and the signals all show the result for each profile. Set `monitor.risk_profile` to your own:
+only that profile's BUY / SELL changes go to `alerts.log`.
+
+| Threshold | Conservative | Moderate | Aggressive |
+|---|---|---|---|
+| Margin of safety below base value | 35% | 25% | 10% |
+| Bear value at most this far below price | 30% | 50% | 70% |
+| Maximum debt / equity | 1.0 | 1.5 | 2.5 |
+| Minimum return on equity | 12% | 10% | 5% |
+| Minimum free cash flow / net income | 0.8 | 0.6 | 0.4 |
+| Skeptic rating that blocks | minor or major | major | major |
+
 **Triggers** that make `auto` escalate to a full analysis: no stored analysis, analysis older than
 `reanalyze_after_days`, a new 10-K/10-Q on SEC EDGAR, or a price move of `price_move_trigger` since the analysis.
 
-**Signals** are decided in code from the stored valuation and today's price:
+**Signals** are decided in code, per risk profile, from the stored valuation and today's price:
 
 | Signal | When |
 |---|---|
-| BUY | Price is below base value by `decision.margin_of_safety`, bear value is acceptable, and all checks pass. |
+| BUY | Price is below base value by the profile's `margin_of_safety`, bear value is acceptable, and all checks pass. |
 | SELL | Held, and price is `sell_above_base` above base value, or the skeptic / a quality check fails. |
 | HOLD / WATCH | Held / not held, and neither of the above. |
 | AVOID | Not held, and a check fails or the stock cannot be valued. |
@@ -169,10 +183,10 @@ keeps a price sitting on a threshold from flipping the signal every day.
 
 | Path | Content |
 |---|---|
-| `work/logs/alerts.log` | One line per confirmed change into or out of BUY / SELL. This is the alert channel. |
+| `work/logs/alerts.log` | One line per confirmed change into or out of BUY / SELL for your risk profile. This is the alert channel. |
 | `work/logs/<name>_<timestamp>.log` | Full log of one run, including every LLM prompt and reply. |
 | `work/state/<TICKER>.json` | Stored analysis, valuation, seen filings and current signal. Delete it to start over. |
-| `work/state/signals.csv` | Every signal evaluation with the price at the time, for judging the signals later. |
+| `work/state/signals.csv` | Every signal evaluation (one row per risk profile) with the price at the time, for judging the signals later. |
 | `work/output/<TICKER>_report.md` | Latest research report (plus `_raw.json`). |
 
 **Scheduling (Windows)**: `run-watchlist.cmd` runs the watchlist with the config in `src/main/resources`.

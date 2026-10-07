@@ -87,23 +87,44 @@ final class Monitor {
         state.putObject("last_check").put("at", now()).put("price", price).put("tier", ran);
 
         String signal;
-        if (!state.has("analysis")) {
+        if (!hasAnalysis(state)) {
             signal = "NO DATA";
             Log.info("   no stored analysis for " + ticker + " yet - run it with --tier full");
         } else {
-            Signal.Result s = Signal.evaluate(cfg, state.get("analysis"), price, held,
-                    state.at("/signal/current").asText(null));
-            signal = confirm(state, ticker, ran, price, s);
+            // Every risk profile gets its own signal; only the active one (monitor.risk_profile) raises alerts.
+            JsonNode a = state.get("analysis");
+            String active = cfg.activeProfile();
+            String mine = "NO DATA";
+            List<String> others = new ArrayList<>();
+            for (var p : cfg.riskProfiles().entrySet()) {
+                JsonNode stored = a.path("profiles").path(p.getKey());
+                if (!stored.isObject()) continue;
+                Signal.Result s = Signal.evaluate(cfg, p.getValue(), a.path("valuation"), stored.path("checks"), price, held,
+                        state.at("/signals/" + p.getKey() + "/current").asText(null));
+                String shown = confirm(state, ticker, p.getKey(), p.getKey().equals(active), ran, price, s);
+                if (p.getKey().equals(active)) mine = shown;
+                else others.add(p.getKey() + " " + shown);
+            }
+            signal = mine + " [" + active + "]" + (others.isEmpty() ? "" : "  (" + String.join(", ", others) + ")");
         }
+        state.remove("signal"); // single-profile signal from before risk profiles
         State.save(stateDir, ticker, state);
         return new Result(ticker, ran, price, signal, note);
     }
 
+    private static boolean hasAnalysis(ObjectNode state) {
+        return state.at("/analysis/profiles").isObject();
+    }
+
     /** Reasons a full analysis is due; empty when the stored one is still good. */
     private List<String> triggers(ObjectNode state, List<Filing> filings, double price) {
-        if (!state.has("analysis")) return List.of("no stored analysis");
+        if (!hasAnalysis(state)) return List.of("no stored analysis");
         JsonNode a = state.get("analysis");
         List<String> due = new ArrayList<>();
+
+        for (String p : cfg.riskProfiles().keySet()) {
+            if (!a.path("profiles").has(p)) due.add("risk profile '" + p + "' is not in the stored analysis");
+        }
 
         long age = ChronoUnit.DAYS.between(OffsetDateTime.parse(a.path("at").asText()), OffsetDateTime.now());
         if (age >= cfg.intVal("/monitor/reanalyze_after_days", 30)) due.add("analysis is " + age + " days old");
@@ -168,17 +189,22 @@ final class Monitor {
         JsonNode skeptic = agents.skepticPanel(data, filingsJ, qualitative, valuation);
         Log.info("   severities " + skeptic.path("panel_severities") + " => " + skeptic.path("severity").asText());
 
-        step("Decision rule (code)");
-        Decision decision = Valuation.decide(cfg, data, valuation, skeptic, filingsJ);
-        Log.info("   => " + decision.recommendation());
-        Log.detail("Decision checks", Json.pretty(decision.checks()));
+        step("Decision rule (code), once per risk profile");
+        String active = cfg.activeProfile();
+        ObjectNode profiles = Json.MAPPER.createObjectNode();
+        for (var p : cfg.riskProfiles().entrySet()) {
+            Decision d = Valuation.decide(p.getValue(), data, valuation, skeptic, filingsJ);
+            Log.info(String.format("   %-13s => %s%s", p.getKey(), d.recommendation(),
+                    p.getKey().equals(active) ? "   <- your profile" : ""));
+            profiles.putObject(p.getKey()).put("recommendation", d.recommendation()).set("checks", d.checks());
+        }
+        Log.detail("Decision checks per risk profile", Json.pretty(profiles));
 
         // Store the analysis before the report is written: it is what the signal and later checks depend on.
         ObjectNode a = state.putObject("analysis");
         a.put("at", now());
         a.put("price", data.marketData().price());
-        a.put("recommendation", decision.recommendation());
-        a.set("checks", decision.checks());
+        a.set("profiles", profiles);
         ObjectNode v = a.putObject("valuation");
         v.put("reliable", valuation.path("reliable").asBoolean(false));
         v.set("notes", valuation.path("notes"));
@@ -197,7 +223,7 @@ final class Monitor {
         State.save(stateDir, ticker, state);
 
         step("Agent 6: synthesizer");
-        String report = agents.synthesizer(data, filingsJ, qualitative, valuation, skeptic, decision);
+        String report = agents.synthesizer(data, filingsJ, qualitative, valuation, skeptic, profiles);
 
         Files.createDirectories(Path.of(outDir));
         String base = Path.of(outDir, ticker.replace('.', '_')).toString();
@@ -209,8 +235,9 @@ final class Monitor {
         raw.set("valuation", valuation);
         raw.set("qualitative", qualitative);
         raw.set("skeptic", skeptic);
-        raw.put("recommendation", decision.recommendation());
-        raw.set("checks", decision.checks());
+        raw.put("risk_profile", active);
+        raw.put("recommendation", profiles.path(active).path("recommendation").asText());
+        raw.set("recommendations", profiles);
         Files.writeString(Path.of(base + "_raw.json"), Json.pretty(raw), StandardCharsets.UTF_8);
 
         Log.info("\nSaved: " + base + "_report.md and " + base + "_raw.json");
@@ -219,10 +246,12 @@ final class Monitor {
 
     /**
      * A changed signal must repeat on confirm_runs consecutive runs before it replaces the current one,
-     * and only then is it alerted. Every evaluation is appended to signals.csv.
+     * and only then is it alerted (active profile only). Every evaluation is appended to signals.csv.
      */
-    private String confirm(ObjectNode state, String ticker, String tier, double price, Signal.Result s) throws IOException {
-        ObjectNode sig = state.has("signal") ? (ObjectNode) state.get("signal") : state.putObject("signal");
+    private String confirm(ObjectNode state, String ticker, String profile, boolean alerts, String tier, double price,
+                           Signal.Result s) throws IOException {
+        ObjectNode all = state.has("signals") ? (ObjectNode) state.get("signals") : state.putObject("signals");
+        ObjectNode sig = all.has(profile) ? (ObjectNode) all.get(profile) : all.putObject(profile);
         String current = sig.path("current").asText(null);
         int need = Math.max(1, cfg.intVal("/monitor/confirm_runs", 2));
         String status;
@@ -235,21 +264,21 @@ final class Monitor {
                 sig.put("current", s.signal()).put("since", now());
                 sig.remove(List.of("pending", "pending_count"));
                 status = "confirmed";
-                String msg = String.format("%s: %s -> %s at %.2f - %s",
-                        ticker, current == null ? "(new)" : current, s.signal(), price, s.reason());
-                if (Signal.isAction(s.signal()) || Signal.isAction(current)) Log.alert(msg);
+                String msg = String.format("%s [%s]: %s -> %s at %.2f - %s",
+                        ticker, profile, current == null ? "(new)" : current, s.signal(), price, s.reason());
+                if (alerts && (Signal.isAction(s.signal()) || Signal.isAction(current))) Log.alert(msg);
                 else Log.info("   signal change " + msg);
             } else {
                 sig.put("pending", s.signal()).put("pending_count", count);
                 status = "pending " + count + "/" + need;
             }
         }
-        Log.info("   signal: " + s.signal() + " (" + status + ") - " + s.reason());
+        Log.info(String.format("   signal %-14s %s (%s) - %s", "[" + profile + "]", s.signal(), status, s.reason()));
 
         JsonNode a = state.get("analysis"), v = a.path("valuation");
-        State.appendSignal(stateDir, now(), ticker, tier, price,
+        State.appendSignal(stateDir, now(), ticker, profile, tier, price,
                 v.path("bear").asText(""), v.path("base").asText(""), v.path("bull").asText(""),
-                a.path("recommendation").asText(), s.signal(), status, s.reason());
+                a.at("/profiles/" + profile + "/recommendation").asText(), s.signal(), status, s.reason());
         return status.startsWith("pending") ? s.signal() + " (" + status + ")" : s.signal();
     }
 }
